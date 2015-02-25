@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    file                 : usr.xml
+    created              : Wed Jan 8 18:31:16 CET 2003
+    copyright            : (C) 2002 Andrew Sumner
+    email                : firechief@bluewin.ch
+    version              : $Id$
+-->
+
+<!--    This program is free software; you can redistribute it and/or modify  -->
+<!--    it under the terms of the GNU General Public License as published by  -->
+<!--    the Free Software Foundation; either version 2 of the License, or     -->
+<!--    (at your option) any later version.                                   -->
+
+<!DOCTYPE params SYSTEM "../../libs/tgf/params.dtd">
+
+<params name="rs" type="robotdef">
+  <section name="Robots">
+    <section name="index">
+
+      <section name="1">
+        <attstr name="name" val="Crazy Eddie"></attstr>
+        <attstr name="short name" val="C. Eddie"></attstr>
+        <attstr name="code name" val="CED"></attstr>
+        <attstr name="desc" val=""></attstr>
+        <attstr name="team" val="Fast as Lightning"></attstr>
+        <attstr name="author" val="Simon Wood"></attstr>
+        <attstr name="car name" val="rs1-kenji-08"></attstr>
+        <attnum name="race number" val="78"></attnum>
+        <attnum name="red" val="1.0"></attnum>
+        <attnum name="green" val="0.2"></attnum>
+        <attnum name="blue" val="0.2"></attnum>
+        <attstr name="features" val=""></attstr>
+      </section>
+
+    </section>
+  </section>
+</params>

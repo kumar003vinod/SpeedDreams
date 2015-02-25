@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+auto generated      : by Track Editor
+version             : v 0.6.0 24/4/2005
+copyright           : (C) 2005 by Charalampos Alexopoulos
+email               : 
+-->
+
+<!-- $Id -->
+
+<!--
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
+-->
+
+<!DOCTYPE params SYSTEM "../../../src/libs/tgf/params.dtd" [
+<!--  general definitions for tracks  -->
+<!ENTITY default-surfaces SYSTEM "../../../data/tracks/surfaces.xml">
+]>
+
+<params name="Caddo Speedway" type="trackdef" mode="mw">
+
+  <section name="Header">
+    <attstr name="name" val="Caddo Speedway" />
+    <attstr name="category" val="speedway" />
+    <attnum name="version" val="4" />
+	<attnum name="sky version" val="1"/>
+    <attstr name="author" val="kilo" />
+    <attstr name="description" val="Quad-oval, steeply banked speedway" />
+  </section>
+
+	<section name="Local Info">
+		<attnum name="overall rain likelyhood" unit="%" val="10"/>
+		<attnum name="little rain likelyhood" unit="%" val="70"/>
+		<attnum name="medium rain likelyhood" unit="%" val="20"/>
+		<attnum name="time of day" unit="hour" val="7.0"/>
+		<attnum name="sun ascension" unit="deg" val="0"/>
+	</section>
+
+  <section name="Graphic">
+    <attstr name="3d description" val="caddo.ac" />
+    <attstr name="background image" val="background.png"/>
+    <attnum name="background type" val="4"/>
+	
+	<attnum name="background color R" val="0.60"/>
+    <attnum name="background color G" val="0.60"/>
+    <attnum name="background color B" val="0.48"/>
+
+    <attnum name="ambient color R" val="0.1"/>
+    <attnum name="ambient color G" val="0.1"/>
+    <attnum name="ambient color B" val="0.05"/>
+
+    <attnum name="diffuse color R" val="1"/>
+    <attnum name="diffuse color G" val="1"/>
+    <attnum name="diffuse color B" val="0.9"/>
+
+    <attnum name="specular color R" val="0.6"/>
+    <attnum name="specular color G" val="0.6"/>
+    <attnum name="specular color B" val="0.6"/>
+	
+	<attnum name="light position x" val="1500"/>
+    <attnum name="light position y" val="450"/>
+    <attnum name="light position z" val="300"/>
+	
+    <section name="Terrain Generation">
+      <attnum name="track step" unit="m" val="20" />
+      <attnum name="border margin" unit="m" val="50" />
+      <attnum name="border step" unit="m" val="30" />
+      <attnum name="border height" unit="m" val="0" />
+      <attstr name="orientation" val="clockwise" />
+      <attnum name="maximum altitude" unit="m" val="10" />
+      <attnum name="minimum altitude" unit="m" val="-5" />
+      <attnum name="group size" unit="m" val="200" />
+      <attstr name="surface" val="caddo-grass" />
+    </section>
+  </section>
+
+  <section name="Main Track">
+    <attnum name="width" unit="m" val="17.7" />
+    <attnum name="profil steps length" unit="m" val="4.0" />
+
+    <!--
+    Note: pits are here, but Speed Dreams / TORCS has a limitation currently
+    so it cannot draw a decent pit building when the pit includes a turn.
+    So I add this pit definition but expect some graphical weirdness on track.
+    Let's hope Speed Dreams will be able to get rid of this age-old limitation
+    soon.
+    -->
+    <section name="Pits">
+      <attstr name="side" val="left" />
+      <attnum name="pit style" val="3" /><!--TR_PIT_NO_BUILDING-->
+      <attstr name="entry" val="turn4-2" />
+      <attstr name="start" val="frontstretch-5" />
+      <attstr name="end" val="frontstretch-2" />
+      <attstr name="exit" val="turn1-1" />
+      <attnum name="length" unit="m" val="15.0" />
+      <attnum name="width" unit="m" val="5.0" />
+    </section>
+
+    <section name="Track Segments">
+      <!--******************************-->
+      <!--     Frontstretch             -->
+      <!--******************************-->
+      <section name="frontstretch-1">
+        <attstr name="type" val="str" />
+        <attnum name="lg" unit="m" val="99.45" />
+        <attnum name="z start left" unit="m" val="0.0" />
+        <attnum name="z start right" unit="m" val="1.54" /><!-- 5 deg-->
+        <attnum name="z end left" unit="m" val="0.0" />
+        <attnum name="z end right" unit="m" val="1.54" />
+        <attstr name="surface" val="caddo-asphalt-dash" />
+        <section name="Left Border">
+          <attnum name="width" unit="m" val="1.0" />
+          <attnum name="height" unit="m" val="0.0" />
+          <attstr name="surface" val="concrete" />
+          <attstr name="style" val="plan" />
+        </section>
+        <section name="Left Side">
+          <attnum name="start width" unit="m" val="30.0" />
+          <attnum name="end width" unit="m" val="30.0" />
+          <attstr name="surface" val="road1-pits" />
+        </section>
+        <section name="Left Barrier">
+          <attnum name="width" unit="m" val="0.5" />
+          <attnum name="height" unit="m" val="1.5" />
+          <attstr name="surface" val="caddo-wall" />
+          <attstr name="style" val="wall" />
+        </section>
+        <section name="Right Border">
+          <attnum name="width" unit="m" val="0.0" />
+          <attnum name="height" unit="m" val="0.0" />
+          <attstr name="surface" val="concrete" />
+          <attstr name="style" val="plan" />
+        </section>
+        <section name="Right Side">
+          <attnum name="start width" unit="m" val="0.0" />
+          <attnum name="end width" unit="m" val="0.0" />
+          <attstr name="surface" val="concrete" />
+          <attstr name="banking type" in="level,tangent" val="tangent"/>
+        </section>
+        <section name="Right Barrier">
+          <attnum name="width" unit="m" val="0.3" />
+          <attnum name="height" unit="m" val="3.0" />
+          <attstr name="surface" val="caddo-wall-fence" />
+          <attstr name="style" val="fence" />
+        </section>
+      </section>
+
+      <section name="frontstretch-2">
+        <attstr name="type" val="lft" />
+        <attnum name="arc" unit="deg" val="20.0" />
+        <attnum name="radius" unit="m" val="206.12" />
+        <attnum name="end radius" unit="m" val="113.36" />
+        <attnum name="z end left" unit="m" val="0.0" />
+        <attnum name="z end right" unit="m" val="1.54" /><!-- 5 deg-->
+        <section name="Left Side">
+          <attnum name="start width" unit="m" val="30.0" />
+          <attnum name="end width" unit="m" val="30.0" />
+          <attstr name="surface" val="road1-pits" />
+        </section>
+      </section>
+
+      <section name="frontstretch-3">
+        <attstr name="type" val="str" />
+        <attnum name="lg" unit="m" val="166.96" />
+        <attnum name="z end left" unit="m" val="0.0" />
+        <attnum name="z end right" unit="m" val="1.54" /><!-- 5 deg-->
+        <section name="Left Side">
+          <attnum name="start width" unit="m" val="30.0" />
+          <attnum name="end width" unit="m" val="17.5" />
+          <attstr name="surface" val="road1-pits" />
+        </section>
+      </section>
+
+      <!--******************************-->
+      <!--     Turn 1                   -->
+      <!--******************************-->
+      <section name="turn1-1">
+        <attstr name="type" val="lft" />
+        <attnum name="arc" unit="deg" val="40.0" />
+        <attnum name="radius" unit="m" val="235.59" />
+        <attnum name="z end left" unit="m" val="0.0" />
+        <attnum name="z end right" unit="m" val="7.2" /> <!--24 deg-->
+        <attstr name="profil" val="spline"/>
+        <attstr name="surface" val="caddo-asphalt" />
+        <section name="Left Side">
+          <attnum name="start width" unit="m" val="17.5" />
+          <attnum name="end width" unit="m" val="17.5" />
+          <attstr name="surface" val="road1" />
+        </section>
+      </section>
+      <section name="turn1-2">
+        <attstr name="type" val="lft" />
+        <attnum name="arc" unit="deg" val="40.0" />
+        <attnum name="radius" unit="m" val="235.59" />
+        <attnum name="z end left" unit="m" val="0.0" />
+        <attnum name="z end right" unit="m" val="7.2" /> <!--24 deg-->
+        <section name="Left Side">
+          <attnum name="start width" unit="m" val="17.5" />
+          <attnum name="end width" unit="m" val="17.5" />
+          <attstr name="surface" val="concrete" />
+        </section>
+      </section>
+
+      <!--******************************-->
+      <!--     Turn 2                   -->
+      <!--******************************-->
+      <section name="turn2-1">
+        <attstr name="type" val="lft" />
+        <attnum name="arc" unit="deg" val="40.0" />
+        <attnum name="radius" unit="m" val="235.59" />
+        <attnum name="z end left" unit="m" val="0.0" />
+        <attnum name="z end right" unit="m" val="7.2" /> <!--24 deg-->
+        <section name="Left Side">
+          <attnum name="start width" unit="m" val="17.5" />
+          <attnum name="end width" unit="m" val="18.5" />
+          <attstr name="surface" val="concrete" />
+        </section>
+      </section>
+      <section name="turn2-2">
+        <attstr name="type" val="lft" />
+        <attnum name="arc" unit="deg" val="40.0" />
+        <attnum name="radius" unit="m" val="235.59" />
+        <attnum name="z end left" unit="m" val="0.0" />
+        <attnum name="z end right" unit="m" val="1.54" /><!-- 5 deg-->
+        <attstr name="profil" val="spline"/>
+        <section name="Left Side">
+          <attnum name="start width" unit="m" val="18.5" />
+          <attnum name="end width" unit="m" val="10.0" />
+          <attstr name="surface" val="concrete" />
+        </section>
+      </section>
+
+      <!--******************************-->
+      <!--     Backstretch              -->
+      <!--******************************-->
+      <section name="backstretch-1">
+        <attstr name="type" val="str" />
+        <attnum name="lg" unit="m" val="114.4" />
+        <attnum name="z end left" unit="m" val="0.0" />
+        <attnum name="z end right" unit="m" val="1.54" /><!-- 5 deg-->
+        <attstr name="surface" val="caddo-asphalt-dash" />
+        <section name="Left Side">
+          <attnum name="start width" unit="m" val="10.0" />
+          <attnum name="end width" unit="m" val="7.0" />
+          <attstr name="surface" val="concrete" />
+        </section>
+      </section>
+      <section name="backstretch-2">
+        <attstr name="type" val="str" />
+        <attnum name="lg" unit="m" val="228.79" />
+        <attnum name="z end left" unit="m" val="0.0" />
+        <attnum name="z end right" unit="m" val="1.54" /><!-- 5 deg-->
+        <section name="Left Side">
+          <attnum name="start width" unit="m" val="7.0" />
+          <attnum name="end width" unit="m" val="7.0" />
+          <attstr name="surface" val="concrete" />
+        </section>
+      </section>
+      <section name="backstretch-3">
+        <attstr name="type" val="str" />
+        <attnum name="lg" unit="m" val="114.4" />
+        <attnum name="z end left" unit="m" val="0.0" />
+        <attnum name="z end right" unit="m" val="1.54" /><!-- 5 deg-->
+        <section name="Left Side">
+          <attnum name="start width" unit="m" val="7.0" />
+          <attnum name="end width" unit="m" val="12.0" />
+          <attstr name="surface" val="concrete" />
+        </section>
+      </section>
+
+      <!--******************************-->
+      <!--     Turn 3                   -->
+      <!--******************************-->
+      <section name="turn3-1">
+        <attstr name="type" val="lft" />
+        <attnum name="arc" unit="deg" val="40.0" />
+        <attnum name="radius" unit="m" val="235.59" />
+        <attnum name="z end left" unit="m" val="0.0" />
+        <attnum name="z end right" unit="m" val="7.2" /> <!--24 deg-->
+        <attstr name="profil" val="spline"/>
+        <attstr name="surface" val="caddo-asphalt" />
+        <section name="Left Side">
+          <attnum name="start width" unit="m" val="12.0" />
+          <attnum name="end width" unit="m" val="17.5" />
+          <attstr name="surface" val="concrete" />
+        </section>
+      </section>
+      <section name="turn3-2">
+        <attstr name="type" val="lft" />
+        <attnum name="arc" unit="deg" val="40.0" />
+        <attnum name="radius" unit="m" val="235.59" />
+        <attnum name="z end left" unit="m" val="0.0" />
+        <attnum name="z end right" unit="m" val="7.2" /> <!--24 deg-->
+        <section name="Left Side">
+          <attnum name="start width" unit="m" val="17.5" />
+          <attnum name="end width" unit="m" val="17.5" />
+          <attstr name="surface" val="concrete" />
+        </section>
+      </section>
+
+      <!--******************************-->
+      <!--     Turn 4                   -->
+      <!--******************************-->
+      <section name="turn4-1">
+        <attstr name="type" val="lft" />
+        <attnum name="arc" unit="deg" val="40.0" />
+        <attnum name="radius" unit="m" val="235.59" />
+        <attnum name="z end left" unit="m" val="0.0" />
+        <attnum name="z end right" unit="m" val="7.2" /> <!--24 deg-->
+        <section name="Left Side">
+          <attnum name="start width" unit="m" val="17.5" />
+          <attnum name="end width" unit="m" val="14.5" />
+          <attstr name="surface" val="concrete" />
+        </section>
+      </section>
+      <section name="turn4-2">
+        <attstr name="type" val="lft" />
+        <attnum name="arc" unit="deg" val="40.0" />
+        <attnum name="radius" unit="m" val="235.59" />
+        <attnum name="z end left" unit="m" val="0.0" />
+        <attnum name="z end right" unit="m" val="1.54" /><!-- 5 deg-->
+        <attstr name="profil" val="spline"/>
+        <section name="Left Side">
+          <attnum name="start width" unit="m" val="14.5" />
+          <attnum name="end width" unit="m" val="15.5" />
+          <attstr name="surface" val="road1" />
+        </section>
+      </section>
+
+      <!--******************************-->
+      <!--     Frontstretch             -->
+      <!--******************************-->
+      <!-- Y correction -->
+      <section name="frontstretch-4">
+        <attstr name="type" val="str" />
+        <attnum name="lg" unit="m" val="166.96493" />
+        <attnum name="z end left" unit="m" val="0.0" />
+        <attnum name="z end right" unit="m" val="1.54" /><!-- 5 deg-->
+        <attstr name="surface" val="caddo-asphalt-dash" />
+        <section name="Left Side">
+          <attnum name="start width" unit="m" val="15.5" />
+          <attnum name="end width" unit="m" val="30.0" />
+          <attstr name="surface" val="road1-pits" />
+        </section>
+      </section>
+      <!-- Angle correction -->
+      <section name="frontstretch-5">
+        <attstr name="type" val="lft" />
+        <attnum name="arc" unit="deg" val="20.00154" />
+        <attnum name="radius" unit="m" val="113.36" />
+        <attnum name="end radius" unit="m" val="206.12" />
+        <attnum name="z end left" unit="m" val="0.0" />
+        <attnum name="z end right" unit="m" val="1.54" /><!-- 5 deg-->
+        <section name="Left Side">
+          <attnum name="start width" unit="m" val="30.0" />
+          <attnum name="end width" unit="m" val="30.0" />
+          <attstr name="surface" val="road1-pits" />
+        </section>
+      </section>
+      <!-- X correction -->
+      <section name="frontstretch-6">
+        <attstr name="type" val="str" />
+        <attnum name="lg" unit="m" val="99.5422" />
+        <attnum name="z end left" unit="m" val="0.0" />
+        <attnum name="z end right" unit="m" val="1.54" /><!-- 5 deg-->
+        <section name="Left Side">
+          <attnum name="start width" unit="m" val="30.0" />
+          <attnum name="end width" unit="m" val="30.0" />
+          <attstr name="surface" val="road1-pits" />
+        </section>
+      </section>
+    </section>
+  </section>
+
+  
+  <section name="Cameras">
+    <!-- After finish line, looking at Turn 4 & frontstretch straight -->
+    <section name="cam 0">
+        <attstr name="segment" val="frontstretch-1"/>
+        <attnum name="to right" unit="m" val="-40"/>
+        <attnum name="to start" unit="m" val="40"/>
+        <attnum name="height" unit="m" val="80"/>
+        <attstr name="fov start" val="turn4-2"/>
+        <attstr name="fov end" val="frontstretch-2"/>
+    </section>
+    <!-- Turn1 first part, looking at frontstretch turn & Turn 1 -->
+    <section name="cam 1">
+        <attstr name="segment" val="frontstretch-3"/>
+        <attnum name="to right" unit="m" val="14"/>
+        <attnum name="to start" unit="m" val="249"/>
+        <attnum name="height" unit="m" val="6"/>
+        <attstr name="fov start" val="frontstretch-2"/>
+        <attstr name="fov end" val="turn1-2"/>
+    </section>
+    <!-- Turn2 middle, looking at Turn 2 -->
+    <section name="cam 2">
+        <attstr name="segment" val="turn2-1"/>
+        <attnum name="to right" unit="m" val="-10"/>
+        <attnum name="to start" unit="m" val="20"/>
+        <attnum name="height" unit="m" val="6"/>
+        <attstr name="fov start" val="turn1-2"/>
+        <attstr name="fov end" val="backstretch-1"/>
+    </section>
+    <!-- Turn3 beginning, looking at backstretch & Turn 3 1st part-->
+    <section name="cam 3">
+        <attstr name="segment" val="backstretch-3"/>
+        <attnum name="to right" unit="m" val="22"/>
+        <attnum name="to start" unit="m" val="100"/>
+        <attnum name="height" unit="m" val="4"/>
+        <attstr name="fov start" val="backstretch-1"/>
+        <attstr name="fov end" val="turn3-2"/>
+    </section>
+    <!-- Turn4 middle, looking at Turn 3 2nd part & Turn 4 -->
+    <section name="cam 4">
+        <attstr name="segment" val="turn4-1"/>
+        <attnum name="to right" unit="m" val="-2"/>
+        <attnum name="to start" unit="m" val="20"/>
+        <attnum name="height" unit="m" val="6"/>
+        <attstr name="fov start" val="turn3-2"/>
+        <attstr name="fov end" val="turn4-2"/>
+    </section>
+  </section>
+
+  
+  <section name="Surfaces">
+    &default-surfaces;
+
+    <!-- Asphalt with white border line on the left, used in the turns -->
+    <section name="caddo-asphalt">
+      <attnum name="color R1" val="0.1"/>
+      <attnum name="color G1" val="0.1"/>
+      <attnum name="color B1" val="0.1"/>
+      <attnum name="color R2" val="0.2"/>
+      <attnum name="color G2" val="0.2"/>
+      <attnum name="color B2" val="0.2"/>
+      <attstr name="texture name" val="caddo-asphalt.png"/>
+      <attstr name="texture type" in="discrete, continuous" val="discrete"/>
+      <attnum name="texture size" val="18.0001" unit="m"/>
+      <attnum name="texture mipmap" val="0.0" unit="m"/>
+      <attnum name="friction"           val="1.05"/>
+      <attnum name="rolling resistance" val="0.02"/>
+      <attnum name="roughness" val="0.005"/>
+      <attnum name="roughness wavelength" val="1.0"/>
+    </section>
+
+    <!-- Asphalt with white border line on the left, 2 dashed lines,
+        used in the straights -->
+    <section name="caddo-asphalt-dash">
+      <attnum name="color R1" val="0.1"/>
+      <attnum name="color G1" val="0.1"/>
+      <attnum name="color B1" val="0.1"/>
+      <attnum name="color R2" val="0.2"/>
+      <attnum name="color G2" val="0.2"/>
+      <attnum name="color B2" val="0.2"/>
+      <attstr name="texture name" val="caddo-asphalt-dash.png"/>
+      <attstr name="texture type" in="discrete, continuous" val="discrete"/>
+      <attnum name="texture size" val="18.0001" unit="m"/>
+      <attnum name="texture mipmap" val="0.0" unit="m"/>
+      <attnum name="friction"           val="1.05"/>
+      <attnum name="rolling resistance" val="0.02"/>
+      <attnum name="roughness" val="0.005"/>
+      <attnum name="roughness wavelength" val="1.0"/>
+    </section>
+
+    <!-- Left barrier wall -->
+    <section name="caddo-wall">
+      <attnum name="color R1" val="1.0"/>
+      <attnum name="color G1" val="0.0"/>
+      <attnum name="color B1" val="0.0"/>
+      <attnum name="color R2" val="1.0"/>
+      <attnum name="color G2" val="1.0"/>
+      <attnum name="color B2" val="1.0"/>
+      <attstr name="texture name" val="caddo-wall.png"/>
+      <attstr name="texture type" in="discrete, continuous" val="continuous"/>
+      <attnum name="texture size" val="3.0" unit="m"/>
+      <attnum name="texture mipmap" val="4.0"/>
+      <attnum name="friction" val="0.0"/>
+      <attnum name="roughness" val="0.03"/>
+      <attnum name="roughness wavelength" val="4.0"/>
+      <attnum name="dammage" val="10.0"/>
+    </section>
+
+
+    <!-- right wall & fence -->
+    <section name="caddo-wall-fence">
+      <attnum name="color R1" val="1.0"/>
+      <attnum name="color G1" val="0.0"/>
+      <attnum name="color B1" val="0.0"/>
+      <attnum name="color R2" val="1.0"/>
+      <attnum name="color G2" val="1.0"/>
+      <attnum name="color B2" val="1.0"/>
+      <attstr name="texture name" val="caddo-wall-fence_n.png"/>
+      <attstr name="texture type" in="discrete, continuous" val="continuous"/>
+      <attnum name="texture size" val="3.0" unit="m"/>
+      <attnum name="texture mipmap" val="4.0"/>
+      <attnum name="friction" val="0.0"/>
+      <attnum name="roughness" val="0.03"/>
+      <attnum name="roughness wavelength" val="4.0"/>
+      <attnum name="dammage" val="10.0"/>
+    </section>
+
+    <section name="caddo-grass">
+      <attnum name="color R1" val="0.1"/>
+      <attnum name="color G1" val="0.4"/>
+      <attnum name="color B1" val="0.1"/>
+      <attnum name="color R2" val="0.2"/>
+      <attnum name="color G2" val="0.5"/>
+      <attnum name="color B2" val="0.2"/>
+<!--
+      <attstr name="texture name" val="caddo-grass.png"/>
+-->
+      <attstr name="texture name" val="tr-grass5.png"/>
+      <attstr name="texture type" in="discrete, continuous" val="discrete"/>
+      <attnum name="texture size" val="15.0001" unit="m"/>
+      <attnum name="texture mipmap" val="4.0"/>
+
+      <attnum name="friction"           val="0.55"/>
+      <attnum name="rolling resistance" val="0.08"/>
+
+      <attnum name="roughness" val="0.05"/>
+      <attnum name="roughness wavelength" val="0.5"/>
+    </section>
+
+  </section>
+</params>
+

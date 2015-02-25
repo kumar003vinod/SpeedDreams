@@ -1,0 +1,39 @@
+Track name: Sunshine State Superspeedway
+
+Based on Daytona International Speedway, Daytona Beach, Florida.
+A 2.5 mile, steeply banked, high-speed tri-oval race track, opened in 1959.
+It currently hosts several NASCAR, GrandAm, ARCA & AMA races each year.
+
+Note #1 the pits are included, but Speed Dreams / TORCS has a limitation
+currently so it cannot draw a decent pit building when the pit includes
+a turn. So I added the pit definition but expect some graphical weirdness
+on track. Let's hope Speed Dreams will be able to get rid of this
+age-old limitation soon.
+
+Credits:
+-Haruna Say for the idea of more speedways in Speed Dreams
+
+Thanks to:
+-Speed Dreams team http://speed-dreams.org
+-Google Maps
+-http://en.wikipedia.org/wiki/Daytona_International_Speedway
+-http://www.nascartrack.com/DAYTONA_INTERNATIONAL_SPEEDWAY.html
+-http://www.trackpedia.com/wiki/Daytona_International_Speedway
+-http://www.daytonainternationalspeedway.com/News/Track-Facts.aspx
+-http://www.bookrags.com/research/daytona-500-sjpc-01/
+-http://jayski.com/pages/tracks/daytona.htm
+-http://www.youtube.com/watch?v=Ou6NXvIPJPw
+-http://www.youtube.com/watch?v=8zkI4xPF9f8
+
+License:
+All original XML, PNG, XCF, JPG, AC, ACC, RGB files for this track are:
+Copyright 2010 Gabor Kmetyko <kg.kilo@gmail.com>
+Copyleft: This is a free work, you can copy, distribute,
+and modify it under the terms of the Free Art License
+http://artlibre.org/licence/lal/en/
+
+Textures mostly originated from other Speed Dreams tracks:
+- background from Brondehach
+
+PNG textures compressed by:
+pngcrush -brute -d su-*.png

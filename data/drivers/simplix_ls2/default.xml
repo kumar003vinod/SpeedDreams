@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- 
+    file          : default.xml 
+    created       : 05 Jun 2011
+    last modified : 05 Jun 2011
+    copyright     : (C) 2011 Wolf-Dieter Beelitz
+
+    SIMPLIX LS2 - ALL CARS
+
+    SVN version   : $Id: default.xml 3118 2010-11-10 16:27:35Z wdbee $
+-->
+<!--    This program is free software; you can redistribute it and/or modify  -->
+<!--    it under the terms of the GNU General Public License as published by  -->
+<!--    the Free Software Foundation; either version 2 of the License, or     -->
+<!--    (at your option) any later version.                                   -->
+<!DOCTYPE params SYSTEM "../../../src/libs/tgf/params.dtd">
+<params name="simplix_ls2" type="template" mode="mw">
+	<section name="skilling">
+            <!-- enable skilling -->
+		<attnum name="enable" min="0" max="1" val="0"/>
+	</section>
+	<section name="team">
+            <!-- disable team features (as slipstreaming) -->
+		<attnum name="enable" min="0" max="1" val="0"/>
+	</section>
+</params>

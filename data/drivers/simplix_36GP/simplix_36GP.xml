@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    file                 : simplix_36GP.xml
+    created              : Wed Jan 8 18:31:16 CET 2003
+    copyright            : (C) 2002 Andrew Sumner
+    email                : firechief@bluewin.ch
+    version              : $Id: simplix_36GP.xml 5319 2013-03-15 00:22:00Z kmetykog $
+-->
+
+<!--    This program is free software; you can redistribute it and/or modify  -->
+<!--    it under the terms of the GNU General Public License as published by  -->
+<!--    the Free Software Foundation; either version 2 of the License, or     -->
+<!--    (at your option) any later version.                                   -->
+
+<!DOCTYPE params SYSTEM "../../libs/tgf/params.dtd">
+
+<params name="simplix_36GP" type="robotdef">
+  <section name="Robots">
+    <section name="index">
+
+      <section name="0">
+        <attstr name="name" val="Rudolf Caracciola"></attstr>
+        <attstr name="short name" val="R. Caracciola"></attstr>
+        <attstr name="code name" val="CAR"></attstr>
+        <attstr name="desc" val=""></attstr>
+        <attstr name="team" val="36 Mercedes"></attstr>
+        <attstr name="author" val="Wolf-Dieter Beelitz"></attstr>
+        <attstr name="car name" val="36gp-silber-w25b"></attstr>
+        <attnum name="race number" val="6"></attnum>
+        <attnum name="red" val="0.9"></attnum>
+        <attnum name="green" val="0.9"></attnum>
+        <attnum name="blue" val="0.9"></attnum>
+      </section>
+
+      <section name="1">
+        <attstr name="name" val="Antonio Brivio"></attstr>
+        <attstr name="short name" val="A. Brivio"></attstr>
+        <attstr name="code name" val="BRI"></attstr>
+        <attstr name="desc" val=""></attstr>
+        <attstr name="team" val="36 Scuderia Ferrari"></attstr>
+        <attstr name="author" val="Wolf-Dieter Beelitz"></attstr>
+        <attstr name="car name" val="36gp-milano-12c36"></attstr>
+        <attnum name="race number" val="19"></attnum>
+        <attnum name="red" val="1.0"></attnum>
+        <attnum name="green" val="0.2"></attnum>
+        <attnum name="blue" val="0.2"></attnum>
+      </section>
+
+      <section name="2">
+        <attstr name="name" val="Manfred von Brauchitsch"></attstr>
+        <attstr name="short name" val="M. Brauchitsch"></attstr>
+        <attstr name="code name" val="BRA"></attstr>
+        <attstr name="desc" val=""></attstr>
+        <attstr name="team" val="36 Mercedes"></attstr>
+        <attstr name="author" val="Wolf-Dieter Beelitz"></attstr>
+        <attstr name="car name" val="36gp-silber-w25b"></attstr>
+        <attnum name="race number" val="8"></attnum>
+        <attnum name="red" val="0.8"></attnum>
+        <attnum name="green" val="0.7"></attnum>
+        <attnum name="blue" val="0.2"></attnum>
+      </section>
+
+      <section name="3">
+        <attstr name="name" val="Luigi Fagioli"></attstr>
+        <attstr name="short name" val="L. Fagioli"></attstr>
+        <attstr name="code name" val="FAI"></attstr>
+        <attstr name="desc" val=""></attstr>
+        <attstr name="team" val="36 Mercedes"></attstr>
+        <attstr name="author" val="Wolf-Dieter Beelitz"></attstr>
+        <attstr name="car name" val="36gp-silber-w25b"></attstr>
+        <attnum name="race number" val="7"></attnum>
+        <attnum name="red" val="0.8"></attnum>
+        <attnum name="green" val="0.7"></attnum>
+        <attnum name="blue" val="0.2"></attnum>
+      </section>
+
+      <section name="4">
+        <attstr name="name" val="Count Carlo Trossi"></attstr>
+        <attstr name="short name" val="C. Trossi"></attstr>
+        <attstr name="code name" val="TRO"></attstr>
+        <attstr name="desc" val=""></attstr>
+        <attstr name="team" val="36 Scuderia Torino"></attstr>
+        <attstr name="author" val="Wolf-Dieter Beelitz"></attstr>
+        <attstr name="car name" val="36gp-tridenti-v8ri"></attstr>
+        <attnum name="race number" val="33"></attnum>
+        <attnum name="red" val="1.0"></attnum>
+        <attnum name="green" val="0.5"></attnum>
+        <attnum name="blue" val="0.0"></attnum>
+      </section>
+
+      <section name="5">
+        <attstr name="name" val="Piero Dusio"></attstr>
+        <attstr name="short name" val="P. Dusio"></attstr>
+        <attstr name="code name" val="DUS"></attstr>
+        <attstr name="desc" val=""></attstr>
+        <attstr name="team" val="36 Scuderia Torino"></attstr>
+        <attstr name="author" val="Wolf-Dieter Beelitz"></attstr>
+        <attstr name="car name" val="36gp-tridenti-6c34"></attstr>
+        <attnum name="race number" val="35"></attnum>
+        <attnum name="red" val="1.0"></attnum>
+        <attnum name="green" val="0.5"></attnum>
+        <attnum name="blue" val="0.0"></attnum>
+      </section>
+
+      <section name="6">
+        <attstr name="name" val="Clemente Biondetti"></attstr>
+        <attstr name="short name" val="C. Biondetti"></attstr>
+        <attstr name="code name" val="BIO"></attstr>
+        <attstr name="desc" val=""></attstr>
+        <attstr name="team" val="36 Scuderia Maremmana"></attstr>
+        <attstr name="author" val="Wolf-Dieter Beelitz"></attstr>
+        <attstr name="car name" val="36gp-tridenti-6c34"></attstr>
+        <attnum name="race number" val="57"></attnum>
+        <attnum name="red" val="1.0"></attnum>
+        <attnum name="green" val="0.5"></attnum>
+        <attnum name="blue" val="0.5"></attnum>
+      </section>
+
+      <section name="7">
+        <attstr name="name" val="Pietro Ghersi"></attstr>
+        <attstr name="short name" val="P. Ghersi"></attstr>
+        <attstr name="code name" val="GHE"></attstr>
+        <attstr name="desc" val=""></attstr>
+        <attstr name="team" val="36 Scuderia Maremmana"></attstr>
+        <attstr name="author" val="Wolf-Dieter Beelitz"></attstr>
+        <attstr name="car name" val="36gp-tridenti-6c34"></attstr>
+        <attnum name="race number" val="58"></attnum>
+        <attnum name="red" val="1.0"></attnum>
+        <attnum name="green" val="0.5"></attnum>
+        <attnum name="blue" val="0.5"></attnum>
+      </section>
+
+      <section name="8">
+        <attstr name="name" val="Jean-Pierre Wimille"></attstr>
+        <attstr name="short name" val="J-P. Wimille"></attstr>
+        <attstr name="code name" val="WIM"></attstr>
+        <attstr name="desc" val=""></attstr>
+        <attstr name="team" val="36 Ettore Bugatti"></attstr>
+        <attstr name="author" val="Wolf-Dieter Beelitz"></attstr>
+        <attstr name="car name" val="36gp-ettore-t59"></attstr>
+        <attnum name="race number" val="24"></attnum>
+        <attnum name="red" val="0.4"></attnum>
+        <attnum name="green" val="0.4"></attnum>
+        <attnum name="blue" val="1.0"></attnum>
+      </section>
+
+      <section name="9">
+        <attstr name="name" val="Earl Howe"></attstr>
+        <attstr name="short name" val="E. Howe"></attstr>
+        <attstr name="code name" val="HOW"></attstr>
+        <attstr name="desc" val=""></attstr>
+        <attstr name="team" val="36 Private 5"></attstr>
+        <attstr name="author" val="Wolf-Dieter Beelitz"></attstr>
+        <attstr name="car name" val="36gp-ettore-t59"></attstr>
+        <attnum name="race number" val="44"></attnum>
+        <attnum name="red" val="0.7"></attnum>
+        <attnum name="green" val="0.7"></attnum>
+        <attnum name="blue" val="0.7"></attnum>
+      </section>
+
+      <section name="10">
+        <attstr name="name" val="Hermann Lang"></attstr>
+        <attstr name="short name" val="H. Lang"></attstr>
+        <attstr name="code name" val="LAN"></attstr>
+        <attstr name="desc" val=""></attstr>
+        <attstr name="team" val="36 Mercedes"></attstr>
+        <attstr name="author" val="Wolf-Dieter Beelitz"></attstr>
+        <attstr name="car name" val="36gp-silber-w25b"></attstr>
+        <attnum name="race number" val="10"></attnum>
+        <attnum name="red" val="0.8"></attnum>
+        <attnum name="green" val="0.7"></attnum>
+        <attnum name="blue" val="0.2"></attnum>
+      </section>
+
+
+    </section>
+  </section>
+</params>

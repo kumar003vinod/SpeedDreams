@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- 
+    file          : brondehach.xml 
+    created       : 12 Oct 2010
+    last modified : 02 Nov 2011
+    copyright     : (C) 2010-2011 Wolf-Dieter Beelitz
+
+    SIMPLIX_MP5
+-->
+<!--    This program is free software; you can redistribute it and/or modify  -->
+<!--    it under the terms of the GNU General Public License as published by  -->
+<!--    the Free Software Foundation; either version 2 of the License, or     -->
+<!--    (at your option) any later version.                                   -->
+<!DOCTYPE params SYSTEM "../../../src/libs/tgf/params.dtd">
+<params name="mp5-fmc" type="template" mode="mw">
+
+      <!-- Car parameters >>> -->
+	<section name="Gearbox">
+		<section name="gears">
+			<section name="r">
+				<attnum name="ratio" min="-5" max="-1" val="-2.4"/>
+			</section>
+			<section name="1">
+				<attnum name="ratio" min="0.1" max="9.0" val="2.4"/>
+			</section>
+			<section name="2">
+				<attnum name="ratio" min="0.1" max="9.0" val="1.632"/>
+			</section>
+			<section name="3">
+				<attnum name="ratio" min="0.1" max="9.0" val="1.273"/>
+			</section>
+			<section name="4">
+				<attnum name="ratio" min="0.1" max="9.0" val="1.040"/>
+			</section>
+		</section>
+	</section>
+
+	<section name="Rear Differential">
+		<attstr name="type" in="FREE,LIMITED SLIP" val="LIMITED SLIP"/>
+		<attnum name="ratio" min="0" max="10" val="2.6"/>
+	</section>
+
+	<section name="Brake System">
+		<attnum name="front-rear brake repartition" min="0.45" max="0.99" val="0.65"/>
+		<attnum name="max pressure" unit="kPa" min="5000" max="30000" val="18000"/>
+	</section>
+
+	<section name="Front Right Wheel">
+		<attnum name="ride height" unit="mm" val="55"/>
+		<attnum name="toe" unit="deg" val="-0.1"/>
+		<attnum name="camber" unit="deg" val="0"/>
+	</section>
+
+	<section name="Front Left Wheel">
+		<attnum name="ride height" unit="mm" val="55"/>
+		<attnum name="toe" unit="deg" val="0.1"/>
+		<attnum name="camber" unit="deg" val="0"/>
+	</section>
+
+	<section name="Rear Right Wheel">
+		<attnum name="ride height" unit="mm" val="50"/>
+		<attnum name="toe" unit="deg" val="0"/>
+		<attnum name="camber" unit="deg" val="0"/>
+	</section>
+
+	<section name="Rear Left Wheel">
+		<attnum name="ride height" unit="mm" val="50"/>
+		<attnum name="toe" unit="deg" val="0"/>
+		<attnum name="camber" unit="deg" val="0"/>
+	</section>
+
+	<section name="Front Anti-Roll Bar">
+		<attnum name="spring" unit="kN/m" min="0" max="25" val="8"/>
+	</section>
+
+	<section name="Rear Anti-Roll Bar">
+		<attnum name="spring" unit="N/m" min="0" max="25" val="0"/>
+	</section>
+
+	<section name="Front Right Suspension">
+    <attnum name="spring" unit="kN/m" min="20" max="300" val="35"/>
+    <attnum name="suspension course" unit="m" min="0.02" max="0.1" val="0.1"/>
+    <attnum name="slow bump" unit="kN/m/s" min="0" max="15" val="4.0"/>
+    <attnum name="slow rebound" unit="kN/m/s" min="0" max="30" val="9.0"/>
+    <attnum name="fast bump" unit="kN/m/s" min="0" max="15" val="1.5"/>
+    <attnum name="fast rebound" unit="kN/m/s" min="0" max="30" val="3.0"/>
+	</section>
+
+	<section name="Front Left Suspension">
+    <attnum name="spring" unit="kN/m" min="20" max="300" val="35"/>
+    <attnum name="suspension course" unit="m" min="0.02" max="0.1" val="0.1"/>
+    <attnum name="slow bump" unit="kN/m/s" min="0" max="15" val="4.0"/>
+    <attnum name="slow rebound" unit="kN/m/s" min="0" max="30" val="9.0"/>
+    <attnum name="fast bump" unit="kN/m/s" min="0" max="15" val="1.5"/>
+    <attnum name="fast rebound" unit="kN/m/s" min="0" max="30" val="3.0"/>
+	</section>
+
+	<section name="Rear Right Suspension">
+    <attnum name="spring" unit="kN/m" min="20" max="300" val="30"/>
+    <attnum name="suspension course" unit="m" min="0.02" max="0.1" val="0.1"/>
+    <attnum name="bellcrank" min="0.5" max="2.0" val="1.0"/>
+    <attnum name="slow bump" unit="kN/m/s" min="0" max="15" val="4.0"/>
+    <attnum name="slow rebound" unit="kN/m/s" min="0" max="30" val="9.0"/>
+    <attnum name="fast bump" unit="kN/m/s" min="0" max="15" val="1.5"/>
+    <attnum name="fast rebound" unit="kN/m/s" min="0" max="30" val="3.0"/>
+	</section>
+
+	<section name="Rear Left Suspension">
+    <attnum name="spring" unit="kN/m" min="20" max="300" val="30"/>
+    <attnum name="suspension course" unit="m" min="0.02" max="0.1" val="0.1"/>
+    <attnum name="bellcrank" min="0.5" max="2.0" val="1.0"/>
+    <attnum name="slow bump" unit="kN/m/s" min="0" max="15" val="4.0"/>
+    <attnum name="slow rebound" unit="kN/m/s" min="0" max="30" val="9.0"/>
+    <attnum name="fast bump" unit="kN/m/s" min="0" max="15" val="1.5"/>
+    <attnum name="fast rebound" unit="kN/m/s" min="0" max="30" val="3.0"/>
+	</section>
+      <!-- <<< Car parameters -->
+
+      <!-- Robot parameters >>> -->
+	<section name="simplix private">
+            <!-- Use this parameters to test the car's pitting -->
+		<attnum name="pit test stop" min="0" max="1" val="0"/>
+		<attnum name="qualification" min="0" max="1" val="0"/>
+
+            <!-- Use this parameters to setup the car's fuel strategy -->
+		<attnum name="reserve" unit="m" min="0.0" max="20000.0" val="2000"/>
+		<attnum name="start fuel" min="-1" max="100.0" val="-1"/>
+		<attnum name="fuelper100km" min="1.0" max="100.0" val="60.0"/>
+
+            <!-- Use the parameters below to tune the robots detection
+                 of changes in the track's height -->
+		<attnum name="scale bump" min="0.0" max="2.0" val="0.33"/>
+		<attnum name="scale bump outer" min="0.0" max="2.0" val="0.5"/>
+
+            <!-- Use the parameters below to tune the robots 
+                 detection of the car's limits -->
+		<attnum name="accel out" min="0" max="1" val="1"/>
+		<attnum name="tcl slip" min="1.0" max="10.0" val="1.5"/>
+		<attnum name="lookaheadfactor" min="0.0" max="0.5" val="0.12"/>
+		<attnum name="scale steer" min="0.1" max="2.0" val="1.0"/>
+		<attnum name="brake limit" val="-100.0"/>
+		<attnum name="scale brake" min="0" max="1" val="0.95"/>
+		<attnum name="scale mu" min="0" max="5" val="0.83"/>
+
+            <!-- Use the parameters below to tune the robots 
+                 detection of the car's limits while qualification -->
+		<attnum name="qualy brake" min="0" max="1" val="0.97"/>
+		<attnum name="qualy mu" min="0" max="2" val="0.93"/>
+
+            <!-- Do not change the parameters below 
+                 unless you really know what you are doing -->
+		<attnum name="length margin" min="1.0" max="10.0" val="3.0"/>
+		<attnum name="avoid width" min="0.0" max="3.0" val="0.5"/>
+		<attnum name="scale avoid" min="1.0" max="20.0" val="15.0"/>
+		<attnum name="scale min mu" min="0.1" max="1.0" val="0.8"/>
+		<attnum name="stay together" min="10.0" max="2000.0" val="10"/>
+
+	</section>
+      <!-- <<< Robot parameters -->
+</params>

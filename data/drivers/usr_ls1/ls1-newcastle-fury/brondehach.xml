@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    file                 : viper-gts-r.xml
+    created              : Sat Mar  3 18:46:37 CET 2001
+    copyright            : (C) 2001 by Eric Espié                         
+    email                : Eric.Espie@torcs.org   
+    version              : $Id: default.xml 2917 2010-10-17 19:03:40Z pouillot $                                  
+-->
+
+<!--    This program is free software; you can redistribute it and/or modify  -->
+<!--    it under the terms of the GNU General Public License as published by  -->
+<!--    the Free Software Foundation; either version 2 of the License, or     -->
+<!--    (at your option) any later version.                                   -->
+
+<!DOCTYPE params SYSTEM "../../../../src/libs/tgf/params.dtd">
+
+<params name="Viper GTS-R" type="template">
+	<section name="Front Wing">
+		<attnum name="angle" unit="deg" min="6" max="10" val="10"/>
+	</section>
+
+	<section name="Rear Wing">
+		<attnum name="angle" unit="deg" min="4" max="22" val="22"/>
+	</section>
+
+	<section name="Front Right Wheel">
+		<attnum name="ride height" unit="mm" min="60" max="140" val="80"/>
+		<attnum name="toe" unit="deg" min="-5" max="5" val="-0.3"/>
+		<attnum name="camber" min="-5" max="0" unit="deg" val="-5.0"/>
+	</section>
+
+	<section name="Front Left Wheel">
+		<attnum name="ride height" unit="mm" min="60" max="140" val="80"/>
+		<attnum name="toe" unit="deg" min="-5" max="5" val="0.3"/>
+		<attnum name="camber" min="-5" max="0" unit="deg" val="-5.0"/>
+	</section>
+
+	<section name="Rear Right Wheel">
+		<attnum name="ride height" unit="mm" min="60" max="140" val="80"/>
+		<attnum name="toe" unit="deg" min="-1" max="1" val="0.0"/>
+		<attnum name="camber" min="-4" max="0" unit="deg" val="0.0"/>
+	</section>
+
+	<section name="Rear Left Wheel">
+		<attnum name="ride height" unit="mm" min="60" max="140" val="80"/>
+		<attnum name="toe" unit="deg" min="-1" max="1" val="0.0"/>
+		<attnum name="camber" min="-4" max="0" unit="deg" val="0.0"/>
+	</section>
+
+  <section name="Front Right Suspension">
+    <attnum name="spring" min="100" max="410" unit="kN/m" val="100"/>
+  </section>
+
+  <section name="Front Left Suspension">
+    <attnum name="spring" min="100" max="410" unit="kN/m" val="100"/>
+  </section>
+
+  <section name="Rear Right Suspension">
+    <attnum name="spring" min="90" max="410" unit="kN/m" val="160"/>
+  </section>
+
+  <section name="Rear Left Suspension">
+    <attnum name="spring" min="90" max="410" unit="kN/m" val="160"/>
+  </section>
+
+	<section name="Front Anti-Roll Bar">
+		<attnum name="spring" unit="kN/m" min="0" max="50" val="10"/>
+	</section>
+
+	<section name="Rear Anti-Roll Bar">
+		<attnum name="spring" unit="kN/m" min="0" max="50" val="10"/>
+	</section>
+
+	<section name="private">
+		<attnum name="min corner inverse" min="0" max="2" val="0.0010"/>
+		<attnum name="rough limit" min="0" max="2" val="0.02"/>
+		<attnum name="base speed factor" val="1.10"/>
+		<attnum name="ext margin" min="0" max="2" val="0.5"/>
+		<attnum name="slope factor" min="0.0" max="1.0" val="0.30"/>
+
+		<attnum name="4 bgn" val="330"/>
+		<attnum name="4 end" val="360"/>
+		<attnum name="4 int margin" val="2.2"/>
+
+		<attnum name="3 bgn" val="10"/>
+		<attnum name="3 end" val="140"/>
+		<attnum name="3 ext margin" val="2.5"/>
+
+		<attnum name="2 bgn" val="1000"/>
+		<attnum name="2 end" val="1270"/>
+		<attnum name="2 base speed" val="12"/>
+
+		<attnum name="1 bgn" val="1300"/>
+		<attnum name="1 end" val="1380"/>
+		<attnum name="1 rl left margin" val="2"/>
+
+		<attnum name="0 bgn" val="1430"/>
+		<attnum name="0 end" val="1490"/>
+		<attnum name="0 rl left margin" val="4"/>
+		<attnum name="0 base speed" val="8"/>
+	</section>
+
+</params>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

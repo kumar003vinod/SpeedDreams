@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    file                 : usr.xml
+    created              : Wed Jan 8 18:31:16 CET 2003
+    copyright            : (C) 2002 Xavier Bertaux
+    email                : firechief@bluewin.ch
+    version              : $Id$
+-->
+
+<!--    This program is free software; you can redistribute it and/or modify  -->
+<!--    it under the terms of the GNU General Public License as published by  -->
+<!--    the Free Software Foundation; either version 2 of the License, or     -->
+<!--    (at your option) any later version.                                   -->
+
+<!DOCTYPE params SYSTEM "../../libs/tgf/params.dtd">
+
+<params name="usr_mpa1" type="robotdef">
+  <section name="Robots">
+    <section name="index">
+
+      <section name="1">
+        <attstr name="name" val="Anselme Tiquet"></attstr>
+        <attstr name="short name" val="A. Tiquet"></attstr>
+        <attstr name="code name" val="TIQ"></attstr>
+        <attstr name="desc" val="mpa24_A"></attstr>
+        <attstr name="team" val="USR Team"></attstr>
+        <attstr name="author" val="Xavier Bertaux"></attstr>
+        <attstr name="car name" val="mpa1-ffr"></attstr>
+        <attnum name="race number" val="18"></attnum>
+        <attnum name="red" val="0.9"></attnum>
+        <attnum name="green" val="0.9"></attnum>
+        <attnum name="blue" val="0.9"></attnum>
+        <attstr name="features" val=""></attstr>
+      </section>
+
+      <section name="2">
+        <attstr name="name" val="Lionel Defraine"></attstr>
+        <attstr name="short name" val="L. Defraine"></attstr>
+        <attstr name="code name" val="DEF"></attstr>
+        <attstr name="desc" val="mpa24_B"></attstr>
+        <attstr name="team" val="USR Team"></attstr>
+        <attstr name="author" val="Xavier Bertaux"></attstr>
+        <attstr name="car name" val="mpa1-ffr"></attstr>
+        <attnum name="race number" val="24"></attnum>
+        <attnum name="red" val="0.9"></attnum>
+        <attnum name="green" val="0.9"></attnum>
+        <attnum name="blue" val="0.9"></attnum>
+        <attstr name="features" val=""></attstr>
+      </section>
+
+      <section name="3">
+        <attstr name="name" val="Carlo Foreman"></attstr>
+        <attstr name="short name" val="C. Foreman"></attstr>
+        <attstr name="code name" val="FOR"></attstr>
+        <attstr name="desc" val="mpa2_A"></attstr>
+        <attstr name="team" val="Takasuki Racing"></attstr>
+        <attstr name="author" val="Xavier Bertaux"></attstr>
+        <attstr name="car name" val="mpa1-furia"></attstr>
+        <attnum name="race number" val="12"></attnum>
+        <attnum name="red" val="1.0"></attnum>
+        <attnum name="green" val="0.2"></attnum>
+        <attnum name="blue" val="0.2"></attnum>
+        <attstr name="features" val=""></attstr>
+      </section>
+
+      <section name="4">
+        <attstr name="name" val="Garry Petty"></attstr>
+        <attstr name="short name" val="G. Petty"></attstr>
+        <attstr name="code name" val="PET"></attstr>
+        <attstr name="desc" val="mpa2_B"></attstr>
+        <attstr name="team" val="Takasuki Racing"></attstr>
+        <attstr name="author" val="Xavier Bertaux"></attstr>
+        <attstr name="car name" val="mpa1-furia"></attstr>
+        <attnum name="race number" val="2"></attnum>
+        <attnum name="red" val="1.0"></attnum>
+        <attnum name="green" val="0.2"></attnum>
+        <attnum name="blue" val="0.2"></attnum>
+        <attstr name="features" val=""></attstr>
+      </section>
+
+      <section name="5">
+        <attstr name="name" val="Paul Davenport"></attstr>
+        <attstr name="short name" val="P. Davenport"></attstr>
+        <attstr name="code name" val="DAV"></attstr>
+        <attstr name="desc" val="mpa666_A"></attstr>
+        <attstr name="team" val="Oli's Oil Team"></attstr>
+        <attstr name="author" val="Xavier Bertaux"></attstr>
+        <attstr name="car name" val="mpa1-hartbill-2002"></attstr>
+        <attnum name="race number" val="3"></attnum>
+        <attnum name="red" val="0.8"></attnum>
+        <attnum name="green" val="0.7"></attnum>
+        <attnum name="blue" val="0.2"></attnum>
+        <attstr name="features" val=""></attstr>
+      </section>
+
+      <section name="6">
+        <attstr name="name" val="Leandro Coleman"></attstr>
+        <attstr name="short name" val="L. Coleman"></attstr>
+        <attstr name="code name" val="COL"></attstr>
+        <attstr name="desc" val="mpa666_B"></attstr>
+        <attstr name="team" val="Oli's Oil Team"></attstr>
+        <attstr name="author" val="Xavier Bertaux"></attstr>
+        <attstr name="car name" val="mpa1-hartbill-2002"></attstr>
+        <attnum name="race number" val="666"></attnum>
+        <attnum name="red" val="1.0"></attnum>
+        <attnum name="green" val="0.5"></attnum>
+        <attnum name="blue" val="0.0"></attnum>
+        <attstr name="features" val=""></attstr>
+      </section>
+
+      <section name="7">
+        <attstr name="name" val="Andreas Tomasson"></attstr>
+        <attstr name="short name" val="A. Tomasson"></attstr>
+        <attstr name="code name" val="TOM"></attstr>
+        <attstr name="desc" val="mpa58_A"></attstr>
+        <attstr name="team" val="Bydo Race"></attstr>
+        <attstr name="author" val="Xavier Bertaux"></attstr>
+        <attstr name="car name" val="mpa1-murasama"></attstr>
+        <attnum name="race number" val="20"></attnum>
+        <attnum name="red" val="0.4"></attnum>
+        <attnum name="green" val="0.4"></attnum>
+        <attnum name="blue" val="1.0"></attnum>
+        <attstr name="features" val=""></attstr>
+      </section>
+
+      <section name="8">
+        <attstr name="name" val=" Lorenzo Natale"></attstr>
+        <attstr name="short name" val="L. Natale"></attstr>
+        <attstr name="code name" val="NAT"></attstr>
+        <attstr name="desc" val="mpa58_B"></attstr>
+        <attstr name="team" val="Bydo Race"></attstr>
+        <attstr name="author" val="Xavier Bertaux"></attstr>
+        <attstr name="car name" val="mpa1-murasama"></attstr>
+        <attnum name="race number" val="58"></attnum>
+        <attnum name="red" val="0.7"></attnum>
+        <attnum name="green" val="0.7"></attnum>
+        <attnum name="blue" val="0.7"></attnum>
+        <attstr name="features" val=""></attstr>
+      </section>
+
+      <section name="9">
+        <attstr name="name" val="Marcelo Takeda"></attstr>
+		<attstr name="short name" val="M. Takeda"></attstr>
+        <attstr name="code name" val="TAK"></attstr>
+        <attstr name="desc" val=""></attstr>
+        <attstr name="team" val="Lovely BEAM"></attstr>
+        <attstr name="author" val="Xavier Bertaux"></attstr>
+        <attstr name="car name" val="mpa1-team-lynx"></attstr>
+        <attnum name="race number" val="28"></attnum>
+        <attnum name="red" val="0.7"></attnum>
+        <attnum name="green" val="0.7"></attnum>
+        <attnum name="blue" val="0.7"></attnum>
+        <attstr name="features" val=""></attstr>
+      </section>
+
+      <section name="10">
+        <attstr name="name" val="Richard Ulrich"></attstr>
+		<attstr name="short name" val="R. Ulrich"></attstr>
+        <attstr name="code name" val="ULR"></attstr>
+        <attstr name="desc" val=""></attstr>
+        <attstr name="team" val="Lovely BEAM"></attstr>
+        <attstr name="author" val="Xavier Bertaux"></attstr>
+        <attstr name="car name" val="mpa1-team-lynx"></attstr>
+        <attnum name="race number" val="13"></attnum>
+        <attnum name="red" val="0.7"></attnum>
+        <attnum name="green" val="0.7"></attnum>
+        <attnum name="blue" val="0.7"></attnum>
+        <attstr name="features" val=""></attstr>
+      </section>
+
+    </section>
+  </section>
+</params>

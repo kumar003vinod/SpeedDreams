@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- 
+    file          : default.xml 
+    created       : 25 Dec 2007
+    last modified : 03 May 2011
+    copyright     : (C) 2007-2011 Wolf-Dieter Beelitz
+
+    SIMPLIX - LS1-TORO-RGT
+
+    SVN version   : $Id: default.xml 3546 2011-05-04 17:54:10Z wdbee $
+-->
+<!--    This program is free software; you can redistribute it and/or modify  -->
+<!--    it under the terms of the GNU General Public License as published by  -->
+<!--    the Free Software Foundation; either version 2 of the License, or     -->
+<!--    (at your option) any later version.                                   -->
+<!DOCTYPE params SYSTEM "../../../src/libs/tgf/params.dtd">
+<params name="36gp" type="template" mode="mw">
+      <!-- Robot parameters >>> -->
+	<section name="private">
+		<attnum name="min corner inverse" min="0" max="2" val="0.0001"/>
+		<attnum name="add avoid speed" min="-20" max="20" val="0.0"/>
+		<attnum name="avoid speed factor" min="-20" max="20" val="0.80"/>
+		<attnum name="avoid brake factor" min="-20" max="20" val="0.9"/>
+		<attnum name="exit boost factor" min="-20" max="20" val="1.00"/>
+		<attnum name="avoid exit boost factor" min="-20" max="20" val="1.1"/>
+		<attnum name="brake margin" min="-20" max="20" val="1.8"/>
+		<attnum name="base speed factor" min="0.0" max="50.0" val="1.00"/>
+		<attnum name="base brake factor" min="0.0" max="50.0" val="1.00"/>
+		<attnum name="accel redux factor" min="-20" max="20" val="2.5"/>
+		<attnum name="base speed" min="0.0" max="50.0" val="9.00"/>
+		<attnum name="base brake" min="10.0" max="200.0" val="30.00"/>
+		<attnum name="brake mod" min="0.0" max="1.0" val="0.30"/>
+		<attnum name="steer mod" min="0.0" max="1.0" val="1.00"/>
+		<attnum name="slope factor" min="0.0" max="1.0" val="0.15"/>
+		<attnum name="accel exit" min="0.0" max="10.0" val="1.40"/>
+		<attnum name="turn decel" min="0" max="2" val="0.4"/>
+		<attnum name="curve factor" min="0" max="2" val="0.13"/>
+		<attnum name="accel curve" min="0" max="2" val="1.30"/>
+		<attnum name="brake curve" min="0" max="2" val="1.00"/>
+		<attnum name="accel curve limit" min="0" max="6" val="2.5"/>
+		<attnum name="brake curve limit" min="0" max="6" val="1.1"/>
+		<attnum name="revs change up" min="0" max="2" val="0.83"/>
+		<attnum name="revs change down" min="0" max="2" val="0.63"/>
+		<attnum name="revs change down max" min="0" max="2" val="0.73"/>
+		<attnum name="steer skid" min="0" max="3" val="0.0"/>
+		<attnum name="steer gain" min="0" max="3" val="1.2"/>
+		<attnum name="max steer time" min="0.5" max="10" val="2.0"/>
+		<attnum name="min steer time" min="0.5" max="10" val="1.77"/>
+		<attnum name="int margin" min="0" max="2" val="2.0"/>
+		<attnum name="ext margin" min="0" max="2" val="1.0"/>
+		<attnum name="no team waiting" min="0" max="2" val="1"/>
+		<attnum name="inc factor" min="0" max="5" val="1.05"/>
+		<attnum name="overtake caution" min="-20" max="20" val="0.2"/>
+		<attnum name="abs slip" min="0.5" max="4.5" val="4.0"/>
+		<attnum name="abs range" min="0.5" max="10.5" val="12.0"/>
+		<attnum name="tcl slip" min="0.5" max="8.5" val="6.0"/>
+		<attnum name="tcl range" min="0.5" max="20.0" val="11.0"/>
+		<attnum name="accel mod" min="0" max="1" val="1"/>
+		<attnum name="skid correction" min="0.0" max="8.5" val="0.4"/>
+		<attnum name="bump caution" min="0.0" max="4.0" val="0.4"/>
+		<attnum name="oversteer asr" min="-0.0" max="2.0" val="0.2"/>
+		<attnum name="side margin" min="0.0" max="4.0" val="1.0"/>
+		<attnum name="pit offset" min="-200.0" max="200.0" val="-50"/>
+		<attnum name="steer debug" min="-5" max="5" val="-1.0"/>
+		<attnum name="overtake debug" min="0" max="1" val="0"/>
+		<attnum name="raceline debug" min="0" max="1" val="0"/>
+	</section>
+      <!-- <<< Robot parameters -->
+</params>
+

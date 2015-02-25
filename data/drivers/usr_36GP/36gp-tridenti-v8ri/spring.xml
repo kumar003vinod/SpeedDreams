@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    file                 : viper-gts-r.xml
+    created              : Sat Mar  3 18:46:37 CET 2001
+    copyright            : (C) 2001 by Eric Espié                         
+    email                : Eric.Espie@torcs.org   
+    version              : $Id: default.xml 2917 2010-10-17 19:03:40Z pouillot $                                  
+-->
+
+<!--    This program is free software; you can redistribute it and/or modify  -->
+<!--    it under the terms of the GNU General Public License as published by  -->
+<!--    the Free Software Foundation; either version 2 of the License, or     -->
+<!--    (at your option) any later version.                                   -->
+
+<!DOCTYPE params SYSTEM "../../../../src/libs/tgf/params.dtd">
+
+<params name="Viper GTS-R" type="template">
+	<section name="Front Wing">
+		<attnum name="angle" unit="deg" min="6" max="10" val="10"/>
+	</section>
+
+	<section name="Rear Wing">
+		<attnum name="angle" unit="deg" min="4" max="22" val="21"/>
+	</section>
+
+	<section name="private">
+		<attnum name="int margin" val="1.00"/>
+		<attnum name="ext margin" val="1.20"/>
+
+		<attnum name="0 bgn" val="860"/>
+		<attnum name="0 end" val="900"/>
+		<attnum name="0 int margin" val="2.0"/>
+
+		<attnum name="1 bgn" val="1180"/>
+		<attnum name="1 end" val="1220"/>
+		<attnum name="1 int margin" val="2.0"/>
+
+		<attnum name="2 bgn" val="8480"/>
+		<attnum name="2 end" val="8650"/>
+		<attnum name="2 int margin" val="2.0"/>
+	</section>
+
+</params>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

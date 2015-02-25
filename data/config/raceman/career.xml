@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+    file        : career.xml
+    created     : 2009
+    copyright   : (C) 2009 by Mart Kelder                         
+    web         : www.speed-dreams.org
+    version     : $Id: career.xml 4555 2012-03-04 17:09:14Z pouillot $
+-->
+
+<!--    This program is free software; you can redistribute it and/or modify  -->
+<!--    it under the terms of the GNU General Public License as published by  -->
+<!--    the Free Software Foundation; either version 2 of the License, or     -->
+<!--    (at your option) any later version.                                   -->
+
+<!DOCTYPE params SYSTEM "params.dtd">
+
+
+<params name="Career" version="1.8">
+
+  <section name="Header">
+    <attstr name="name" val="Career"/>
+    <attstr name="type" val="Career"/>
+    <attstr name="subtype" val="Standard"/>
+    <attstr name="description" val="Career"/>
+    <attnum name="priority" val="30"/>
+    <attstr name="menu image" val="data/img/splash-career.jpg"/>
+    <attstr name="run image" val="data/img/splash-run-practice.jpg"/>
+    <attstr name="start image" val="data/img/splash-careerstart.jpg"/>
+    <section name="Subfiles">
+      <attstr name="has subfiles" val="yes"/>
+      <attstr name="first subfile" val="career_supercars.xmls"/>
+    </section>
+
+  </section>
+
+  <section name="Tracks">
+    <attnum name="maximum number" val="6"/>
+  </section>
+
+  <section name="Names">
+    <section name="Last Name">
+      <section name="1">
+        <attstr name="name" val="Adiuvo"/>
+      </section>
+
+      <section name="2">
+        <attstr name="name" val="Adsumo"/>
+      </section>
+
+      <section name="3">
+        <attstr name="name" val="Arguo"/>
+      </section>
+
+      <section name="4">
+        <attstr name="name" val="Cognosco"/>
+      </section>
+
+      <section name="5">
+        <attstr name="name" val="Coniuro"/>
+      </section>
+
+      <section name="6">
+        <attstr name="name" val="Contego"/>
+      </section>
+
+      <section name="7">
+        <attstr name="name" val="Curso"/>
+      </section>
+
+      <section name="8">
+        <attstr name="name" val="Dicto"/>
+      </section>
+
+      <section name="9">
+        <attstr name="name" val="Eruo"/>
+      </section>
+
+      <section name="10">
+        <attstr name="name" val="Frango"/>
+      </section>
+
+      <section name="11">
+        <attstr name="name" val="Impello"/>
+      </section>
+
+      <section name="12">
+        <attstr name="name" val="Inrideo"/>
+      </section>
+
+      <section name="13">
+        <attstr name="name" val="Lacesso"/>
+      </section>
+
+    </section>
+
+    <section name="First Name">
+      <section name="1">
+        <attstr name="name" val="Vultus"/>
+      </section>
+
+      <section name="2">
+        <attstr name="name" val="Via"/>
+      </section>
+
+      <section name="3">
+        <attstr name="name" val="Ubi"/>
+      </section>
+
+      <section name="4">
+        <attstr name="name" val="Tardus"/>
+      </section>
+
+      <section name="5">
+        <attstr name="name" val="Tantus"/>
+      </section>
+
+      <section name="6">
+        <attstr name="name" val="Sonitus"/>
+      </section>
+
+      <section name="7">
+        <attstr name="name" val="Semper"/>
+      </section>
+
+      <section name="8">
+        <attstr name="name" val="Saeta"/>
+      </section>
+
+      <section name="9">
+        <attstr name="name" val="Reliquum"/>
+      </section>
+
+      <section name="10">
+        <attstr name="name" val="Quasi"/>
+      </section>
+
+      <section name="11">
+        <attstr name="name" val="Promissio"/>
+      </section>
+
+      <section name="12">
+        <attstr name="name" val="Priui"/>
+      </section>
+
+      <section name="13">
+        <attstr name="name" val="Porta"/>
+      </section>
+
+      <section name="14">
+        <attstr name="name" val="Perturpis"/>
+      </section>
+
+      <section name="15">
+        <attstr name="name" val="Paratus"/>
+      </section>
+
+      <section name="16">
+        <attstr name="name" val="Omnis"/>
+      </section>
+
+      <section name="17">
+        <attstr name="name" val="Mora"/>
+      </section>
+
+    </section>
+
+  </section>
+
+  <section name="Drivers">
+
+    <attnum name="maximum number" val="50"/>
+    <attstr name="focused module" val="human"/>
+    <attnum name="focused idx" val="1"/>
+    <attstr name="accepted types" val="human"/>
+
+    <section name="1">
+      <attnum name="idx" val="1"/>
+      <attstr name="module" val="human"/>
+    </section>
+
+  </section>
+
+  <section name="Configuration">
+    <attnum name="current configuration" val="2"/>
+    <section name="1">
+      <attstr name="type" val="drivers select"/>
+    </section>
+    <section name="2">
+      <attstr name="type" val="race config"/>
+      <attstr name="race" val="All Sessions"/>
+      <section name="Options">
+        <section name="1">
+          <attstr name="type" val="time of day"/>
+        </section>
+        <section name="2">
+          <attstr name="type" val="cloud cover"/>
+        </section>
+        <section name="3">
+          <attstr name="type" val="rain fall"/>
+        </section>
+      </section>
+    </section>
+
+  </section>
+
+  <section name="RaceConfig">
+    <section name="Cars">
+      <attnum name="maximum number" val="15"/>
+    </section>
+
+  </section>
+
+  <section name="Classes">
+    <section name="1">
+      <attstr name="subfile" val="career_supercars.xmls"/>
+      <attstr name="subfile suffix" val="supercars"/>
+      <attnum name="number of groups" val="2"/>
+      <section name="Tracks">
+        <attnum name="minimum number" val="4"/>
+        <attnum name="maximum number" val="6"/>
+      </section>
+
+    </section>
+
+    <section name="2">
+      <attstr name="subfile" val="career_ls1.xmls"/>
+      <attstr name="subfile suffix" val="ls1"/>
+      <attnum name="number of groups" val="1"/>
+      <section name="Tracks">
+        <attnum name="minimum number" val="4"/>
+        <attnum name="maximum number" val="6"/>
+      </section>
+
+    </section>
+
+  </section>
+
+</params>

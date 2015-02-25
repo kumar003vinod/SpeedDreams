@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    file          : simplix_mpa1.xml
+    created       : 16 May 2009
+    last modified : 16 May 2009
+    copyright     : (C) 2009 Wolf-Dieter Beelitz
+-->
+
+<!--    This program is free software; you can redistribute it and/or modify  -->
+<!--    it under the terms of the GNU General Public License as published by  -->
+<!--    the Free Software Foundation; either version 2 of the License, or     -->
+<!--    (at your option) any later version.                                   -->
+
+<!DOCTYPE params SYSTEM "../../libs/tgf/params.dtd">
+
+<params name="simplix_mpa1" type="robotdef">
+  <section name="Robots">
+    <section name="index">
+
+      <section name="0">
+        <attstr name="name" val="Thibault Gros"></attstr>
+        <attstr name="short name" val="T. Gros"></attstr>
+        <attstr name="code name" val="GRO"></attstr>
+        <attstr name="desc" val="mpa101_A"></attstr>
+        <attstr name="team" val="TRC"></attstr>
+        <attstr name="author" val="Wolf-Dieter Beelitz"></attstr>
+        <attstr name="car name" val="mpa1-hartbill-2002"></attstr>
+        <attnum name="race number" val="1"></attnum>
+        <attnum name="red" val="0.2"></attnum>
+        <attnum name="green" val="0.4"></attnum>
+        <attnum name="blue" val="1.0"></attnum>
+      </section>
+
+      <section name="1">
+        <attstr name="name" val="Christophe Bouchard"></attstr>
+        <attstr name="short name" val="C. Bouchard"></attstr>
+        <attstr name="code name" val="BOU"></attstr>
+        <attstr name="desc" val="mpa101_B"></attstr>
+        <attstr name="team" val="TRC"></attstr>
+        <attstr name="author" val="Wolf-Dieter Beelitz"></attstr>
+        <attstr name="car name" val="mpa1-hartbill-2002"></attstr>
+        <attnum name="race number" val="2"></attnum>
+        <attnum name="red" val="1.0"></attnum>
+        <attnum name="green" val="0.2"></attnum>
+        <attnum name="blue" val="0.0"></attnum>
+      </section>
+
+      <section name="2">
+        <attstr name="name" val="Nicky Savage"></attstr>
+        <attstr name="short name" val="N. Savage"></attstr>
+        <attstr name="code name" val="SAV"></attstr>
+        <attstr name="desc" val="mpa102_A"></attstr>
+        <attstr name="team" val="Leekspin"></attstr>
+        <attstr name="author" val="Wolf-Dieter Beelitz"></attstr>
+        <attstr name="car name" val="mpa1-team-lynx"></attstr>
+        <attnum name="race number" val="20"></attnum>
+        <attnum name="red" val="1.0"></attnum>
+        <attnum name="green" val="0.2"></attnum>
+        <attnum name="blue" val="0.0"></attnum>
+      </section>
+
+      <section name="3">
+        <attstr name="name" val="Blake Talley"></attstr>
+        <attstr name="short name" val="B. Talley"></attstr>
+        <attstr name="code name" val="TAL"></attstr>
+        <attstr name="desc" val="mpa102_B"></attstr>
+        <attstr name="team" val="Leekspin"></attstr>
+        <attstr name="author" val="Wolf-Dieter Beelitz"></attstr>
+        <attstr name="car name" val="mpa1-team-lynx"></attstr>
+        <attnum name="race number" val="21"></attnum>
+        <attnum name="red" val="0.2"></attnum>
+        <attnum name="green" val="0.4"></attnum>
+        <attnum name="blue" val="1.0"></attnum>
+      </section>
+
+      <section name="4">
+        <attstr name="name" val="Andy Lawson"></attstr>
+        <attstr name="short name" val="A. Lawson"></attstr>
+        <attstr name="code name" val="LAW"></attstr>
+        <attstr name="desc" val="American Driver on Monoposto American type 1"></attstr>
+        <attstr name="team" val="Team Simplix"></attstr>
+        <attstr name="author" val="Wolf-Dieter Beelitz"></attstr>
+        <attstr name="car name" val="mpa1-murasama"></attstr>
+        <attnum name="race number" val="32"></attnum>
+        <attnum name="red" val="0.2"></attnum>
+        <attnum name="green" val="0.4"></attnum>
+        <attnum name="blue" val="1.0"></attnum>
+      </section>
+
+      <section name="5">
+        <attstr name="name" val="Luther Conley"></attstr>
+        <attstr name="short name" val="L. Conley"></attstr>
+        <attstr name="code name" val="CON"></attstr>
+        <attstr name="desc" val="Best American driver on Monoposto American type 1"></attstr>
+        <attstr name="team" val="Team Simplix"></attstr>
+        <attstr name="author" val="Wolf-Dieter Beelitz"></attstr>
+        <attstr name="car name" val="mpa1-murasama"></attstr>
+        <attnum name="race number" val="6"></attnum>
+        <attnum name="red" val="0.2"></attnum>
+        <attnum name="green" val="0.4"></attnum>
+        <attnum name="blue" val="1.0"></attnum>
+      </section>
+
+      <section name="6">
+        <attstr name="name" val="Leandro Fuch"></attstr>
+        <attstr name="short name" val="L. Fuch"></attstr>
+        <attstr name="code name" val="FUC"></attstr>
+        <attstr name="desc" val="mpa104_A"></attstr>
+        <attstr name="team" val="FFR"></attstr>
+        <attstr name="author" val="Wolf-Dieter Beelitz"></attstr>
+        <attstr name="car name" val="mpa1-ffr"></attstr>
+        <attnum name="race number" val="6"></attnum>
+        <attnum name="red" val="0.1"></attnum>
+        <attnum name="green" val="0.1"></attnum>
+        <attnum name="blue" val="0.2"></attnum>
+      </section>
+
+      <section name="7">
+        <attstr name="name" val="Javier Lambert"></attstr>
+        <attstr name="short name" val="J. Lambert"></attstr>
+        <attstr name="code name" val="LAM"></attstr>
+        <attstr name="desc" val="mpa104_B"></attstr>
+        <attstr name="team" val="FFR"></attstr>
+        <attstr name="author" val="Wolf-Dieter Beelitz"></attstr>
+        <attstr name="car name" val="mpa1-ffr"></attstr>
+        <attnum name="race number" val="7"></attnum>
+        <attnum name="red" val="0.1"></attnum>
+        <attnum name="green" val="0.1"></attnum>
+        <attnum name="blue" val="0.2"></attnum>
+      </section>
+
+      <section name="8">
+        <attstr name="name" val="Steven De Smet"></attstr>
+        <attstr name="short name" val="S. De Smet"></attstr>
+        <attstr name="code name" val="SME"></attstr>
+        <attstr name="desc" val="mpa105_A"></attstr>
+        <attstr name="team" val="Team Furia"></attstr>
+        <attstr name="author" val="Wolf-Dieter Beelitz"></attstr>
+        <attstr name="car name" val="mpa1-furia"></attstr>
+        <attnum name="race number" val="27"></attnum>
+        <attnum name="red" val="0.4"></attnum>
+        <attnum name="green" val="0.4"></attnum>
+        <attnum name="blue" val="0.6"></attnum>
+      </section>
+
+      <section name="9">
+        <attstr name="name" val="Anthony Lemaire"></attstr>
+        <attstr name="short name" val="A. Lemaire"></attstr>
+        <attstr name="code name" val="LEM"></attstr>
+        <attstr name="desc" val="mpa105_B"></attstr>
+        <attstr name="team" val="Team Furia"></attstr>
+        <attstr name="author" val="Wolf-Dieter Beelitz"></attstr>
+        <attstr name="car name" val="mpa1-furia"></attstr>
+        <attnum name="race number" val="28"></attnum>
+        <attnum name="red" val="0.4"></attnum>
+        <attnum name="green" val="0.4"></attnum>
+        <attnum name="blue" val="0.6"></attnum>
+      </section>
+
+    </section>
+  </section>
+</params>

@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+    file        : career_ls1.xmls
+    created     : 2009
+    copyright   : (C) 2009 by Mart Kelder                         
+    web         : www.speed-dreams.org
+    version     : $Id: career_ls1.xmls 4392 2012-01-10 18:33:39Z pouillot $
+-->
+
+<!--    This program is free software; you can redistribute it and/or modify  -->
+<!--    it under the terms of the GNU General Public License as published by  -->
+<!--    the Free Software Foundation; either version 2 of the License, or     -->
+<!--    (at your option) any later version.                                   -->
+
+<!DOCTYPE params SYSTEM "../libs/tgf/params.dtd">
+
+<params name="LS1 Championship" type="param" mode="mw" version="1.7">
+
+  <section name="Header">
+    <attstr name="name" val="LS1 Championship"/>
+    <attstr name="description" val="LS1 Championship"/>
+    <attnum name="priority" val="30"/>
+    <attstr name="menu image" val="data/img/splash-career.jpg"/>
+    <attstr name="run image" val="data/img/splash-run-practice.jpg"/>
+    <attstr name="start image" val="data/img/splash-career.jpg"/>
+    <section name="Subfiles">
+      <attstr name="is subfile" val="yes" />
+      <attstr name="suffix" val="ls1" />
+      <attstr name="parent file" val="career.xml" />
+      <attstr name="next subfile" val="career_supercars.xmls" />
+      <attstr name="next suffix" val="supercars" />
+      <attstr name="islast" val="no" />
+    </section>
+  </section>
+
+  <section name="Tracks">
+    <attnum name="maximum number" val="20"/>
+
+    <section name="1">
+      <attstr name="name" val="pinabashi"/>
+      <attstr name="category" val="road"/>
+    </section>
+    <section name="2">
+      <attstr name="name" val="chemisay"/>
+      <attstr name="category" val="road"/>
+    </section>
+    <section name="3">
+      <attstr name="name" val="e-track-4"/>
+      <attstr name="category" val="road"/>
+    </section>
+    <section name="4">
+      <attstr name="name" val="espie"/>
+      <attstr name="category" val="circuit"/>
+    </section>
+  </section>
+
+  <section name="Allowed Tracks">
+    <section name="1">
+      <attstr name="name" val="e-track-3"/>
+      <attstr name="category" val="road"/>
+    </section>
+    <section name="2">
+      <attstr name="name" val="ruudskogen"/>
+      <attstr name="category" val="circuit"/>
+    </section>
+    <section name="3">
+      <attstr name="name" val="allondaz"/>
+      <attstr name="category" val="road"/>
+    </section>
+    <section name="4">
+      <attstr name="name" val="ole-road-1"/>
+      <attstr name="category" val="road"/>
+    </section>
+    <section name="5">
+      <attstr name="name" val="karwada"/>
+      <attstr name="category" val="circuit"/>
+    </section>
+    <section name="6">
+      <attstr name="name" val="prenzlau"/>
+      <attstr name="category" val="road"/>
+    </section>
+    <section name="7">
+      <attstr name="name" val="pinabashi"/>
+      <attstr name="category" val="road"/>
+    </section>
+    <section name="8">
+      <attstr name="name" val="street-1"/>
+      <attstr name="category" val="road"/>
+    </section>
+    <section name="9">
+      <attstr name="name" val="espie"/>
+      <attstr name="category" val="circuit"/>
+    </section>
+    <section name="10">
+      <attstr name="name" val="lombaro"/>
+      <attstr name="category" val="road"/>
+    </section>
+  </section>
+
+  <section name="Teams">
+    <section name="1">
+      <attstr name="name" val="Team I" />
+      <attstr name="car name" val="ls1-archer-r9" />
+    </section>
+    <section name="2">
+      <attstr name="name" val="Team II" />
+      <attstr name="car name" val="ls1-newcastle-fury" />
+    </section>
+    <section name="3">
+      <attstr name="name" val="Team III" />
+      <attstr name="car name" val="ls1-taipan-ltsr" />
+    </section>
+    <section name="4">
+      <attstr name="name" val="Team IV" />
+      <attstr name="car name" val="ls1-toro-rgt" />
+    </section>
+    <section name="5">
+      <attstr name="name" val="Team V" />
+      <attstr name="car name" val="ls1-vulture-v6r" />
+    </section>
+    <section name="6">
+      <attstr name="name" val="Team VI" />
+      <attstr name="car name" val="ls1-zentek-z7r" />
+    </section>
+    <section name="7">
+      <attstr name="name" val="Team VII" />
+      <attstr name="car name" val="ls1-archer-r9" />
+    </section>
+    <section name="8">
+      <attstr name="name" val="Team VIII" />
+      <attstr name="car name" val="ls1-newcastle-fury" />
+    </section>
+    <section name="9">
+      <attstr name="name" val="Team IX" />
+      <attstr name="car name" val="ls1-taipan-ltsr" />
+    </section>
+    <section name="10">
+      <attstr name="name" val="Team X" />
+      <attstr name="car name" val="ls1-toro-rgt" />
+    </section>
+    <section name="11">
+      <attstr name="name" val="Team XI" />
+      <attstr name="car name" val="ls1-vulture-v6r" />
+    </section>
+    <section name="12">
+      <attstr name="name" val="Team XIII" />
+      <attstr name="car name" val="ls1-zentek-z7r" />
+    </section>
+    <section name="13">
+      <attstr name="name" val="Team XIII" />
+      <attstr name="car name" val="ls1-archer-r9" />
+    </section>
+    <section name="14">
+      <attstr name="name" val="Team XIV" />
+      <attstr name="car name" val="ls1-newcastle-fury" />
+    </section>
+    <section name="15">
+      <attstr name="name" val="Team XV" />
+      <attstr name="car name" val="ls1-taipan-ltsr" />
+    </section>
+    <section name="16">
+      <attstr name="name" val="Team XVI" />
+      <attstr name="car name" val="ls1-toro-rgt" />
+    </section>
+    <section name="17">
+      <attstr name="name" val="Team XVII" />
+      <attstr name="car name" val="ls1-vulture-v6r" />
+    </section>
+    <section name="18">
+      <attstr name="name" val="Team XVIII" />
+      <attstr name="car name" val="ls1-zentek-z7r" />
+    </section>
+  </section>
+
+  <section name="Races">
+
+    <section name="1">
+      <attstr name="name" val="Practice"/>
+    </section>
+
+    <section name="2">
+      <attstr name="name" val="Qualifications"/>
+    </section>
+
+    <section name="3">
+      <attstr name="name" val="First Race"/>
+    </section>
+
+    <section name="4">
+      <attstr name="name" val="Second Race"/>
+    </section>
+  </section>
+
+  <!-- A fictive race (= session) where to put default parameters values
+       which are common to all the normal races (= sessions)  -->
+  <section name="All Sessions">
+    <attstr name="rain" val="random"/>
+    <attstr name="clouds" val="scarce clouds"/>
+    <attstr name="time of day" val="afternoon"/>
+  </section>
+
+  <section name="Practice">
+    <attnum name="laps" val="10"/>
+    <attstr name="type" val="practice"/>
+    <attstr name="starting order" val="drivers list"/>
+    <attstr name="display mode" val="simulation simulation"/>
+    <attstr name="restart" val="no"/>
+    <attstr name="display results" val="if(humanInGroup,#yes#,#no#)"/>
+    <attstr name="must complete" val="no"/>
+
+    <section name="Starting Grid">
+      <attnum name="rows" val="1.000000"/>
+      <attnum name="distance to start" val="100.000000"/>
+      <attnum name="distance between columns" val="20.000000"/>
+      <attnum name="offset within a column" val="10.000000"/>
+      <attnum name="initial speed" val="0.000000"/>
+      <attnum name="initial height" val="0.200000"/>
+    </section>
+  </section>
+
+  <section name="Qualifications">
+    <attnum name="laps" val="3"/>
+    <attstr name="type" val="qualifications"/>
+    <attstr name="starting order" val="drivers list"/>
+    <attstr name="display mode" val="simulation simulation"/>
+    <attstr name="restart" val="no"/>
+    <attstr name="display results" val="if(humanInGroup,#yes#,#no#)"/>
+    <attstr name="must complete" val="yes"/>
+
+    <section name="Starting Grid">
+      <attnum name="rows" val="1.000000"/>
+      <attnum name="distance to start" val="100.000000"/>
+      <attnum name="distance between columns" val="20.000000"/>
+      <attnum name="offset within a column" val="10.000000"/>
+      <attnum name="initial speed" val="0.000000"/>
+      <attnum name="initial height" val="0.200000"/>
+    </section>
+
+    <section name="Points">
+      <section name="1">
+	<attnum name="points" val="3"/>
+      </section>
+      <section name="2">
+	<attnum name="points" val="2"/>
+      </section>
+      <section name="3">
+	<attnum name="points" val="1"/>
+      </section>
+    </section>
+    <section name="Class Points">
+      <section name="1">
+        <attstr name="suffix" val="supercars" />
+	<attform name="points" val="1/2*(1-(pos-1)/(cars-1 \/ 1))" />
+      </section>
+      <section name="2">
+        <attstr name="suffix" val="ls1" />
+	<attform name="points" val="3/10*(1-(pos-1)/(cars-1 \/ 1))" />
+      </section>
+    </section>
+  </section>
+
+  <section name="First Race">
+    <attnum name="distance" unit="km" val="30"/>
+    <attstr name="type" val="race"/>
+    <attstr name="starting order" val="last race"/>
+    <attstr name="restart" val="no"/>
+    <attnum name="maximum drivers" val="12"/>
+    <attform name="splash menu" val="if(humanInGroup,#yes#,#no#)"/>
+    <attstr name="display mode" val="simulation simulation"/>
+    <attstr name="display results" val="if(humanInGroup,#yes#,#no#)"/>
+
+    <section name="Starting Grid">
+      <attnum name="rows" val="2.000000"/>
+      <attnum name="distance to start" val="25.000000"/>
+      <attnum name="distance between columns" val="30.000000"/>
+      <attnum name="offset within a column" val="10.000000"/>
+      <attnum name="initial speed" val="0.000000"/>
+      <attnum name="initial height" val="0.200000"/>
+    </section>
+
+    <section name="Points">
+      <section name="1">
+	<attnum name="points" val="15"/>
+      </section>
+      <section name="2">
+	<attnum name="points" val="10"/>
+      </section>
+      <section name="3">
+	<attnum name="points" val="8"/>
+      </section>
+      <section name="4">
+	<attnum name="points" val="6"/>
+      </section>
+      <section name="5">
+	<attnum name="points" val="4"/>
+      </section>
+      <section name="6">
+	<attnum name="points" val="3"/>
+      </section>
+      <section name="7">
+	<attnum name="points" val="2"/>
+      </section>
+      <section name="8">
+	<attnum name="points" val="1"/>
+      </section>
+    </section>
+    <section name="Class Points">
+      <section name="1">
+        <attstr name="suffix" val="supercars" />
+	<attform name="points" val="1/2*(1-(pos-1)/(cars-1 \/ 1))" />
+      </section>
+      <section name="2">
+        <attstr name="suffix" val="ls1" />
+	<attform name="points" val="5/10*(1-(pos-1)/(cars-1 \/ 1))" />
+      </section>
+    </section>
+  </section>
+
+  <section name="Second Race">
+    <attnum name="distance" unit="km" val="30"/>
+    <attstr name="type" val="race"/>
+    <attstr name="starting order" val="last race reversed"/>
+    <attstr name="restart" val="no"/>
+    <attnum name="maximum drivers" val="8"/>
+    <attstr name="splash menu" val="if(humanInGroup,#yes#,#no#)"/>
+    <attstr name="display mode" val="simulation simulation"/>
+    <attstr name="display results" val="if(humanInGroup,#yes#,#no#)"/>
+
+    <section name="Starting Grid">
+      <attnum name="rows" val="2.000000"/>
+      <attnum name="distance to start" val="25.000000"/>
+      <attnum name="distance between columns" val="30.000000"/>
+      <attnum name="offset within a column" val="10.000000"/>
+      <attnum name="initial speed" val="0.000000"/>
+      <attnum name="initial height" val="0.200000"/>
+    </section>
+
+    <section name="Points">
+      <section name="1">
+	<attnum name="points" val="15"/>
+      </section>
+      <section name="2">
+	<attnum name="points" val="10"/>
+      </section>
+      <section name="3">
+	<attnum name="points" val="8"/>
+      </section>
+      <section name="4">
+	<attnum name="points" val="6"/>
+      </section>
+      <section name="5">
+	<attnum name="points" val="4"/>
+      </section>
+      <section name="6">
+	<attnum name="points" val="3"/>
+      </section>
+      <section name="7">
+	<attnum name="points" val="2"/>
+      </section>
+      <section name="8">
+	<attnum name="points" val="1"/>
+      </section>
+    </section>
+    <section name="Class Points">
+      <section name="1">
+        <attstr name="suffix" val="supercars" />
+	<attform name="points" val="1/2*(1-(pos-1)/(cars-1 \/ 1))" />
+      </section>
+      <section name="2">
+        <attstr name="suffix" val="ls1" />
+	<attform name="points" val="5/10*(1-(pos-1)/(cars-1 \/ 1))" />
+      </section>
+    </section>
+  </section>
+
+  <section name="Drivers">
+    <attnum name="maximum number" val="50"/>
+    <attstr name="focused module" val="human"/>
+    <attnum name="focused idx" val="1"/>
+
+    <section name="1">
+      <attnum name="idx" val="0"/>
+      <attstr name="module" val="simplix"/>
+      <attnum name="extended" val="1"/>
+      <attstr name="name" val="simplix I"/>
+      <attstr name="car name" val="ls1-archer-r9" />
+    </section>
+
+    <section name="2">
+      <attnum name="idx" val="1"/>
+      <attstr name="module" val="simplix_ls1"/>
+      <attnum name="extended" val="1"/>
+      <attstr name="name" val="simplix II"/>
+      <attstr name="car name" val="ls1-zentek-z7r" />
+    </section>
+
+    <section name="3">
+      <attnum name="idx" val="2"/>
+      <attstr name="module" val="simplix_ls1"/>
+      <attnum name="extended" val="1"/>
+      <attstr name="name" val="simplix III"/>
+      <attstr name="car name" val="ls1-newcastle-fury" />
+    </section>
+
+    <section name="4">
+      <attnum name="idx" val="3"/>
+      <attstr name="module" val="simplix_ls1"/>
+      <attnum name="extended" val="1"/>
+      <attstr name="name" val="simplix IV"/>
+      <attstr name="car name" val="ls1-taipan-ltsr" />
+    </section>
+
+    <section name="5">
+      <attnum name="idx" val="4"/>
+      <attstr name="module" val="simplix_ls1"/>
+      <attnum name="extended" val="1"/>
+      <attstr name="name" val="simplix V"/>
+      <attstr name="car name" val="ls1-toro-rgt" />
+    </section>
+
+    <section name="6">
+      <attnum name="idx" val="5"/>
+      <attstr name="module" val="simplix_ls1"/>
+      <attnum name="extended" val="1"/>
+      <attstr name="name" val="simplix VI"/>
+      <attstr name="car name" val="ls1-vulture-v6r" />
+    </section>
+
+  </section>
+</params>

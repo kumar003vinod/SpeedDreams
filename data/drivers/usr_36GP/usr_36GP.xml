@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    file                 : usr.xml
+    created              : Wed Jan 8 18:31:16 CET 2003
+    copyright            : (C) 2002 Andrew Sumner
+    email                : firechief@bluewin.ch
+    version              : $Id: usr_36GP.xml 5319 2013-03-15 00:22:00Z kmetykog $
+-->
+
+<!--    This program is free software; you can redistribute it and/or modify  -->
+<!--    it under the terms of the GNU General Public License as published by  -->
+<!--    the Free Software Foundation; either version 2 of the License, or     -->
+<!--    (at your option) any later version.                                   -->
+
+<!DOCTYPE params SYSTEM "../../libs/tgf/params.dtd">
+
+<params name="36GP" type="robotdef">
+  <section name="Robots">
+    <section name="index">
+
+      <section name="1">
+        <attstr name="name" val="Tazio Nuvolari"></attstr>
+        <attstr name="short name" val="T. Nuvolari"></attstr>
+        <attstr name="code name" val="NUV"></attstr>
+        <attstr name="desc" val="16/11/1892–11/08/1953, Italian racecar driver. According to Ferdinand Porsche: The greatest driver of the past, the present, and the future. He first raced in motorcycling and from 1931 turned to cars. He was part of Alfa Corse, then Scuderia Ferrari, Maserati and Auto Union, winning an extraordinary number of races."></attstr>
+        <attstr name="team" val="36 Scuderia Ferrari"></attstr>
+        <attstr name="author" val="Andrew Sumner"></attstr>
+        <attstr name="car name" val="36gp-milano-12c36"></attstr>
+        <attnum name="race number" val="18"></attnum>
+        <attnum name="red" val="1.0"></attnum>
+        <attnum name="green" val="0.2"></attnum>
+        <attnum name="blue" val="0.2"></attnum>
+        <attstr name="features" val=""></attstr>
+      </section>
+
+      <section name="2">
+        <attstr name="name" val="Carlo Pintacuda"></attstr>
+        <attstr name="short name" val="C. Pintacuda"></attstr>
+        <attstr name="code name" val="PIN"></attstr>
+        <attstr name="desc" val="18/09/1900–08/03/1971, a motor-racing driver from Italy. He won the 1934 Giro di Italia (6000km) in a Lancia, and the Mille Miglie in 1935 and 1937 in an Alfa Romeo."></attstr>
+        <attstr name="team" val="36 Scuderia Ferrari"></attstr>
+        <attstr name="author" val="Andrew Sumner"></attstr>
+        <attstr name="car name" val="36gp-milano-12c36"></attstr>
+        <attnum name="race number" val="20"></attnum>
+        <attnum name="red" val="1.0"></attnum>
+        <attnum name="green" val="0.2"></attnum>
+        <attnum name="blue" val="0.2"></attnum>
+        <attstr name="features" val=""></attstr>
+      </section>
+
+      <section name="3">
+        <attstr name="name" val="Bernd Rosemeyer"></attstr>
+        <attstr name="short name" val="B. Rosemeyer"></attstr>
+        <attstr name="code name" val="ROS"></attstr>
+        <attstr name="desc" val="14/10/1909–28/01/1938, German racing driver. Racing for Auto Union, he won in ADAC Eifelrennen, Donington GP, Coppa Acerbo, Brno, German GP and Italian GP. He was killed during a land speed record of 429.6 km/h on the Autobahn between Frankfurt and Darmstadt."></attstr>
+        <attstr name="team" val="36 Auto Union"></attstr>
+        <attstr name="author" val="Andrew Sumner"></attstr>
+        <attstr name="car name" val="36gp-motorunion-typec"></attstr>
+        <attnum name="race number" val="11"></attnum>
+        <attnum name="red" val="0.8"></attnum>
+        <attnum name="green" val="0.7"></attnum>
+        <attnum name="blue" val="0.2"></attnum>
+        <attstr name="features" val=""></attstr>
+      </section>
+
+      <section name="4">
+        <attstr name="name" val="Richard Seaman"></attstr>
+        <attstr name="short name" val="R. Seaman"></attstr>
+        <attstr name="code name" val="SEA"></attstr>
+        <attstr name="desc" val="04/02/1913–25/06/1939, he was one of the greatest pre-war Grand Prix drivers from Britain, driving an MG and a MB W125. He won in Bremgarten, Coppa Acerbo, Czech GP, and the 1938 German GP. He died at the 1939 Belgian GP at Spa, following a crash in lap 22."></attstr>
+        <attstr name="team" val="36 Scuderia Torino"></attstr>
+        <attstr name="author" val="Andrew Sumner"></attstr>
+        <attstr name="car name" val="36gp-tridenti-6c34"></attstr>
+        <attnum name="race number" val="34"></attnum>
+        <attnum name="red" val="1.0"></attnum>
+        <attnum name="green" val="0.5"></attnum>
+        <attnum name="blue" val="0.0"></attnum>
+        <attstr name="features" val=""></attstr>
+      </section>
+
+      <section name="5">
+        <attstr name="name" val="Robert Benoist"></attstr>
+        <attstr name="short name" val="R. Benoist"></attstr>
+        <attstr name="code name" val="BEN"></attstr>
+        <attstr name="desc" val="20/03/1895–09/09/1944, French GP driver and war hero. Racing Delage, Bugatti, Alfa, he won the French, Spanish, Italian and British GP, Spa 24h and the 24h of Le Mans, too. In WWII he served as a SOE secret agent helping the French Resistance."></attstr>
+        <attstr name="team" val="36 Ettore Bugatti"></attstr>
+        <attstr name="author" val="Andrew Sumner"></attstr>
+        <attstr name="car name" val="36gp-ettore-t59"></attstr>
+        <attnum name="race number" val="25"></attnum>
+        <attnum name="red" val="0.4"></attnum>
+        <attnum name="green" val="0.4"></attnum>
+        <attnum name="blue" val="1.0"></attnum>
+        <attstr name="features" val=""></attstr>
+      </section>
+
+      <section name="6">
+        <attstr name="name" val="Philippe Etancelin"></attstr>
+        <attstr name="short name" val="P. Etancelin"></attstr>
+        <attstr name="code name" val="ETA"></attstr>
+        <attstr name="desc" val="28/12/1896 –13/10/1981, a French Grand Prix motor racing driver. Nicknamed Phi Phi, he raced in Bugatti, Alfa, Maserati and Talbot, with major wins in Algeria, French GP, Dieppe, Pau and the 24h of Le Mans."></attstr>
+        <attstr name="team" val="36 Private 1"></attstr>
+        <attstr name="author" val="Andrew Sumner"></attstr>
+        <attstr name="car name" val="36gp-tridenti-v8ri"></attstr>
+        <attnum name="race number" val="40"></attnum>
+        <attnum name="red" val="0.7"></attnum>
+        <attnum name="green" val="0.7"></attnum>
+        <attnum name="blue" val="0.7"></attnum>
+        <attstr name="features" val=""></attstr>
+      </section>
+
+      <section name="7">
+        <attstr name="name" val="Raymond Sommer"></attstr>
+        <attstr name="short name" val="R. Sommer"></attstr>
+        <attstr name="code name" val="SOM"></attstr>
+        <attstr name="desc" val="31/08/1906–10/09/1950, a French GP racing driver. He preferred private teams, driving Ferraris, Talbots and Alfas. He died racing a Cooper in Cadours. Major wins: French GP, Spa 24h, Turin GP and Le Mans 24h in 1932 and 33."></attstr>
+        <attstr name="team" val="36 Private 2"></attstr>
+        <attstr name="author" val="Andrew Sumner"></attstr>
+        <attstr name="car name" val="36gp-milano-tipop3"></attstr>
+        <attnum name="race number" val="29"></attnum>
+        <attnum name="red" val="0.7"></attnum>
+        <attnum name="green" val="0.7"></attnum>
+        <attnum name="blue" val="0.7"></attnum>
+        <attstr name="features" val=""></attstr>
+      </section>
+
+      <section name="8">
+        <attstr name="name" val="Hans Ruesch"></attstr>
+        <attstr name="short name" val="H. Ruesch"></attstr>
+        <attstr name="code name" val="RUE"></attstr>
+        <attstr name="desc" val="17/05/1913–27/08/2007, Swiss racing driver and novelist. During the 1930s, he drove Alfa Romeo and Maserati cars, competed in more than 100 races in Europe and South Africa, winning 27 races."></attstr>
+        <attstr name="team" val="36 Private 3"></attstr>
+        <attstr name="author" val="Andrew Sumner"></attstr>
+        <attstr name="car name" val="36gp-tridenti-6c34"></attstr>
+        <attnum name="race number" val="48"></attnum>
+        <attnum name="red" val="0.7"></attnum>
+        <attnum name="green" val="0.7"></attnum>
+        <attnum name="blue" val="0.7"></attnum>
+        <attstr name="features" val=""></attstr>
+      </section>
+
+      <section name="9">
+        <attstr name="name" val="Achille Varzi"></attstr>
+        <attstr name="short name" val="A. Varzi"></attstr>
+        <attstr name="code name" val="VAR"></attstr>
+        <attstr name="desc" val="08/08/1904–01/07/1948, Italian Grand Prix driver, raced for Bugatti, Alfa and Auto Union. He died racing in Bremgarten during a practice. Collected 33 victories, including Avusrennen, Coppa Acerbo, French GP, Monza, Mille Miglia, Monaco, Targa Florio, San Remo, Tripoli and Turin."></attstr>
+        <attstr name="team" val="36 Auto Union"></attstr>
+        <attstr name="author" val="Andrew Sumner"></attstr>
+        <attstr name="car name" val="36gp-motorunion-typec"></attstr>
+        <attnum name="race number" val="12"></attnum>
+        <attnum name="red" val="0.8"></attnum>
+        <attnum name="green" val="0.7"></attnum>
+        <attnum name="blue" val="0.2"></attnum>
+        <attstr name="features" val=""></attstr>
+      </section>
+
+      <section name="10">
+        <attstr name="name" val="Hans Stuck"></attstr>
+        <attstr name="short name" val="H. Stuck"></attstr>
+        <attstr name="code name" val="STU"></attstr>
+        <attstr name="desc" val="27/12/1900–09/02/1978, German motor racing driver. Many successes in Grand Prix motor racing for Auto Union in the early 1930s, mostly known for his domination of hillclimbing, which earned him the nickname Bergkönig or King of the Mountains."></attstr>
+        <attstr name="team" val="36 Auto Union"></attstr>
+        <attstr name="author" val="Andrew Sumner"></attstr>
+        <attstr name="car name" val="36gp-motorunion-typec"></attstr>
+        <attnum name="race number" val="13"></attnum>
+        <attnum name="red" val="0.8"></attnum>
+        <attnum name="green" val="0.7"></attnum>
+        <attnum name="blue" val="0.2"></attnum>
+        <attstr name="features" val=""></attstr>
+      </section>
+
+      <section name="11">
+        <attstr name="name" val="Ernst von Delius"></attstr>
+        <attstr name="short name" val="E. Delius"></attstr>
+        <attstr name="code name" val="DEL"></attstr>
+        <attstr name="desc" val="29/03/1912–26/07/1937, racing driver from Germany. Died at the age of 25 years old at the Nürburgring Circuit during the 1937 German Grand Prix, having suffered a fatal collision with Richard Seaman."></attstr>
+        <attstr name="team" val="36 Auto Union"></attstr>
+        <attstr name="author" val="Andrew Sumner"></attstr>
+        <attstr name="car name" val="36gp-motorunion-typec"></attstr>
+        <attnum name="race number" val="14"></attnum>
+        <attnum name="red" val="0.8"></attnum>
+        <attnum name="green" val="0.7"></attnum>
+        <attnum name="blue" val="0.2"></attnum>
+        <attstr name="features" val=""></attstr>
+      </section>
+
+      <section name="12">
+        <attstr name="name" val="Rene Dreyfus"></attstr>
+        <attstr name="short name" val="R. Dreyfus"></attstr>
+        <attstr name="code name" val="DRE"></attstr>
+        <attstr name="desc" val="06/05/1905–16/08/1993, French national hero who raced for 14 years, earning 36 wins driving Maseratis, Ferraris, Delahayes, and Bugattis. Major victories in Monaco, Florence, Rheims, Belgium, Cork, Dieppe, Pau and Tripoli."></attstr>
+        <attstr name="team" val="36 Scuderia Ferrari"></attstr>
+        <attstr name="author" val="Andrew Sumner"></attstr>
+        <attstr name="car name" val="36gp-milano-12c36"></attstr>
+        <attnum name="race number" val="21"></attnum>
+        <attnum name="red" val="1.0"></attnum>
+        <attnum name="green" val="0.2"></attnum>
+        <attnum name="blue" val="0.2"></attnum>
+        <attstr name="features" val=""></attstr>
+      </section>
+
+    </section>
+  </section>
+</params>

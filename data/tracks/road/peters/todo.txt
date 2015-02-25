@@ -1,0 +1,17 @@
+TODO
+
+v0.5
+- smoothen terrain
+v0.6
+- add stadiums
+- add trees
+v0.7
+- add buildings
+v0.8
+- add special objects (bridges)
+- add ads
+- add shadows
+v0.9
+- add raceline
+v1.0
+- Release

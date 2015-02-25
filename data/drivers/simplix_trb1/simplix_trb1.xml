@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    file          : simplix_trb1.xml
+    created       : 07 Mar 2008
+    last modified : 28 May 2011
+    copyright     : (C) 2008-2011 Wolf-Dieter Beelitz
+-->
+
+<!--    This program is free software; you can redistribute it and/or modify  -->
+<!--    it under the terms of the GNU General Public License as published by  -->
+<!--    the Free Software Foundation; either version 2 of the License, or     -->
+<!--    (at your option) any later version.                                   -->
+
+<!DOCTYPE params SYSTEM "../../libs/tgf/params.dtd">
+
+<params name="simplix_trb1" type="robotdef">
+  <section name="Robots">
+    <section name="index">
+
+      <section name="0">
+        <attstr name="name" val="E. Espie"></attstr>
+        <attstr name="short name" val="E. Espie"></attstr>
+        <attstr name="code name" val="ESP"></attstr>
+        <attstr name="desc" val="Thanks for the TORCS game!"></attstr>
+        <attstr name="team" val="simplix_trb1c1"></attstr>
+        <attstr name="author" val="Wolf-Dieter Beelitz"></attstr>
+        <attstr name="car name" val="trb1-cavallo-360rb"></attstr>
+        <attnum name="race number" val="41"></attnum>
+        <attnum name="red" val="1.0"></attnum>
+        <attnum name="green" val="0.3"></attnum>
+        <attnum name="blue" val="0.3"></attnum>
+        <attstr name="features" val="wet track"></attstr>
+      </section>
+
+      <section name="1">
+        <attstr name="name" val="C. Guionneau"></attstr>
+        <attstr name="short name" val="C. Guionneau"></attstr>
+        <attstr name="code name" val="GUI"></attstr>
+        <attstr name="desc" val="Thanks for the TORCS game!"></attstr>
+        <attstr name="team" val="simplix_trb1c1"></attstr>
+        <attstr name="author" val="Wolf-Dieter Beelitz"></attstr>
+        <attstr name="car name" val="trb1-cavallo-360rb"></attstr>
+        <attnum name="race number" val="42"></attnum>
+        <attnum name="red" val="1.0"></attnum>
+        <attnum name="green" val="0.3"></attnum>
+        <attnum name="blue" val="0.3"></attnum>
+        <attstr name="features" val="wet track"></attstr>
+      </section>
+
+      <section name="2">
+        <attstr name="name" val="D. Schellhammer"></attstr>
+        <attstr name="short name" val="D. Schellhammer"></attstr>
+        <attstr name="code name" val="SCH"></attstr>
+        <attstr name="desc" val="Thanks for all the help while make the wdbee robot driv at Linux!"></attstr>
+        <attstr name="team" val="simplix_trb1c2"></attstr>
+        <attstr name="author" val="Wolf-Dieter Beelitz"></attstr>
+        <attstr name="car name" val="trb1-boxer-trbrs"></attstr>
+        <attnum name="race number" val="43"></attnum>
+        <attnum name="red" val="1.0"></attnum>
+        <attnum name="green" val="0.3"></attnum>
+        <attnum name="blue" val="0.3"></attnum>
+        <attstr name="features" val="wet track"></attstr>
+      </section>
+
+      <section name="3">
+        <attstr name="name" val="J. Isham"></attstr>
+        <attstr name="short name" val="J. Isham"></attstr>
+        <attstr name="code name" val="ISH"></attstr>
+        <attstr name="desc" val="Thanks for using my simplix for races!"></attstr>
+        <attstr name="team" val="simplix_trb1c2"></attstr>
+        <attstr name="author" val="Wolf-Dieter Beelitz"></attstr>
+        <attstr name="car name" val="trb1-boxer-trbrs"></attstr>
+        <attnum name="race number" val="44"></attnum>
+        <attnum name="red" val="1.0"></attnum>
+        <attnum name="green" val="0.3"></attnum>
+        <attnum name="blue" val="0.3"></attnum>
+        <attstr name="features" val="wet track"></attstr>
+      </section>
+
+      <section name="4">
+        <attstr name="name" val="S. Player"></attstr>
+        <attstr name="short name" val="S. Player"></attstr>
+        <attstr name="code name" val="SPL"></attstr>
+        <attstr name="desc" val="Thanks for the nice races!"></attstr>
+        <attstr name="team" val="simplix_trb1c3"></attstr>
+        <attstr name="author" val="Wolf-Dieter Beelitz"></attstr>
+        <attstr name="car name" val="trb1-spirit-rb1lt"></attstr>
+        <attnum name="race number" val="45"></attnum>
+        <attnum name="red" val="1.0"></attnum>
+        <attnum name="green" val="0.3"></attnum>
+        <attnum name="blue" val="0.3"></attnum>
+        <attstr name="features" val="wet track"></attstr>
+      </section>
+
+      <section name="5">
+        <attstr name="name" val="D. Loiacono"></attstr>
+        <attstr name="short name" val="D. Loiacono"></attstr>
+        <attstr name="code name" val="LOI"></attstr>
+        <attstr name="desc" val="Thanks for using by simpliax for racers!"></attstr>
+        <attstr name="team" val="simplix_trb1c3"></attstr>
+        <attstr name="author" val="Wolf-Dieter Beelitz"></attstr>
+        <attstr name="car name" val="trb1-spirit-rb1lt"></attstr>
+        <attnum name="race number" val="46"></attnum>
+        <attnum name="red" val="1.0"></attnum>
+        <attnum name="green" val="0.3"></attnum>
+        <attnum name="blue" val="0.3"></attnum>
+        <attstr name="features" val="wet track"></attstr>
+      </section>
+
+      <section name="6">
+        <attstr name="name" val="G. Kmetyko"></attstr>
+        <attstr name="short name" val="G. Kmetyko"></attstr>
+        <attstr name="code name" val="KME"></attstr>
+        <attstr name="desc" val="Thanks for the nice races!"></attstr>
+        <attstr name="team" val="simplix_trb1c4"></attstr>
+        <attstr name="author" val="Wolf-Dieter Beelitz"></attstr>
+        <attstr name="car name" val="trb1-taipan-rb1"></attstr>
+        <attnum name="race number" val="47"></attnum>
+        <attnum name="red" val="1.0"></attnum>
+        <attnum name="green" val="0.3"></attnum>
+        <attnum name="blue" val="0.3"></attnum>
+        <attstr name="features" val="wet track"></attstr>
+      </section>
+
+      <section name="7">
+        <attstr name="name" val="J. Stanley"></attstr>
+        <attstr name="short name" val="J. Stanley"></attstr>
+        <attstr name="code name" val="STA"></attstr>
+        <attstr name="desc" val="Thanks for the nice races!"></attstr>
+        <attstr name="team" val="simplix_trb1c4"></attstr>
+        <attstr name="author" val="Wolf-Dieter Beelitz"></attstr>
+        <attstr name="car name" val="trb1-taipan-rb1"></attstr>
+        <attnum name="race number" val="48"></attnum>
+        <attnum name="red" val="1.0"></attnum>
+        <attnum name="green" val="0.3"></attnum>
+        <attnum name="blue" val="0.3"></attnum>
+        <attstr name="features" val="wet track"></attstr>
+      </section>
+
+      <section name="8">
+        <attstr name="name" val="B. Wymann"></attstr>
+        <attstr name="short name" val="B. Wymann"></attstr>
+        <attstr name="code name" val="WYM"></attstr>
+        <attstr name="desc" val="Thanks for all the help with TORCS!"></attstr>
+        <attstr name="team" val="simplix_trb1c5"></attstr>
+        <attstr name="author" val="Wolf-Dieter Beelitz"></attstr>
+        <attstr name="car name" val="trb1-silber-rblk"></attstr>
+        <attnum name="race number" val="49"></attnum>
+        <attnum name="red" val="1.0"></attnum>
+        <attnum name="green" val="0.3"></attnum>
+        <attnum name="blue" val="0.3"></attnum>
+        <attstr name="features" val="wet track"></attstr>
+      </section>
+
+      <section name="9">
+        <attstr name="name" val="C. Dimitrakakis"></attstr>
+        <attstr name="short name" val="C. Dimitrakakis"></attstr>
+        <attstr name="code name" val="DIM"></attstr>
+        <attstr name="desc" val="Thanks for all the help with TORCS!"></attstr>
+        <attstr name="team" val="simplix_trb1c5"></attstr>
+        <attstr name="author" val="Wolf-Dieter Beelitz"></attstr>
+        <attstr name="car name" val="trb1-silber-rblk"></attstr>
+        <attnum name="race number" val="50"></attnum>
+        <attnum name="red" val="1.0"></attnum>
+        <attnum name="green" val="0.3"></attnum>
+        <attnum name="blue" val="0.3"></attnum>
+        <attstr name="features" val="wet track"></attstr>
+      </section>
+
+      <section name="10">
+        <attstr name="name" val="W. Beelitz"></attstr>
+        <attstr name="short name" val="W. Beelitz"></attstr>
+        <attstr name="code name" val="BEZ"></attstr>
+        <attstr name="desc" val="Here we go!"></attstr>
+        <attstr name="team" val="simplix_trb1c6"></attstr>
+        <attstr name="author" val="Wolf-Dieter Beelitz"></attstr>
+        <attstr name="car name" val="trb1-sector-rb1"></attstr>
+        <attnum name="race number" val="51"></attnum>
+        <attnum name="red" val="1.0"></attnum>
+        <attnum name="green" val="0.3"></attnum>
+        <attnum name="blue" val="0.3"></attnum>
+        <attstr name="features" val="wet track"></attstr>
+      </section>
+
+      <section name="11">
+        <attstr name="name" val="J. Schuessler"></attstr>
+        <attstr name="short name" val="J. Schuessler"></attstr>
+        <attstr name="code name" val="JSC"></attstr>
+        <attstr name="desc" val="Thanks for all the help with testing may robots!"></attstr>
+        <attstr name="team" val="simplix_trb1c6"></attstr>
+        <attstr name="author" val="Wolf-Dieter Beelitz"></attstr>
+        <attstr name="car name" val="trb1-sector-rb1"></attstr>
+        <attnum name="race number" val="52"></attnum>
+        <attnum name="red" val="1.0"></attnum>
+        <attnum name="green" val="0.3"></attnum>
+        <attnum name="blue" val="0.3"></attnum>
+        <attstr name="features" val="wet track"></attstr>
+      </section>
+
+      <section name="12">
+        <attstr name="name" val="A. Sumner"></attstr>
+        <attstr name="short name" val="A. Sumner"></attstr>
+        <attstr name="code name" val="SUM"></attstr>
+        <attstr name="desc" val="Thanks for beeing a challenging opponent!"></attstr>
+        <attstr name="team" val="simplix_trb1c7"></attstr>
+        <attstr name="author" val="Wolf-Dieter Beelitz"></attstr>
+        <attstr name="car name" val="trb1-zaxxon-rb"></attstr>
+        <attnum name="race number" val="53"></attnum>
+        <attnum name="red" val="1.0"></attnum>
+        <attnum name="green" val="0.3"></attnum>
+        <attnum name="blue" val="0.3"></attnum>
+        <attstr name="features" val="wet track"></attstr>
+      </section>
+
+      <section name="13">
+        <attstr name="name" val="M. Martinez"></attstr>
+        <attstr name="short name" val="M. Martinez"></attstr>
+        <attstr name="code name" val="MMA"></attstr>
+        <attstr name="desc" val="Thanks for the nice races!"></attstr>
+        <attstr name="team" val="simplix_trb1c7"></attstr>
+        <attstr name="author" val="Wolf-Dieter Beelitz"></attstr>
+        <attstr name="car name" val="trb1-zaxxon-rb"></attstr>
+        <attnum name="race number" val="54"></attnum>
+        <attnum name="red" val="1.0"></attnum>
+        <attnum name="green" val="0.3"></attnum>
+        <attnum name="blue" val="0.3"></attnum>
+        <attstr name="features" val="wet track"></attstr>
+      </section>
+
+      <section name="14">
+        <attstr name="name" val="T. Foden"></attstr>
+        <attstr name="short name" val="T. Foden"></attstr>
+        <attstr name="code name" val="FOD"></attstr>
+        <attstr name="desc" val="Thanks for the wonderfull mouse robot!"></attstr>
+        <attstr name="team" val="simplix_trb1c8"></attstr>
+        <attstr name="author" val="Wolf-Dieter Beelitz"></attstr>
+        <attstr name="car name" val="trb1-vieringe-5rb"></attstr>
+        <attnum name="race number" val="54"></attnum>
+        <attnum name="red" val="1.0"></attnum>
+        <attnum name="green" val="0.3"></attnum>
+        <attnum name="blue" val="0.3"></attnum>
+        <attstr name="features" val="wet track"></attstr>
+      </section>
+
+      <section name="15">
+        <attstr name="name" val="S. ChonChon"></attstr>
+        <attstr name="short name" val="S. ChonChon"></attstr>
+        <attstr name="code name" val="CHO"></attstr>
+        <attstr name="desc" val="Thanks for the skins used as base for my wdbee robot!"></attstr>
+        <attstr name="team" val="simplix_trb1c8"></attstr>
+        <attstr name="author" val="Wolf-Dieter Beelitz"></attstr>
+        <attstr name="car name" val="trb1-vieringe-5rb"></attstr>
+        <attnum name="race number" val="54"></attnum>
+        <attnum name="red" val="1.0"></attnum>
+        <attnum name="green" val="0.3"></attnum>
+        <attnum name="blue" val="0.3"></attnum>
+        <attstr name="features" val="wet track"></attstr>
+      </section>
+
+    </section>
+  </section>
+</params>

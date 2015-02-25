@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    file                 : viper-gts-r.xml
+    created              : Sat Mar  3 18:46:37 CET 2001
+    copyright            : (C) 2001 by Eric Espié                         
+    email                : Eric.Espie@torcs.org   
+    version              : $Id: default.xml 2917 2010-10-17 19:03:40Z pouillot $                                  
+-->
+
+<!--    This program is free software; you can redistribute it and/or modify  -->
+<!--    it under the terms of the GNU General Public License as published by  -->
+<!--    the Free Software Foundation; either version 2 of the License, or     -->
+<!--    (at your option) any later version.                                   -->
+
+<!DOCTYPE params SYSTEM "../../../../src/libs/tgf/params.dtd">
+
+<params name="Viper GTS-R" type="template">
+	<section name="private">
+		<attnum name="base speed factor" val="0.9"/>
+		<attnum name="int margin" min="0" max="2" val="0.8"/>
+		<attnum name="ext margin" min="0" max="2" val="0.6"/>
+		<attnum name="offtrack allowed" val="0.0"/>
+		<attnum name="steer debug" val="1.0"/>
+
+		<attnum name="0 bgn" val="280"/>
+		<attnum name="0 end" val="310"/>
+		<attnum name="0 int margin" val="1.2"/>
+
+		<attnum name="1 bgn" val="280"/>
+		<attnum name="1 end" val="305"/>
+		<attnum name="1 base speed" val="8.0"/>
+
+		<attnum name="2 bgn" val="160"/>
+		<attnum name="2 end" val="190"/>
+		<attnum name="2 int margin" val="1.0"/>
+		<attnum name="2 base speed" val="8.1"/>
+	</section>
+
+</params>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

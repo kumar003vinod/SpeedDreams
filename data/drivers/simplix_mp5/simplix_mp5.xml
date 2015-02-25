@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    file          : simplix_gp1600.xml
+    created       : 12 Oct 2010
+    last modified : 12 Oct 2010
+    copyright     : (C) 2010 Wolf-Dieter Beelitz
+-->
+
+<!--    This program is free software; you can redistribute it and/or modify  -->
+<!--    it under the terms of the GNU General Public License as published by  -->
+<!--    the Free Software Foundation; either version 2 of the License, or     -->
+<!--    (at your option) any later version.                                   -->
+
+<!DOCTYPE params SYSTEM "../../libs/tgf/params.dtd">
+
+<params name="simplix_mp5" type="robotdef">
+  <section name="Robots">
+    <section name="index">
+
+      <section name="0">
+        <attstr name="name" val="Bret Vinal"></attstr>
+        <attstr name="short name" val="B. Vinal"></attstr>
+        <attstr name="code name" val="VIN"></attstr>
+        <attstr name="desc" val="mp5-fmc_A"></attstr>
+        <attstr name="team" val="Team FFR"></attstr>
+        <attstr name="author" val="Wolf-Dieter Beelitz"></attstr>
+        <attstr name="car name" val="mp5-fmc-speedy"></attstr>
+        <attnum name="race number" val="1"></attnum>
+        <attnum name="red" val="0.2"></attnum>
+        <attnum name="green" val="0.4"></attnum>
+        <attnum name="blue" val="1.0"></attnum>
+      </section>
+
+      <section name="1">
+        <attstr name="name" val="Dunstan Tyler"></attstr>
+        <attstr name="short name" val="D. Tyler"></attstr>
+        <attstr name="code name" val="TYL"></attstr>
+        <attstr name="desc" val="mp5-fmc_B"></attstr>
+        <attstr name="team" val="Team FFR"></attstr>
+        <attstr name="author" val="Wolf-Dieter Beelitz"></attstr>
+        <attstr name="car name" val="mp5-fmc-speedy"></attstr>
+        <attnum name="race number" val="2"></attnum>
+        <attnum name="red" val="0.2"></attnum>
+        <attnum name="green" val="0.4"></attnum>
+        <attnum name="blue" val="1.0"></attnum>
+      </section>
+
+      <section name="2">
+        <attstr name="name" val="Robert Ferdinand"></attstr>
+        <attstr name="short name" val="R. Ferdinand"></attstr>
+        <attstr name="code name" val="FER"></attstr>
+        <attstr name="desc" val="mp5-fmc_C"></attstr>
+        <attstr name="team" val="Team TRC"></attstr>
+        <attstr name="author" val="Wolf-Dieter Beelitz"></attstr>
+        <attstr name="car name" val="mp5-fmc"></attstr>
+        <attnum name="race number" val="2"></attnum>
+        <attnum name="red" val="0.4"></attnum>
+        <attnum name="green" val="0.4"></attnum>
+        <attnum name="blue" val="1.0"></attnum>
+      </section>
+
+      <section name="3">
+        <attstr name="name" val="Patrice Desire"></attstr>
+        <attstr name="short name" val="P. Desire"></attstr>
+        <attstr name="code name" val="DES"></attstr>
+        <attstr name="desc" val="mp5-fmc_D"></attstr>
+        <attstr name="team" val="Team TRC"></attstr>
+        <attstr name="author" val="Wolf-Dieter Beelitz"></attstr>
+        <attstr name="car name" val="mp5-fmc"></attstr>
+        <attnum name="race number" val="3"></attnum>
+        <attnum name="red" val="0.4"></attnum>
+        <attnum name="green" val="0.4"></attnum>
+        <attnum name="blue" val="1.0"></attnum>
+      </section>
+
+      <section name="4">
+        <attstr name="name" val="Steffen Gerlach"></attstr>
+        <attstr name="short name" val="S. Gerlach"></attstr>
+        <attstr name="code name" val="GER"></attstr>
+        <attstr name="desc" val="mp5-fmc_E"></attstr>
+        <attstr name="team" val="AI"></attstr>
+        <attstr name="author" val="Wolf-Dieter Beelitz"></attstr>
+        <attstr name="car name" val="mp5-fmc-drift"></attstr>
+        <attnum name="race number" val="4"></attnum>
+        <attnum name="red" val="0.9"></attnum>
+        <attnum name="green" val="0.4"></attnum>
+        <attnum name="blue" val="0.3"></attnum>
+      </section>
+
+      <section name="5">
+        <attstr name="name" val="Sauli Artturi"></attstr>
+        <attstr name="short name" val="S. Artturi"></attstr>
+        <attstr name="code name" val="ART"></attstr>
+        <attstr name="desc" val="mp5-fmc_F"></attstr>
+        <attstr name="team" val="AI"></attstr>
+        <attstr name="author" val="Wolf-Dieter Beelitz"></attstr>
+        <attstr name="car name" val="mp5-fmc-drift"></attstr>
+        <attnum name="race number" val="5"></attnum>
+        <attnum name="red" val="0.9"></attnum>
+        <attnum name="green" val="0.4"></attnum>
+        <attnum name="blue" val="0.3"></attnum>
+      </section>
+
+    </section>
+  </section>
+</params>
