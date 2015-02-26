@@ -6,6 +6,7 @@ SD_ADD_SUBDIRECTORY(kilo2008)
 SD_ADD_SUBDIRECTORY(networkhuman)
 SD_ADD_SUBDIRECTORY(simplix)
 SD_ADD_SUBDIRECTORY(usr)
+SD_ADD_SUBDIRECTORY(traffic)
 
 # Work-in-progress / unofficial robots.
 IF(NOT OPTION_OFFICIAL_ONLY)

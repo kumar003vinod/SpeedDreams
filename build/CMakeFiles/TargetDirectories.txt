@@ -31,6 +31,7 @@
 /home/vinod/Downloads/sd2/2.1.0/build/src/libs/tgfdata/CMakeFiles/tgfdata.dir
 /home/vinod/Downloads/sd2/2.1.0/build/data/data/tracks/CMakeFiles/tracks_xml.dir
 /home/vinod/Downloads/sd2/2.1.0/build/src/modules/track/trackv1/CMakeFiles/trackv1.dir
+/home/vinod/Downloads/sd2/2.1.0/build/src/drivers/traffic/CMakeFiles/traffic.dir
 /home/vinod/Downloads/sd2/2.1.0/build/CMakeFiles/uninstall.dir
 /home/vinod/Downloads/sd2/2.1.0/build/src/drivers/usr/CMakeFiles/usr.dir
 /home/vinod/Downloads/sd2/2.1.0/build/src/tools/xmlversion/CMakeFiles/xmlversion.dir

@@ -368,6 +368,19 @@ usr/fast:
 .PHONY : usr/fast
 
 #=============================================================================
+# Target rules for targets named traffic
+
+# Build rule for target.
+traffic: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 traffic
+.PHONY : traffic
+
+# fast build rule for target.
+traffic/fast:
+	$(MAKE) -f src/drivers/traffic/CMakeFiles/traffic.dir/build.make src/drivers/traffic/CMakeFiles/traffic.dir/build
+.PHONY : traffic/fast
+
+#=============================================================================
 # Target rules for targets named ssggraph
 
 # Build rule for target.
@@ -657,6 +670,7 @@ help:
 	@echo "... networkhuman"
 	@echo "... simplix"
 	@echo "... usr"
+	@echo "... traffic"
 	@echo "... ssggraph"
 	@echo "... snddefault"
 	@echo "... simuv2.1"
