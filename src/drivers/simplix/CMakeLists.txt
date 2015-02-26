@@ -73,7 +73,7 @@ SET(ROBOT_SOURCES
 )
 
 # Official-only simplix instances.
-SET(ROBOT_CLONES simplix_36GP simplix_sc simplix_trb1 simplix_ls1 simplix_ls2 simplix_mp5 
+SET(ROBOT_CLONES simplix_36GP simplix_sc simplix_trb1 simplix_ls1 simplix_tr1 simplix_ls2 simplix_mp5 
 			simplix_mpa1 simplix_lp1 simplix_ref)
 
 # The ubiquitous robot module and its clones.
