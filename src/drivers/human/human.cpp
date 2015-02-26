@@ -234,6 +234,15 @@ static void
 drive_at(int index, tCarElt* car, tSituation *s)
 {
     robot.drive_at(index, car, s);
+    printf("%f  ",car-> race.distFromStartLine);
+    printf("%f  ",car->_steerCmd);
+    printf("%f  ",(tdble)car->_gear);
+    printf("%f  ",car->_brakeCmd);
+    printf("%f  ",car->_clutchCmd);
+    printf("%f  ",car->_accelCmd);
+    printf("%f  ",car->pub.trkPos.toMiddle);
+    printf("%f\n",int(car->race.curLapTime * 1000));
+    
 }//drive_at
 
 
