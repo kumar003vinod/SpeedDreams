@@ -280,10 +280,33 @@ initStartingGrid(void)
   if (rows < 1) {
     rows = 1;
   }
+  
+	tdble max = 0;
+	int n  = ReInfo->s->_ncars;
+	n++;
+	int dist = 0;
+  
+  
   for (i = 0; i < ReInfo->s->_ncars; i++) {
     car = &(ReInfo->carList[i]);
     car->_speed_x = speedInit;
-    startpos = ReInfo->track->length - (d1 + (i / rows) * d2 + (i % rows) * d3);
+    //startpos = ReInfo->track->length - (d1 + (i / rows) * d2 + (i % rows) * d3);
+    
+	if(i == 0){
+		max = ReInfo->track->length - (d1 + (i / rows) * d2 + (i % rows) * d3);
+	}
+    
+	dist += (max/n);
+	int range = (int)max;
+	startpos = max - dist;    
+
+	//player always start from starting position
+	if(strcmp((&(car->info))->name,"Player") == 0 ){
+		startpos = max;
+	}
+	
+	startpos = ReInfo->track->length - (d1 + (i / rows) * d2 + (i % rows) * d3);
+    
     tr = a + b * ((i % rows) + 1) / (rows + 1);
     curseg = ReInfo->track->seg;  /* last segment */
     while (startpos < curseg->lgfromstart) {
@@ -312,6 +335,10 @@ initStartingGrid(void)
     car->_pos_Z = RtTrackHeightL(&(car->_trkPos)) + heightInit;
 
     FLOAT_NORM0_2PI(car->_yaw);
+
+	if((strcmp((&(car->info))->name,"trss0") == 0 )|| (strcmp((&(car->info))->name,"bug_r 0") == 0 )|| (strcmp((&(car->info))->name,"bt 0") == 0 )){
+		car->_yaw = car->_yaw+3;
+	}
 
 	RePhysicsEngine().configureCar(car);
   }

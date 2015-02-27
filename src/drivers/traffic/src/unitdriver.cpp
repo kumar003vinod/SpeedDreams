@@ -1461,6 +1461,7 @@ void TDriver::Drive()
 
   oSteer = Steering();                           // Steering
   printf("%f\n",oSteer);
+  
   oSteer = FilterSteerSpeed(oSteer);             // Steering
 
   //cTimeSum[2] += RtDuration(StartTimeStamp);
@@ -2097,6 +2098,9 @@ double TDriver::Steering()
   else
     oAngle = SteerAngle(AheadPointInfo);
   oDeltaOffset = oLanePoint.Offset + CarToMiddle;// Delta to planned offset
+  
+  PtCarElt thisCar = Car();
+  
   return oAngle / SteerLock;
 }
 //==========================================================================*
