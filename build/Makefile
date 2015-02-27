@@ -368,17 +368,30 @@ usr/fast:
 .PHONY : usr/fast
 
 #=============================================================================
-# Target rules for targets named traffic
+# Target rules for targets named trafficss
 
 # Build rule for target.
-traffic: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 traffic
-.PHONY : traffic
+trafficss: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 trafficss
+.PHONY : trafficss
 
 # fast build rule for target.
-traffic/fast:
-	$(MAKE) -f src/drivers/traffic/CMakeFiles/traffic.dir/build.make src/drivers/traffic/CMakeFiles/traffic.dir/build
-.PHONY : traffic/fast
+trafficss/fast:
+	$(MAKE) -f src/drivers/trafficss/CMakeFiles/trafficss.dir/build.make src/drivers/trafficss/CMakeFiles/trafficss.dir/build
+.PHONY : trafficss/fast
+
+#=============================================================================
+# Target rules for targets named trafficos
+
+# Build rule for target.
+trafficos: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 trafficos
+.PHONY : trafficos
+
+# fast build rule for target.
+trafficos/fast:
+	$(MAKE) -f src/drivers/trafficos/CMakeFiles/trafficos.dir/build.make src/drivers/trafficos/CMakeFiles/trafficos.dir/build
+.PHONY : trafficos/fast
 
 #=============================================================================
 # Target rules for targets named ssggraph
@@ -670,7 +683,8 @@ help:
 	@echo "... networkhuman"
 	@echo "... simplix"
 	@echo "... usr"
-	@echo "... traffic"
+	@echo "... trafficss"
+	@echo "... trafficos"
 	@echo "... ssggraph"
 	@echo "... snddefault"
 	@echo "... simuv2.1"

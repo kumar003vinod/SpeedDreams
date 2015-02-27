@@ -39,7 +39,8 @@ IF(NOT CMAKE_INSTALL_LOCAL_ONLY)
   INCLUDE("/home/vinod/Downloads/sd2/2.1.0/build/src/drivers/networkhuman/cmake_install.cmake")
   INCLUDE("/home/vinod/Downloads/sd2/2.1.0/build/src/drivers/simplix/cmake_install.cmake")
   INCLUDE("/home/vinod/Downloads/sd2/2.1.0/build/src/drivers/usr/cmake_install.cmake")
-  INCLUDE("/home/vinod/Downloads/sd2/2.1.0/build/src/drivers/traffic/cmake_install.cmake")
+  INCLUDE("/home/vinod/Downloads/sd2/2.1.0/build/src/drivers/trafficss/cmake_install.cmake")
+  INCLUDE("/home/vinod/Downloads/sd2/2.1.0/build/src/drivers/trafficos/cmake_install.cmake")
 
 ENDIF(NOT CMAKE_INSTALL_LOCAL_ONLY)
 
