@@ -963,7 +963,7 @@ static void Drive(int Index, tCarElt* car, tSituation *S)
     //same direction
     //angle = RtTrackSideTgAngleL(&(car->_trkPos)) - car->_yaw;
 	//reverse direction
-    angle = RtTrackSideTgAngleL(&(car->_trkPos)) - car->_yaw + 3;
+    angle = RtTrackSideTgAngleL(&(car->_trkPos)) - car->_yaw;
     
     //debug
     //printf("angle1 => %f\n",angle);
@@ -974,7 +974,7 @@ static void Drive(int Index, tCarElt* car, tSituation *S)
     //same direction
     //angle -= SC*car->_trkPos.toMiddle/car->_trkPos.seg->width;
 	//reverse direction
-    angle += SC*car->_trkPos.toMiddle/car->_trkPos.seg->width;
+    angle -= SC*car->_trkPos.toMiddle/car->_trkPos.seg->width;
     //debug
     //printf("angle3 => %f\n",angle);
 
