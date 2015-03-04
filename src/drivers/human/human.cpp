@@ -39,6 +39,9 @@
  */
 
 #include <humandriver.h>
+#include <sys/time.h>
+#include <iostream>
+#include <fstream>
 
 static HumanDriver robot("human");
 
@@ -48,6 +51,27 @@ static void drive_at(int index, tCarElt* car, tSituation *s);
 static void newrace(int index, tCarElt* car, tSituation *s);
 static void resumerace(int index, tCarElt* car, tSituation *s);
 static int  pitcmd(int index, tCarElt* car, tSituation *s);
+
+//======================================================================
+//implementing data logging
+const int COLS = 8;
+float data[1000][COLS];
+time_t clockTime[1000];
+
+int counter = 0;
+struct timeval tval_before, tval_after, tval_result;
+
+int get_start_time = 1;
+
+char tmp_file[] = "tmp_file.txt";
+char tmp_file_loc[] = "/tmp/";
+
+bool first_time = true;
+
+std::ofstream fo;
+
+//======================================================================
+
 
 #ifdef _WIN32
 /* Must be present under MS Windows */
@@ -61,6 +85,37 @@ BOOL WINAPI DllEntryPoint (HINSTANCE hDLL, DWORD dwReason, LPVOID Reserved)
 static void
 shutdown(const int index)
 {
+	char tmp_file_path[100];
+	sprintf(tmp_file_path,"%s%s",tmp_file_loc, tmp_file);
+
+	fo.open(tmp_file_path, std::ofstream::app);
+	int itr = 0;
+	for(int i=1; i<=counter; i++)
+	{
+		for(int j=0; j<COLS-1; j++)
+		{
+			fo<<data[itr][j]<<"\t";
+			//std::cout<<logData[i][j]<<" ";
+		}
+		fo<<clockTime[itr]<<"\n";
+		itr++;
+	}
+	fo.close();
+
+	printf("Enter your name here ::::----\n");
+	char name[100];
+	scanf("%s",name);
+
+	int num = rand();
+	char* home = getenv ("HOME");
+	char dir[200];
+	sprintf(dir,"%s/log/",home);
+
+	char new_file_path[100];
+	sprintf(new_file_path,"%s%s%d.txt",dir,name,num);
+
+	rename(tmp_file_path, new_file_path);
+	
     robot.shutdown(index);
 }//shutdown
 
@@ -230,9 +285,64 @@ drive_mt(int index, tCarElt* car, tSituation *s)
  * Remarks
  *
  */
+
+
 static void
 drive_at(int index, tCarElt* car, tSituation *s)
 {
+//======================================================================
+	if(get_start_time){
+		gettimeofday(&tval_before, NULL);
+		get_start_time = 0;
+	}
+	
+	gettimeofday(&tval_after, NULL);
+	
+	timersub(&tval_after, &tval_before, &tval_result);
+	
+	//printf("Time elapsed: %ld.%06ld\n", (long int)tval_result.tv_sec, (long int)tval_result.tv_usec);
+
+	//printf("%d\n",(int)tval_result.tv_sec);
+
+	if(((int)tval_result.tv_usec) >= 1000){
+		get_start_time = 1;
+		data[counter][0] = car-> race.distFromStartLine;
+		data[counter][1] = car->_steerCmd;
+		data[counter][2] = (tdble)car->_gear;
+		data[counter][3] = car->_brakeCmd;
+		data[counter][4] = car->_clutchCmd;
+		data[counter][5] = car->_accelCmd;
+		data[counter][6] = car->pub.trkPos.toMiddle;
+		data[counter][7] = int(car->race.curLapTime * 1000);
+		clockTime[counter] = time(NULL);
+		counter++;
+	}
+	
+	char fileName[100];
+
+	if(counter == 10){
+		sprintf(fileName,"%s%s",tmp_file_loc, tmp_file);
+		if(first_time){
+			fo.open(fileName);
+			first_time = false;
+		}else{
+			fo.open(fileName, std::ofstream::app);
+		}
+		int itr = 0;
+		for(int i=1; i<=counter; i++)
+		{
+			for(int j=0; j<COLS-1; j++)
+			{
+				fo<<data[itr][j]<<"\t";
+				//std::cout<<logData[i][j]<<" ";
+			}
+			fo<<clockTime[itr]<<"\n";
+			itr++;
+		}
+		fo.close();
+		counter = 0;
+	}
+//======================================================================
     robot.drive_at(index, car, s);
     /*
     printf("%f  ",car-> race.distFromStartLine);
