@@ -336,7 +336,13 @@ initStartingGrid(void)
 
     FLOAT_NORM0_2PI(car->_yaw);
 
-	if((strcmp((&(car->info))->name,"trss0") == 0 )|| (strcmp((&(car->info))->name,"bug_r 0") == 0 )|| (strcmp((&(car->info))->name,"bt 0") == 0 )){
+	if((strcmp((&(car->info))->name,"tros0") == 0 )){
+		car->_yaw = car->_yaw+3;
+	}
+	if((strcmp((&(car->info))->name,"tros1") == 0 )){
+		car->_yaw = car->_yaw+3;
+	}
+	if((strcmp((&(car->info))->name,"tros2") == 0 )){
 		car->_yaw = car->_yaw+3;
 	}
 
