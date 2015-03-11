@@ -1432,7 +1432,6 @@ void TDriver::DriveLast()
 //--------------------------------------------------------------------------*
 void TDriver::Drive()
 {
-//Propagation counts the maximum race etc. of a race on lap completion
   Propagation(CarLaps);                          // Propagation
   oLastLap = CarLaps;
 
@@ -1445,21 +1444,11 @@ void TDriver::Drive()
 
   //double StartTimeStamp = RtTimeStamp(); 
 
-  //
   DetectFlight();
-  //	TTrackDescription oTrackDesc;                // Track description
-  // 	defined in unittrack.h
   double Pos = oTrackDesc.CalcPos(oCar);         // Get current pos on track
-  
-  //    TLanePoint oLanePoint;                       // Information to Point
-  //	definded in unitlanepoint.h
+
   GetPosInfo(Pos,oLanePoint);                    // Info about pts on track
-  
-  //where is the oLnamePoint is assigned
-  
-  //this is where is the speed id contorlled
-  oTargetSpeed = 50;				 // Target for speed control
-  //oTargetSpeed = oLanePoint.Speed;				 // Target for speed control
+  oTargetSpeed = oLanePoint.Speed;				 // Target for speed control
   oTargetSpeed = FilterStart(oTargetSpeed);      // Filter Start
   //fprintf(stderr,"oTargetSpeed %.2f km/h\n",oTargetSpeed*3.6),
 
@@ -1944,7 +1933,6 @@ void TDriver::InitCarModells()
 //--------------------------------------------------------------------------*
 void TDriver::Update(tCarElt* Car, tSituation* S)
 {
-	printf("Update\n");
   oCar = Car;                                    // Update pointers
   oSituation = S;
 
@@ -2071,13 +2059,9 @@ void TDriver::FlightControl()
 //--------------------------------------------------------------------------*
 void TDriver::Propagation(int lap)
 {
-// 	Defined in unitparam.h
-//	TParam Param;                                // Parameters
-
   if (Param.Tmp.Needed()
 	  || ((oLastLap > 0) && (oLastLap < 5) && (oLastLap != lap)))
   {
-	printf("Propagation\n");
 	  LogSimplix.debug("\n\n#Propagation\n\n");
     if (oLastLap > 5)
       TDriver::Learning = false;
@@ -2101,24 +2085,17 @@ void TDriver::Propagation(int lap)
 double TDriver::Steering()
 {
   TLanePoint AheadPointInfo;
-  /*
   if (oUnstucking)
   {
-	  printf("if steering\n");
     double Factor = 4.0 * MAX(0,MIN(1.0,CarSpeedLong));
     double Angle = UnstuckSteerAngle(oLanePoint,AheadPointInfo) * Factor;
     oAngle = SteerAngle(AheadPointInfo);
     double T = MAX(0.0,7 - MAX(0,CarSpeedLong));
 	oAngle = Angle * T + oAngle * (1 - T);
   }
-  else{
-	printf("else steering\n");
+  else
     oAngle = SteerAngle(AheadPointInfo);
-  }
-  */
-  oAngle = SteerAngle(AheadPointInfo); 
   oDeltaOffset = oLanePoint.Offset + CarToMiddle;// Delta to planned offset
-    
   return oAngle / SteerLock;
 }
 //==========================================================================*
@@ -3130,8 +3107,6 @@ double TDriver::SteerAngle(TLanePoint& AheadPointInfo)
   if (oCurrSpeed < SLOWSPEED)
     return Angle;
 
-  printf("no return\n");
-
   double Delta = oLanePoint.Offset + CarToMiddle;
 
   // Control rotational velocity.
@@ -3152,8 +3127,6 @@ double TDriver::SteerAngle(TLanePoint& AheadPointInfo)
     oStartSteerFactor += 0.0002;
   double Factor = MIN(0.15,oStartSteerFactor);
   Angle -= Factor * atan(oPIDCLine.Sample(Delta));
-
-	printf("Angle = %f\n",Angle);
 
   return Angle;
 }
