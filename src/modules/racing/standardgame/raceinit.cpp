@@ -305,7 +305,6 @@ initStartingGrid(void)
 		startpos = max;
 	}
 	
-	startpos = ReInfo->track->length - (d1 + (i / rows) * d2 + (i % rows) * d3);
     
     tr = a + b * ((i % rows) + 1) / (rows + 1);
     curseg = ReInfo->track->seg;  /* last segment */
@@ -343,6 +342,33 @@ initStartingGrid(void)
 		car->_yaw = car->_yaw+3;
 	}
 	if((strcmp((&(car->info))->name,"tros2") == 0 )){
+		car->_yaw = car->_yaw+3;
+	}
+	if((strcmp((&(car->info))->name,"tros3") == 0 )){
+		car->_yaw = car->_yaw+3;
+	}
+	if((strcmp((&(car->info))->name,"tros4") == 0 )){
+		car->_yaw = car->_yaw+3;
+	}
+	if((strcmp((&(car->info))->name,"tros5") == 0 )){
+		car->_yaw = car->_yaw+3;
+	}
+	if((strcmp((&(car->info))->name,"tros6") == 0 )){
+		car->_yaw = car->_yaw+3;
+	}
+	if((strcmp((&(car->info))->name,"tros7") == 0 )){
+		car->_yaw = car->_yaw+3;
+	}
+	if((strcmp((&(car->info))->name,"tros8") == 0 )){
+		car->_yaw = car->_yaw+3;
+	}
+	if((strcmp((&(car->info))->name,"tros9") == 0 )){
+		car->_yaw = car->_yaw+3;
+	}
+	if((strcmp((&(car->info))->name,"tros10") == 0 )){
+		car->_yaw = car->_yaw+3;
+	}
+	if((strcmp((&(car->info))->name,"tros11") == 0 )){
 		car->_yaw = car->_yaw+3;
 	}
 
