@@ -909,10 +909,9 @@ static void NewRace(int Index, tCarElt* Car, tSituation *S)
 // aufgerufen. Deshalb geben wir hier in der Regel keine Debug-Texte aus!
 // Zur Fehlersuche kann das aber mal sinnvoll sein.
 //--------------------------------------------------------------------------*
-static void Drive(int Index, tCarElt* car, tSituation *S)
+static void Drive(int Index, tCarElt* Car, tSituation *S)
 {
 
-/*	
 	//printf("main drive\n");
   //LogSimplix.debug("#>>> TDriver::Drive\n");
   if (cInstances[Index-IndexOffset].cRobot->CurrSimTime < S->currentTime)
@@ -953,8 +952,8 @@ static void Drive(int Index, tCarElt* car, tSituation *S)
     cInstances[Index-IndexOffset].cRobot->DriveLast();      // Use last drive commands
   }
   //LogSimplix.debug("#<<< TDriver::Drive\n");
-  */
-  
+
+/*  
     memset((void *)&car->ctrl, 0, sizeof(tCarCtrl)); 
     
     float angle;
@@ -983,6 +982,7 @@ static void Drive(int Index, tCarElt* car, tSituation *S)
     car->ctrl.gear = 1;
 	car->ctrl.accelCmd = 0.1;
     car->ctrl.brakeCmd = 0.0;
+ */
     /*  
      * add the driving code here to modify the 
      * car->_steerCmd 

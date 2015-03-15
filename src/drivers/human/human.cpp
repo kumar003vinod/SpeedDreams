@@ -344,6 +344,7 @@ drive_at(int index, tCarElt* car, tSituation *s)
 	}
 //======================================================================
     robot.drive_at(index, car, s);
+
     /*
     printf("%f  ",car-> race.distFromStartLine);
     printf("%f  ",car->_steerCmd);
