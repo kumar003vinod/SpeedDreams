@@ -2141,38 +2141,38 @@ double TDriver::Steering()
 	//4-segment of look ahead
 	if(seg->next->next->next->next->type == TR_RGT)
 	{
-		rW += 1;
+		rW += -1.0;
 	}
 	else if(seg->next->next->next->next->type == TR_LFT)
 	{
-		lW += 1;
+		lW += 4.0;
 	}
 	else
-		sW += 1;
+		sW += -2.0;
 
 	//3-segment of look ahead
 	if(seg->next->next->next->type == TR_RGT)
 	{
-		rW += 1.5;
+		rW += -0.5;
 	}
 	else if(seg->next->next->next->type == TR_LFT)
 	{
-		lW += 1.5;
+		lW += 5.0;
 	}
 	else
-		sW += 1.5;
+		sW += -1;
 
 	//2-segment of look ahead
 	if(seg->next->next->type == TR_RGT)
 	{
-		rW += 1.5;
+		rW += -0.5;
 	}
 	else if(seg->next->next->type == TR_LFT)
 	{
-		lW += 1.5;
+		lW += 5.0;
 	}
 	else
-		sW += 1.5;
+		sW += -1;
 
 	//1-segment of look ahead
 	if(seg->next->type == TR_RGT)
