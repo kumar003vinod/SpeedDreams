@@ -2079,11 +2079,159 @@ void TDriver::Propagation(int lap)
 }
 //==========================================================================*
 
+// Compute the length to the end of the segment.
+float TDriver::getDistToSegEnd()
+{
+	if (oCar->_trkPos.seg->type == TR_STR) {
+		return oCar->_trkPos.seg->length - oCar->_trkPos.toStart;
+	} else {
+		return (oCar->_trkPos.seg->arc - oCar->_trkPos.toStart)*oCar->_trkPos.seg->radius;
+	}
+}
+
+
+
 //==========================================================================*
 // Steering
 //--------------------------------------------------------------------------*
 double TDriver::Steering()
 {
+
+    float angle;
+    const float SC = 8.0;
+
+    //same direction
+    //angle = RtTrackSideTgAngleL(&(car->_trkPos)) - car->_yaw;
+	//reverse direction
+    angle = RtTrackSideTgAngleL(&(oCar->_trkPos)) - oCar->_yaw + 3;
+
+    //debug
+    //printf("angle1 => %f\n",angle);
+    //printf("yaw => %f\n", car->_yaw);
+
+    NORM_PI_PI(angle);
+
+    //same direction
+    //angle -= SC*car->_trkPos.toMiddle/car->_trkPos.seg->width;
+	//reverse direction
+    angle += SC*oCar->_trkPos.toMiddle/oCar->_trkPos.seg->width;
+    //debug
+    //printf("angle3 => %f\n",angle);
+
+
+	tTrackSeg *seg = oCar->_trkPos.seg;
+
+	if(seg->prev->prev->prev->prev->prev->type == TR_RGT)
+	{
+		printf("TR_RGT\n");
+		//rW += 1*(1-(seg_len/12.0));
+	}
+	else if(seg->prev->prev->prev->prev->prev->type == TR_LFT)
+	{
+		//lW += 1*(1-(seg_len/12.0));
+		printf("TR_LFT\n");
+	}
+
+	return angle/oCar->_steerLock;
+
+/*
+	float track_width = oCar->_trkPos.seg->width;
+	float car_angle = RtTrackSideTgAngleL(&(oCar->_trkPos)) - oCar->_yaw;
+	NORM_PI_PI(car_angle); // put the angle back in the range from -PI to PI
+
+	float pos_correc = (oCar->_trkPos.toMiddle)/ (track_width);
+	float right_curve_correc = ((track_width/4) + oCar->_trkPos.toMiddle)/(track_width);
+	float left_curve_correc = (-(track_width/4) + oCar->_trkPos.toMiddle)/(track_width);
+
+	float rW=0, lW=0, sW=0;
+	tTrackSeg *seg = oCar->_trkPos.seg;
+
+	//remaining length of current segment
+	float seg_len = getDistToSegEnd();
+
+
+	if(seg->next->next->next->next->next->type == TR_RGT)
+	{
+		rW += 1*(1-(seg_len/12.0));
+	}
+	else if(seg->next->next->next->next->next->type == TR_LFT)
+	{
+		lW += 1*(1-(seg_len/12.0));
+	}
+	else
+		sW += 1*(1-(seg_len/12.0));
+
+	//4-segment of look ahead
+	if(seg->next->next->next->next->type == TR_RGT)
+	{
+		rW += -1.0;
+	}
+	else if(seg->next->next->next->next->type == TR_LFT)
+	{
+		lW += 4.0;
+	}
+	else
+		sW += -2.0;
+
+	//3-segment of look ahead
+	if(seg->next->next->next->type == TR_RGT)
+	{
+		rW += -0.5;
+	}
+	else if(seg->next->next->next->type == TR_LFT)
+	{
+		lW += 5.0;
+	}
+	else
+		sW += -1;
+
+	//2-segment of look ahead
+	if(seg->next->next->type == TR_RGT)
+	{
+		rW += -0.5;
+	}
+	else if(seg->next->next->type == TR_LFT)
+	{
+		lW += 5.0;
+	}
+	else
+		sW += -1;
+
+	//1-segment of look ahead
+	if(seg->next->type == TR_RGT)
+	{
+		rW += 2*(seg_len/12) + 3*(1-(seg_len/12.0));
+	}
+	else if(seg->next->type == TR_LFT)
+	{
+		lW += 2*(seg_len/12) + 3*(1-(seg_len/12.0));
+	}
+	else
+		sW += 2*(seg_len/12) + 3*(1-(seg_len/12.0));
+
+	//current segment
+	if(seg->type == TR_RGT)
+	{
+		rW += 3*(seg_len/12.0);
+	}
+	else if(seg->type == TR_LFT)
+	{
+		lW += 3*(seg_len/12.0);
+	}
+	else
+		sW += 3*(seg_len/12.0);
+
+	float curve_correc=0;
+
+	curve_correc = (rW/10)*right_curve_correc + (lW/10)*left_curve_correc;
+	pos_correc = (sW/10)*pos_correc;
+
+	float steering = car_angle - pAlpha*pos_correc - pBeta*curve_correc;
+
+	return steering/oCar->_steerLock;
+*/
+
+/*
   TLanePoint AheadPointInfo;
   if (oUnstucking)
   {
@@ -2095,8 +2243,13 @@ double TDriver::Steering()
   }
   else
     oAngle = SteerAngle(AheadPointInfo);
+
+  printf("%f\n",CarToMiddle);
+
   oDeltaOffset = oLanePoint.Offset + CarToMiddle;// Delta to planned offset
   return oAngle / SteerLock;
+*/
+
 }
 //==========================================================================*
 
@@ -2863,6 +3016,9 @@ bool TDriver::EcoShift()
 //--------------------------------------------------------------------------*
 void TDriver::GearTronic()
 {
+	//drive at first gear
+	oGear = 1; return;
+
   if ((oJumping > 0.0) && (UsedGear > 0))
 	  return;
 
@@ -4085,7 +4241,7 @@ double TDriver::FilterDrifting(double Accel)
   else
     Accel /= MAX(1.0,(DriftFactor * 50 * ( 1 - cos(DriftAngle))));
 
-  return MIN(1.0,Accel);
+  return MIN(0.2,Accel);
 }
 //==========================================================================*
 
