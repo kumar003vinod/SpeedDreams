@@ -1462,6 +1462,21 @@ void TDriver::Drive()
   oSteer = Steering();                           // Steering
   oSteer = FilterSteerSpeed(oSteer);             // Steering
 
+	float angle = RtTrackSideTgAngleL(&(oCar->_trkPos)) - oCar->_yaw;
+	//printf("%f\n",angle);
+	//printf("%f\n",oSteer);
+
+
+	if(oCar->pub.trkPos.toMiddle < 1){
+		//printf("%f\n",oCar->pub.trkPos.toMiddle);
+		//oSteer = angle;
+		//printf("nooo\n");
+		//oSteer += 0.1;
+	}
+
+	//printf("%f\n",oCar->_steerCmd);
+
+
   //cTimeSum[2] += RtDuration(StartTimeStamp);
 
   if (oWingControl)
@@ -2079,11 +2094,121 @@ void TDriver::Propagation(int lap)
 }
 //==========================================================================*
 
+// Compute the length to the end of the segment.
+float TDriver::getDistToSegEnd()
+{
+	if (oCar->_trkPos.seg->type == TR_STR) {
+		return oCar->_trkPos.seg->length - oCar->_trkPos.toStart;
+	} else {
+		return (oCar->_trkPos.seg->arc - oCar->_trkPos.toStart)*oCar->_trkPos.seg->radius;
+	}
+}
+
+
+
 //==========================================================================*
 // Steering
 //--------------------------------------------------------------------------*
 double TDriver::Steering()
 {
+	
+	float track_width = oCar->_trkPos.seg->width;
+	float car_angle = RtTrackSideTgAngleL(&(oCar->_trkPos)) - oCar->_yaw;
+	NORM_PI_PI(car_angle); // put the angle back in the range from -PI to PI
+
+	float pos_correc = (oCar->_trkPos.toMiddle)/ (track_width);
+	float right_curve_correc = ((track_width/4) + oCar->_trkPos.toMiddle)/(track_width);
+	float left_curve_correc = (-(track_width/4) + oCar->_trkPos.toMiddle)/(track_width);
+
+	float rW=0, lW=0, sW=0;
+	tTrackSeg *seg = oCar->_trkPos.seg;
+
+	//remaining length of current segment
+	float seg_len = getDistToSegEnd();
+
+
+	if(seg->next->next->next->next->next->type == TR_RGT)
+	{
+		rW += 1*(1-(seg_len/12.0));
+	}
+	else if(seg->next->next->next->next->next->type == TR_LFT)
+	{
+		lW += 1*(1-(seg_len/12.0));
+	}
+	else
+		sW += 1*(1-(seg_len/12.0));
+
+	//4-segment of look ahead
+	if(seg->next->next->next->next->type == TR_RGT)
+	{
+		rW += 1;
+	}
+	else if(seg->next->next->next->next->type == TR_LFT)
+	{
+		lW += 1;
+	}
+	else
+		sW += 1;
+
+	//3-segment of look ahead
+	if(seg->next->next->next->type == TR_RGT)
+	{
+		rW += 1.5;
+	}
+	else if(seg->next->next->next->type == TR_LFT)
+	{
+		lW += 1.5;
+	}
+	else
+		sW += 1.5;
+
+	//2-segment of look ahead
+	if(seg->next->next->type == TR_RGT)
+	{
+		rW += 1.5;
+	}
+	else if(seg->next->next->type == TR_LFT)
+	{
+		lW += 1.5;
+	}
+	else
+		sW += 1.5;
+
+	//1-segment of look ahead
+	if(seg->next->type == TR_RGT)
+	{
+		rW += 2*(seg_len/12) + 3*(1-(seg_len/12.0));
+	}
+	else if(seg->next->type == TR_LFT)
+	{
+		lW += 2*(seg_len/12) + 3*(1-(seg_len/12.0));
+	}
+	else
+		sW += 2*(seg_len/12) + 3*(1-(seg_len/12.0));
+
+	//current segment
+	if(seg->type == TR_RGT)
+	{
+		rW += 3*(seg_len/12.0);
+	}
+	else if(seg->type == TR_LFT)
+	{
+		lW += 3*(seg_len/12.0);
+	}
+	else
+		sW += 3*(seg_len/12.0);
+	
+	float curve_correc=0;
+
+	curve_correc = (rW/10)*right_curve_correc + (lW/10)*left_curve_correc;
+	pos_correc = (sW/10)*pos_correc;
+
+	float steering = car_angle - pAlpha*pos_correc - pBeta*curve_correc;
+	
+	return steering/oCar->_steerLock;
+
+
+/*
   TLanePoint AheadPointInfo;
   if (oUnstucking)
   {
@@ -2095,8 +2220,13 @@ double TDriver::Steering()
   }
   else
     oAngle = SteerAngle(AheadPointInfo);
+    
+  printf("%f\n",CarToMiddle);
+  
   oDeltaOffset = oLanePoint.Offset + CarToMiddle;// Delta to planned offset
   return oAngle / SteerLock;
+*/
+  
 }
 //==========================================================================*
 

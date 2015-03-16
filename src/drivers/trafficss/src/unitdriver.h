@@ -125,6 +125,9 @@ class TDriver
 	int PitSide();                               // Side of pitlane
 	double PrevGearRatio();                      // Get prev gear ratio
 	void Propagation(int lap);                   // Propagation
+	
+	float getDistToSegEnd();
+
 	double Steering();                           // Steering
 	void TeamInfo();                             // Get team infos
 	void Turning();                              // Turn if needed
@@ -514,6 +517,10 @@ private:
 
 	void UseFilterAccel(){oUseFilterAccel = true;};
 	void UseAccelOut(){oUseAccelOut = true;};
+
+	float pAlpha = 0.5; // parameter controlling position correction
+	float pBeta = 0.5;  // parameter controlling curve correction
+
 
 };
 //==========================================================================*
