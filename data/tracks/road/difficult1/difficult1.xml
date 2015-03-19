@@ -29,9 +29,9 @@ the Free Software Foundation; either version 2 of the License, or
   </section>
   <!-- Local Info -->
 	<section name="Local Info">
-		<attnum name="overall rain likelyhood" unit="%" val="50"/>
-		<attnum name="little rain likelyhood" unit="%" val="60"/>
-		<attnum name="medium rain likelyhood" unit="%" val="30"/>
+		<attnum name="overall rain likelyhood" unit="%" val="70"/>
+		<attnum name="little rain likelyhood" unit="%" val="90"/>
+		<attnum name="medium rain likelyhood" unit="%" val="70"/>
 		<attnum name="time of day" unit="hour" val="14.0"/>
 		<attnum name="sun ascension" unit="deg" val="310"/>
 	</section> <!-- Local Info -->
