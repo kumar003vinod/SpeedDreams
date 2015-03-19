@@ -1462,20 +1462,6 @@ void TDriver::Drive()
   oSteer = Steering();                           // Steering
   oSteer = FilterSteerSpeed(oSteer);             // Steering
 
-	float angle = RtTrackSideTgAngleL(&(oCar->_trkPos)) - oCar->_yaw;
-	//printf("%f\n",angle);
-	//printf("%f\n",oSteer);
-
-
-	if(oCar->pub.trkPos.toMiddle < 1){
-		//printf("%f\n",oCar->pub.trkPos.toMiddle);
-		//oSteer = angle;
-		//printf("nooo\n");
-		//oSteer += 0.1;
-	}
-
-	//printf("%f\n",oCar->_steerCmd);
-
 
   //cTimeSum[2] += RtDuration(StartTimeStamp);
 
