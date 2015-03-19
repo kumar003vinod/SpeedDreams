@@ -25,9 +25,10 @@
 				<attstr name="author" val=""></attstr>
 				<attstr name="car name" val="ls1-archer-r9"></attstr>
 				<attnum name="race number" val="2008"></attnum>
-				<attnum name="red" val="1.0"></attnum>
+				<attnum name="red" val="0.9"></attnum>
 				<attnum name="green" val="0.9"></attnum>
-				<attnum name="blue" val="0.7"></attnum>
+				<attnum name="blue" val="0.9"></attnum>
+					<attstr name="features" val="wet track"></attstr>
 			</section>
 
 			<section name="1">
@@ -39,9 +40,10 @@
 				<attstr name="author" val=""></attstr>
 				<attstr name="car name" val="ls1-archer-r9"></attstr>
 				<attnum name="race number" val="2009"></attnum>
-				<attnum name="red" val="1.0"></attnum>
+				<attnum name="red" val="0.9"></attnum>
 				<attnum name="green" val="0.9"></attnum>
-				<attnum name="blue" val="0.7"></attnum>
+				<attnum name="blue" val="0.9"></attnum>
+					<attstr name="features" val="wet track"></attstr>
 			</section>
 
 			<section name="2">
@@ -53,9 +55,10 @@
 				<attstr name="author" val=""></attstr>
 				<attstr name="car name" val="ls1-archer-r9"></attstr>
 				<attnum name="race number" val="2009"></attnum>
-				<attnum name="red" val="1.0"></attnum>
+				<attnum name="red" val="0.9"></attnum>
 				<attnum name="green" val="0.9"></attnum>
-				<attnum name="blue" val="0.7"></attnum>
+				<attnum name="blue" val="0.9"></attnum>
+					<attstr name="features" val="wet track"></attstr>
 			</section>
 
 
@@ -68,9 +71,10 @@
 				<attstr name="author" val=""></attstr>
 				<attstr name="car name" val="ls1-archer-r9"></attstr>
 				<attnum name="race number" val="2010"></attnum>
-				<attnum name="red" val="1.0"></attnum>
+				<attnum name="red" val="0.9"></attnum>
 				<attnum name="green" val="0.9"></attnum>
-				<attnum name="blue" val="0.7"></attnum>
+				<attnum name="blue" val="0.9"></attnum>
+					<attstr name="features" val="wet track"></attstr>
 			</section>
 
 			<section name="4">
@@ -82,9 +86,10 @@
 				<attstr name="author" val=""></attstr>
 				<attstr name="car name" val="ls1-archer-r9"></attstr>
 				<attnum name="race number" val="2011"></attnum>
-				<attnum name="red" val="1.0"></attnum>
+				<attnum name="red" val="0.9"></attnum>
 				<attnum name="green" val="0.9"></attnum>
-				<attnum name="blue" val="0.7"></attnum>
+				<attnum name="blue" val="0.9"></attnum>
+					<attstr name="features" val="wet track"></attstr>
 			</section>
 
 			<section name="5">
@@ -96,9 +101,10 @@
 				<attstr name="author" val=""></attstr>
 				<attstr name="car name" val="ls1-archer-r9"></attstr>
 				<attnum name="race number" val="2012"></attnum>
-				<attnum name="red" val="1.0"></attnum>
+				<attnum name="red" val="0.9"></attnum>
 				<attnum name="green" val="0.9"></attnum>
-				<attnum name="blue" val="0.7"></attnum>
+				<attnum name="blue" val="0.9"></attnum>
+					<attstr name="features" val="wet track"></attstr>
 			</section>
 
 			<section name="6">
@@ -110,9 +116,10 @@
 				<attstr name="author" val=""></attstr>
 				<attstr name="car name" val="ls1-archer-r9"></attstr>
 				<attnum name="race number" val="2013"></attnum>
-				<attnum name="red" val="1.0"></attnum>
+				<attnum name="red" val="0.9"></attnum>
 				<attnum name="green" val="0.9"></attnum>
-				<attnum name="blue" val="0.7"></attnum>
+				<attnum name="blue" val="0.9"></attnum>
+					<attstr name="features" val="wet track"></attstr>
 			</section>
 
 <!--
