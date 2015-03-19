@@ -2118,20 +2118,6 @@ double TDriver::Steering()
     //debug
     //printf("angle3 => %f\n",angle);
 
-
-	tTrackSeg *seg = oCar->_trkPos.seg;
-
-	if(seg->prev->prev->prev->prev->prev->type == TR_RGT)
-	{
-		printf("TR_RGT\n");
-		//rW += 1*(1-(seg_len/12.0));
-	}
-	else if(seg->prev->prev->prev->prev->prev->type == TR_LFT)
-	{
-		//lW += 1*(1-(seg_len/12.0));
-		printf("TR_LFT\n");
-	}
-
 	return angle/oCar->_steerLock;
 
 /*
