@@ -220,6 +220,14 @@ moduleTerminate()
 static void
 initTrack(int index, tTrack* track, void *carHandle, void **carParmHandle, tSituation *s)
 {
+	tTrackSeg *Seg;
+	tTrackSurface *Surf;
+	Seg = track->seg;
+	Surf = Seg->surface;
+	float oRainIntensity;
+	oRainIntensity = (Surf->kFrictionDry / Surf->kFriction) - 1;
+	//printf("==========================================%f==================================\n",oRainIntensity);
+
     robot.init_track(index, track, carHandle, carParmHandle, s);
 }//initTrack
 
@@ -331,7 +339,7 @@ drive_at(int index, tCarElt* car, tSituation *s)
 		int itr = 0;
 		for(int i=1; i<=counter; i++)
 		{
-			for(int j=0; j<COLS-1; j++)
+			for(int j=0; j<COLS; j++)
 			{
 				fo<<data[itr][j]<<"\t";
 				//std::cout<<logData[i][j]<<" ";
