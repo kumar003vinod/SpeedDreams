@@ -518,10 +518,8 @@ private:
 	void UseFilterAccel(){oUseFilterAccel = true;};
 	void UseAccelOut(){oUseAccelOut = true;};
 
-	float pAlpha = 0.5; // parameter controlling position correction
-	float pBeta = 0.5;  // parameter controlling curve correction
-
-
+	float pAlpha;// parameter controlling position correction
+	float pBeta; // parameter controlling curve correction
 };
 //==========================================================================*
 
