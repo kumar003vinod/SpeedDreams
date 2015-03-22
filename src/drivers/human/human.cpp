@@ -273,7 +273,72 @@ resumerace(int index, tCarElt* car, tSituation *s)
 static void
 drive_mt(int index, tCarElt* car, tSituation *s)
 {
+
+//======================================================================
+	if(get_start_time){
+		gettimeofday(&tval_before, NULL);
+		get_start_time = 0;
+	}
+
+	gettimeofday(&tval_after, NULL);
+
+	timersub(&tval_after, &tval_before, &tval_result);
+
+	//printf("Time elapsed: %ld.%06ld\n", (long int)tval_result.tv_sec, (long int)tval_result.tv_usec);
+
+	//printf("%d\n",(int)tval_result.tv_sec);
+
+	if(((int)tval_result.tv_usec) >= 1000){
+		get_start_time = 1;
+		data[counter][0] = car-> race.distFromStartLine;
+		data[counter][1] = car->_steerCmd;
+		data[counter][2] = (tdble)car->_gear;
+		data[counter][3] = car->_brakeCmd;
+		data[counter][4] = car->_clutchCmd;
+		data[counter][5] = car->_accelCmd;
+		data[counter][6] = car->pub.trkPos.toMiddle;
+		data[counter][7] = int(car->race.curLapTime * 1000);
+		clockTime[counter] = time(NULL);
+		counter++;
+	}
+
+	char fileName[100];
+
+	if(counter == 10){
+		sprintf(fileName,"%s%s",tmp_file_loc, tmp_file);
+		if(first_time){
+			fo.open(fileName);
+			first_time = false;
+		}else{
+			fo.open(fileName, std::ofstream::app);
+		}
+		int itr = 0;
+		for(int i=1; i<=counter; i++)
+		{
+			for(int j=0; j<COLS; j++)
+			{
+				fo<<data[itr][j]<<"\t";
+				//std::cout<<logData[i][j]<<" ";
+			}
+			fo<<clockTime[itr]<<"\n";
+			itr++;
+		}
+		fo.close();
+		counter = 0;
+	}
+//======================================================================
     robot.drive_mt(index, car, s);
+
+    /*
+    printf("%f  ",car-> race.distFromStartLine);
+    printf("%f  ",car->_steerCmd);
+    printf("%f  ",(tdble)car->_gear);
+    printf("%f  ",car->_brakeCmd);
+    printf("%f  ",car->_clutchCmd);
+    printf("%f  ",car->_accelCmd);
+    printf("%f  ",car->pub.trkPos.toMiddle);
+    printf("%f\n",int(car->race.curLapTime * 1000));
+    */
 }//drive_mt
 
 
