@@ -302,7 +302,7 @@ initStartingGrid(void)
 
 	//player always start from starting position
 	if(strcmp((&(car->info))->name,"Player") == 0 ){
-		startpos = max;
+		startpos = max + 10;
 	}
 	
     
