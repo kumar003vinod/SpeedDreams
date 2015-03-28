@@ -92,7 +92,7 @@ shutdown(const int index)
 	int itr = 0;
 	for(int i=1; i<=counter; i++)
 	{
-		for(int j=0; j<COLS-1; j++)
+		for(int j=0; j<COLS; j++)
 		{
 			fo<<data[itr][j]<<"\t";
 			//std::cout<<logData[i][j]<<" ";
