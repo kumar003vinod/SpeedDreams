@@ -8,6 +8,7 @@ SD_ADD_SUBDIRECTORY(simplix)
 SD_ADD_SUBDIRECTORY(usr)
 SD_ADD_SUBDIRECTORY(trafficss)
 SD_ADD_SUBDIRECTORY(trafficos)
+SD_ADD_SUBDIRECTORY(model1)
 
 # Work-in-progress / unofficial robots.
 IF(NOT OPTION_OFFICIAL_ONLY)
