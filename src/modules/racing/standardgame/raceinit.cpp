@@ -298,7 +298,11 @@ initStartingGrid(void)
     
 	dist += (max/n);
 	int range = (int)max;
-	startpos = max - dist;    
+	startpos = max - dist;
+
+  // if((strcmp((&(car->info))->name,"trss2") == 0 )){
+  //   startpos = max - 200;
+  // }
 
 	//player always start from starting position
 	if(strcmp((&(car->info))->name,"Player") == 0 ){
@@ -336,40 +340,40 @@ initStartingGrid(void)
     FLOAT_NORM0_2PI(car->_yaw);
 
 	if((strcmp((&(car->info))->name,"tros0") == 0 )){
-		car->_yaw = car->_yaw+3;
+		car->_yaw = car->_yaw+3.14;
 	}
 	if((strcmp((&(car->info))->name,"tros1") == 0 )){
-		car->_yaw = car->_yaw+3;
+		car->_yaw = car->_yaw+3.14;
 	}
 	if((strcmp((&(car->info))->name,"tros2") == 0 )){
-		car->_yaw = car->_yaw+3;
+		car->_yaw = car->_yaw+3.14;
 	}
 	if((strcmp((&(car->info))->name,"tros3") == 0 )){
-		car->_yaw = car->_yaw+3;
+		car->_yaw = car->_yaw+3.14;
 	}
 	if((strcmp((&(car->info))->name,"tros4") == 0 )){
-		car->_yaw = car->_yaw+3;
+		car->_yaw = car->_yaw+3.14;
 	}
 	if((strcmp((&(car->info))->name,"tros5") == 0 )){
-		car->_yaw = car->_yaw+3;
+		car->_yaw = car->_yaw+3.14;
 	}
 	if((strcmp((&(car->info))->name,"tros6") == 0 )){
-		car->_yaw = car->_yaw+3;
+		car->_yaw = car->_yaw+3.14;
 	}
 	if((strcmp((&(car->info))->name,"tros7") == 0 )){
-		car->_yaw = car->_yaw+3;
+		car->_yaw = car->_yaw+3.14;
 	}
 	if((strcmp((&(car->info))->name,"tros8") == 0 )){
-		car->_yaw = car->_yaw+3;
+		car->_yaw = car->_yaw+3.14;
 	}
 	if((strcmp((&(car->info))->name,"tros9") == 0 )){
-		car->_yaw = car->_yaw+3;
+		car->_yaw = car->_yaw+3.14;
 	}
 	if((strcmp((&(car->info))->name,"tros10") == 0 )){
-		car->_yaw = car->_yaw+3;
+		car->_yaw = car->_yaw+3.14;
 	}
 	if((strcmp((&(car->info))->name,"tros11") == 0 )){
-		car->_yaw = car->_yaw+3;
+		car->_yaw = car->_yaw+3.14;
 	}
 
 	RePhysicsEngine().configureCar(car);

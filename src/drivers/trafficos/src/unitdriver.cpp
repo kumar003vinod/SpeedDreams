@@ -2098,7 +2098,7 @@ double TDriver::Steering()
 {
 
     float angle;
-    const float SC = 8.0;
+    const float SC = 1.0;
 
     //same direction
     //angle = RtTrackSideTgAngleL(&(car->_trkPos)) - car->_yaw;
@@ -2114,7 +2114,8 @@ double TDriver::Steering()
     //same direction
     //angle -= SC*car->_trkPos.toMiddle/car->_trkPos.seg->width;
 	//reverse direction
-    angle += SC*oCar->_trkPos.toMiddle/oCar->_trkPos.seg->width;
+    float correction = (oCar->_trkPos.toMiddle+3.14)/oCar->_trkPos.seg->width;
+    angle += SC* correction;
     //debug
     //printf("angle3 => %f\n",angle);
 
