@@ -305,9 +305,17 @@ initStartingGrid(void)
   // }
 
 	//player always start from starting position
-	if(strcmp((&(car->info))->name,"Player") == 0 ){
-		startpos = max + 10;
-	}
+  if(strcmp((&(car->info))->name,"Player") == 0 ){
+    startpos = max + 10;
+  }else if(strcmp((&(car->info))->name,"acmodel0") == 0 ){
+    startpos = max + 10;
+  }else if(strcmp((&(car->info))->name,"acmodel1") == 0 ){
+    startpos = max + 10;
+  }else if(strcmp((&(car->info))->name,"acmode2") == 0 ){
+    startpos = max + 10;
+  }else if(strcmp((&(car->info))->name,"acmodel3") == 0 ){
+    startpos = max + 10;
+  }
 	
     
     tr = a + b * ((i % rows) + 1) / (rows + 1);

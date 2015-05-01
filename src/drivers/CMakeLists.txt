@@ -10,6 +10,7 @@ SD_ADD_SUBDIRECTORY(trafficss)
 SD_ADD_SUBDIRECTORY(trafficos)
 SD_ADD_SUBDIRECTORY(model1)
 SD_ADD_SUBDIRECTORY(tutorial)
+SD_ADD_SUBDIRECTORY(acmodel)
 
 # Work-in-progress / unofficial robots.
 IF(NOT OPTION_OFFICIAL_ONLY)
