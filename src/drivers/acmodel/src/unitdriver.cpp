@@ -79,6 +79,7 @@
 #include "unitpit.h"
 #include "unitstrategy.h"
 #include "unittrack.h"
+#include "iostream"
 
 //#define EXPORT_RACINGLINE
 
@@ -388,12 +389,23 @@ TDriver::TDriver(int Index):
   oJumping(0),
   oJumpOffset(0.0),
   oFirstJump(true),
-  COLS(8),
+  COLS(11),
   counter(0),
   get_start_time(1),
   tmp_file("model_tmp_file.txt"),
   tmp_file_loc("/tmp/"),
   first_time(true),
+  t_near(0),
+  t_far(0),
+  steer(0),
+  initk(false),
+  k_far(1.0),
+  k_near(1.4),
+  k_i(1.7),
+  oModelAcc(0.3),
+  oDelThetaNear(0),
+  oDelThetaFar(0),
+  oThetaNear(0),
   oStartSteerFactor(0.0)
 {
   LogSimplix.debug("\n#TDriver::TDriver() >>>\n\n");
@@ -428,6 +440,19 @@ TDriver::TDriver(int Index):
   TDriver::LengthMargin = LENGTH_MARGIN;         // Initialize safty margin
 
   LogSimplix.debug("\n#<<< TDriver::TDriver()\n\n");
+
+  if(initk){
+    // initalize k params
+    std::ifstream fi("/home/vinod/Downloads/MTPdata/data/Scripts/data/rain_track/params.txt", std::ofstream::in);
+    float data[3];
+    fi >> data[0] >> data[1] >> data[2];
+    fi.close();
+    int i;
+    // std::cout<<data[1]<<std::endl;
+    k_far = data[0];
+    k_near = data[1];
+    k_i = data[2];
+  }
 }
 //==========================================================================*
 
@@ -1435,6 +1460,100 @@ void TDriver::DriveLast()
 }
 //==========================================================================*
 
+void TDriver::getModelAcceleration()
+{
+    tTrackSeg *seg = oCar->_trkPos.seg;
+    float track_width = seg->width;
+    float car_speed = oTargetSpeed;
+
+    float car_angle = RtTrackSideTgAngleL(&(oCar->_trkPos)) - oCar->_yaw;
+    NORM_PI_PI(car_angle);
+
+    float thita_near, thita_far;
+    if(seg->type == TR_STR)
+    {
+      float near_point_dist = 10;
+      float base = oCar->pub.trkPos.toMiddle;
+      float angle_a = RAD2DEG(atan(base/near_point_dist)); //with sign
+
+      // angle that car is making with the track axis (+ve on right, -ve on left)
+      float angle_b = car_angle;
+      angle_b = RAD2DEG(angle_b);
+      
+      thita_near = -(angle_a - angle_b);
+
+      //float car_speed = car->_speed_X;
+      float far_point_dist = car_speed * 3;
+      
+      angle_a = RAD2DEG(atan(base/far_point_dist));
+
+      thita_far = -(angle_a - angle_b);
+    }
+    else if(seg->type == TR_RGT)
+    {
+      float near_point_dist = 10;
+      float base = oCar->pub.trkPos.toMiddle;
+      float angle_a = RAD2DEG(atan(base/near_point_dist)); //with sign
+
+      // angle that car is making with the track axis (+ve on right, -ve on left)
+      float angle_b = car_angle;
+      angle_b = RAD2DEG(angle_b);
+
+      thita_near = -(angle_a - angle_b);
+
+      //float car_speed = car->_speed_X;
+      float far_point_dist = car_speed * 3;
+      base = base + (track_width/2);      // Specific to right turn
+      angle_a = RAD2DEG(atan(base/far_point_dist));
+
+      thita_far = -(angle_a - angle_b);
+    }
+    else //its a left turn
+    {
+      float near_point_dist = 10;
+      float base = oCar->pub.trkPos.toMiddle;
+      float angle_a = RAD2DEG(atan(base/near_point_dist)); //with sign
+
+      // angle that car is making with the track axis (+ve on right, -ve on left)
+      float angle_b = car_angle;
+      angle_b = RAD2DEG(angle_b);
+
+      thita_near = -(angle_a - angle_b);
+
+      //float car_speed = car->_speed_X;
+      float far_point_dist = car_speed * 3;
+      base = (track_width/2) - base;      // Specific to left turn
+      angle_a = RAD2DEG(atan(base/far_point_dist));
+
+      thita_far = -(angle_a - angle_b);
+    }
+
+    float del_thita_near =  -(t_near - thita_near);
+    float del_thita_far = -(t_far - thita_far);
+    float del_steer = (k_near * del_thita_near) + (k_far * del_thita_far) + (k_i * t_near *(0.2));
+    oDelThetaNear = del_thita_near;
+    oDelThetaFar = del_thita_far;
+    oThetaNear = t_near;
+
+    //save current angles
+    t_near = thita_near;
+    t_far = thita_far;
+
+    steer = steer + del_steer;
+    steer = DEG2RAD(steer);
+    NORM_PI_PI(steer);
+    
+    steer = steer/oCar->_steerLock;
+    if(steer > 1)
+      steer = 1;
+    else if(steer < -1)
+      steer = -1;  
+
+    oModelAcc = fabs(steer);
+}
+
+
+
 //==========================================================================*
 // Drive
 //--------------------------------------------------------------------------*
@@ -1562,8 +1681,11 @@ void TDriver::Drive()
   oLastBrake = oBrake;
   oLastAbsDriftAngle = oAbsDriftAngle;
 
+  getModelAcceleration();
+
   // Tell TORCS what we want do do
-  CarAccelCmd = (float) oAccel;
+  // CarAccelCmd = (float) oAccel;
+  CarAccelCmd = (float) oModelAcc;
   CarBrakeCmd = (float) oBrake;
   CarClutchCmd = (float) oClutch;
   CarGearCmd = oGear;
@@ -1594,6 +1716,9 @@ void TDriver::Drive()
     data[counter][5] = oCar->_accelCmd;
     data[counter][6] = oCar->pub.trkPos.toMiddle;
     data[counter][7] = int(oCar->race.curLapTime * 1000);
+    data[counter][8] = oDelThetaNear;
+    data[counter][9] = oDelThetaFar;
+    data[counter][10] = oThetaNear;
     clockTime[counter] = time(NULL);
     counter++;
   }
@@ -1611,12 +1736,18 @@ void TDriver::Drive()
     int itr = 0;
     for(int i=1; i<=counter; i++)
     {
-      for(int j=0; j<COLS; j++)
+      for(int j=0; j<8; j++)
       {
         fo<<data[itr][j]<<"\t";
         //std::cout<<logData[i][j]<<" ";
       }
-      fo<<clockTime[itr]<<"\n";
+      fo<<clockTime[itr]<<"\t";
+      for(int j=8; j<COLS-1; j++)
+      {
+        fo<<data[itr][j]<<"\t";
+        //std::cout<<logData[i][j]<<" ";
+      }
+      fo<<data[itr][COLS-1]<<"\n";
       itr++;
     }
     fo.close();
@@ -1712,13 +1843,22 @@ void TDriver::Shutdown()
   int itr = 0;
   for(int i=1; i<=counter; i++)
   {
-    for(int j=0; j<COLS; j++)
+    for(int i=1; i<=counter; i++)
     {
-      fo<<data[itr][j]<<"\t";
-      //std::cout<<logData[i][j]<<" ";
+      for(int j=0; j<8; j++)
+      {
+        fo<<data[itr][j]<<"\t";
+        //std::cout<<logData[i][j]<<" ";
+      }
+      fo<<clockTime[itr]<<"\t";
+      for(int j=8; j<COLS-1; j++)
+      {
+        fo<<data[itr][j]<<"\t";
+        //std::cout<<logData[i][j]<<" ";
+      }
+      fo<<data[itr][COLS-1]<<"\n";
+      itr++;
     }
-    fo<<clockTime[itr]<<"\n";
-    itr++;
   }
   fo.close();
 

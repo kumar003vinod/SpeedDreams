@@ -404,7 +404,7 @@ private:
 
 	//implementing data logging
 	int COLS;
-	float data[1000][8];
+	float data[1000][11];
 	time_t clockTime[1000];
 
 	int counter;
@@ -420,6 +420,19 @@ private:
 	std::ofstream fo;
 	//implementing data logging ends here
 
+	//acceleration model params
+	float t_near;
+	float t_far;
+	float steer;
+	bool initk;
+	float k_far;
+	float k_near;
+	float k_i;
+	float oModelAcc;
+    float oDelThetaNear;
+    float oDelThetaFar;
+    float oThetaNear;
+	//acceleration model params ends here
   public:
 	int oIndex;                                  // index of own driver
     int oTestPitStop;                            // Test pit stop
@@ -539,6 +552,7 @@ private:
 
 	float pAlpha;// parameter controlling position correction
 	float pBeta; // parameter controlling curve correction
+	void getModelAcceleration();
 };
 //==========================================================================*
 
