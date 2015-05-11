@@ -5,12 +5,12 @@
 // A robot for Speed Dreams-Version 2.X simuV4
 //--------------------------------------------------------------------------*
 // Class for driving and driver/robot
-// Zentrale Klasse für das Fahren bzw. den Fahrer/Roboter
+// Zentrale Klasse fÃ¼r das Fahren bzw. den Fahrer/Roboter
 //
 // File         : unitdriver.cpp
 // Created      : 2007.11.25
 // Last changed : 2013.07.15
-// Copyright    : © 2007-2013 Wolf-Dieter Beelitz
+// Copyright    : Â© 2007-2013 Wolf-Dieter Beelitz
 // eMail        : wdb@wdbee.de
 // Version      : 4.01.000
 //--------------------------------------------------------------------------*
@@ -45,17 +45,17 @@
 //
 // Das Programm wurde unter Windows XP entwickelt und getestet.
 // Fehler sind nicht bekannt, dennoch gilt:
-// Wer die Dateien verwendet erkennt an, dass für Fehler, Schäden,
-// Folgefehler oder Folgeschäden keine Haftung übernommen wird.
+// Wer die Dateien verwendet erkennt an, dass fÃ¼r Fehler, SchÃ¤den,
+// Folgefehler oder FolgeschÃ¤den keine Haftung Ã¼bernommen wird.
 //--------------------------------------------------------------------------*
 // This program is free software; you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
 // the Free Software Foundation; either version 2 of the License, or
 // (at your option) any later version.
 //
-// Im übrigen gilt für die Nutzung und/oder Weitergabe die
+// Im Ã¼brigen gilt fÃ¼r die Nutzung und/oder Weitergabe die
 // GNU GPL (General Public License)
-// Version 2 oder nach eigener Wahl eine spätere Version.
+// Version 2 oder nach eigener Wahl eine spÃ¤tere Version.
 //--------------------------------------------------------------------------*
 // THIS VERSION WAS MODIFIED TO BE USED WITH SD CAREER MODE
 // This results in some issues while using it with windows!
@@ -398,11 +398,16 @@ TDriver::TDriver(int Index):
   t_near(0),
   t_far(0),
   steer(0),
-  initk(false),
+  initk(0),
   k_far(1.0),
   k_near(1.4),
   k_i(1.7),
+  k(1.7),
+  tt(0),
+  k1(0.2),
+  k2(0.2),
   oModelAcc(0.3),
+  oModelDAcc(0.1),
   oDelThetaNear(0),
   oDelThetaFar(0),
   oThetaNear(0),
@@ -441,17 +446,39 @@ TDriver::TDriver(int Index):
 
   LogSimplix.debug("\n#<<< TDriver::TDriver()\n\n");
 
-  if(initk){
-    // initalize k params
-    std::ifstream fi("/home/vinod/Downloads/MTPdata/data/Scripts/data/rain_track/params.txt", std::ofstream::in);
-    float data[3];
-    fi >> data[0] >> data[1] >> data[2];
+  std::ifstream fi("/home/vinod/Downloads/MTPdata/data/Scripts/data/rain_track/decesion.txt", std::ofstream::in);
+  fi >> initk;
+  fi >> tt;
+  
+  // if(initk == 1){
+  //   // initalize k params
+  //   std::ifstream fi("/home/vinod/Downloads/MTPdata/data/Scripts/data/rain_track/rpm1.txt", std::ofstream::in);
+  //   float data[4];
+  //   fi >> data[0] >> data[1] >> data[2] >> data[4];
+  //   fi.close();
+  //   int i;
+  //   // std::cout<<data[1]<<std::endl;
+  //   k_far = data[0];
+  //   k_near = data[1];
+  //   k_i = data[2];
+  //   k = data[2];
+  // }
+  if(initk == 1){
+    std::ifstream fi("/home/vinod/Downloads/MTPdata/data/Scripts/data/rain_track/tpm1.txt", std::ofstream::in);
+    float data[2];
+    fi >> data[0] >> data[1];
     fi.close();
-    int i;
     // std::cout<<data[1]<<std::endl;
-    k_far = data[0];
-    k_near = data[1];
-    k_i = data[2];
+    k_near = data[0];
+    k_i = data[1];
+    if(tt == 2){
+      std::ifstream fi("/home/vinod/Downloads/MTPdata/data/Scripts/data/rain_track/tpmd1.txt", std::ofstream::in);
+      float data[2];
+      fi >> data[0] >> data[1];
+      fi.close();
+      k1 = data[0];
+      k2 = data[1];
+    }
   }
 }
 //==========================================================================*
@@ -1070,7 +1097,7 @@ void TDriver::SetPathAndFilenameForRacinglines()
   oPathToWriteTo = PathToWriteToBuffer;
   if (GfDirCreate(oPathToWriteTo) == GF_DIR_CREATION_FAILED)
   {
-	  LogSimplix.debug("#Unable to create path for racinglines: >%s<",oPathToWriteTo);
+    LogSimplix.debug("#Unable to create path for racinglines: >%s<",oPathToWriteTo);
   };
 
   snprintf(TrackLoadBuffer,sizeof(TrackLoadBuffer),"%s/%d-%s.trk",
@@ -1158,7 +1185,7 @@ void TDriver::InitTrack
 
   // Read/merge car parms
   // First all params out of the common files
-  oMaxFuel = GfParmGetNum(CarHandle              // Maximal möglicher
+  oMaxFuel = GfParmGetNum(CarHandle              // Maximal mÃ¶glicher
     , SECT_CAR, PRM_TANK                         //   Tankinhalt
     , (char*) NULL, 100.0);
   LogSimplix.debug("#oMaxFuel (TORCS)   = %.1f\n",oMaxFuel);
@@ -1464,7 +1491,7 @@ void TDriver::getModelAcceleration()
 {
     tTrackSeg *seg = oCar->_trkPos.seg;
     float track_width = seg->width;
-    float car_speed = oTargetSpeed;
+    float car_speed = sqrt(oCar->_speed_x * oCar->_speed_x + oCar->_speed_y * oCar->_speed_y + oCar->_speed_z * oCar->_speed_z)*3.6f;
 
     float car_angle = RtTrackSideTgAngleL(&(oCar->_trkPos)) - oCar->_yaw;
     NORM_PI_PI(car_angle);
@@ -1483,7 +1510,7 @@ void TDriver::getModelAcceleration()
       thita_near = -(angle_a - angle_b);
 
       //float car_speed = car->_speed_X;
-      float far_point_dist = car_speed * 3;
+      float far_point_dist = oCar->_speed_x * 3;
       
       angle_a = RAD2DEG(atan(base/far_point_dist));
 
@@ -1530,28 +1557,119 @@ void TDriver::getModelAcceleration()
 
     float del_thita_near =  -(t_near - thita_near);
     float del_thita_far = -(t_far - thita_far);
-    float del_steer = (k_near * del_thita_near) + (k_far * del_thita_far) + (k_i * t_near *(0.2));
+    // float del_steer = (k_near * del_thita_near) + (k_far * del_thita_far) + (k_i * t_near *(0.2));
+    // float del_steer = (k_near * del_thita_near) + (k_far * del_thita_far);
+    // float del_steer = (k_near * del_thita_near + k_far);
+    // float del_steer = (k_near * del_thita_near + (k_far * del_thita_far) + k_i);
+    // float del_steer = (k_near * del_thita_near) + (k_far * del_thita_far) + (k_i * t_near);
+    float del_steer = (k_near * fabs(t_near) + k_i);
     oDelThetaNear = del_thita_near;
     oDelThetaFar = del_thita_far;
-    oThetaNear = t_near;
+    oThetaNear = thita_near;
+
+    printf("%f\n", oThetaNear);
 
     //save current angles
     t_near = thita_near;
     t_far = thita_far;
 
-    steer = steer + del_steer;
-    steer = DEG2RAD(steer);
-    NORM_PI_PI(steer);
-    
-    steer = steer/oCar->_steerLock;
-    if(steer > 1)
-      steer = 1;
-    else if(steer < -1)
-      steer = -1;  
+    // steer = steer + del_steer;
+    // steer = DEG2RAD(steer);
+    // NORM_PI_PI(steer);
 
-    oModelAcc = fabs(steer);
+    // steer = steer/oCar->_steerLock;
+
+    del_steer = del_steer;
+
+    del_steer = fabs(del_steer);
+
+    // printf("%f %f %f\n", del_thita_near, del_thita_far, del_steer);
+    // printf("%f %f %f\n", oCar->_speed_x, oCar->_speed_y, oCar->_speed_z);
+
+    if(del_steer < 0){
+      del_steer = 0;
+    }else if(del_steer > 1){
+      del_steer = 1;
+    }
+
+    // oModelAcc = del_steer;
+    // if(oCar-> race.distFromStartLine < 100){
+    //   oModelAcc +=  0.1;
+    // }
+    // if(oCar-> race.distFromStartLine > 100 && oCar-> race.distFromStartLine < 200){
+    //   oModelAcc +=  0.1;
+    // }
+
+    // // if(oCar-> race.distFromStartLine < 100){
+    // //   oModelAcc +=  0.1;
+    // // }
+    // if(oCar-> race.distFromStartLine > 2300){
+    //   oModelAcc = 1;
+    // }
+
+    oModelAcc = del_steer;
+
+    if(tt == 2){
+      float dacc = (k1 / t_near + k2);
+      dacc = fabs(dacc);
+      printf("%f\n", dacc);
+      if(dacc > 1){
+        dacc = 1;
+      }
+      if(dacc < 0){
+        dacc = 0;
+      }
+      oModelDAcc = dacc;
+      // oModelDAcc = 0.02;
+    }
+
 }
 
+
+void TDriver::getModel1Acceleration(){
+  oModelAcc = 0.2;
+
+  // // printf("%f\n", (oCar->race).topSpeed);
+  // float car_speed = sqrt(oCar->_speed_x * oCar->_speed_x + oCar->_speed_y * oCar->_speed_y + oCar->_speed_z * oCar->_speed_z)*3.6f;
+  // // printf("%f\n", car_speed);
+  // // printf("%f\n", oCar->_trkPos.seg->width);
+  // float car_angle = RtTrackSideTgAngleL1(oCar->_trkPos.seg->next->next ,oCar->_trkPos.toStart) - oCar->_yaw;
+  // NORM_PI_PI(car_angle);
+  // car_angle = fabs(car_angle);
+  // float sin_t = sin(car_angle/2);
+  // float d = 2 * oCar->_trkPos.seg->width;
+  // float a = (2 * (car_speed * car_speed) * sin_t)/d;
+  // printf("%f\n", a);
+
+  // float v = sqrt(oCar->_speed_x * oCar->_speed_x + oCar->_speed_y * oCar->_speed_y + oCar->_speed_z * oCar->_speed_z)*3.6f;
+  // float a0 = 5.22;
+  // float v0 = 14.84;
+  // float  a = a0 / sqrt(pow((1 - pow((v/v0),2) ), 2) + 2*pow(v/v0, 2));
+  // if(a > 1){
+  //   a = 1.0;
+  // }
+  // if(a < 0){
+  //   a = 0.0;
+  // }
+  // printf("%f %f\n", a, oBrake);
+  // oModelAcc = a;
+
+  // float car_angle = RtTrackSideTgAngleL1(oCar->_trkPos.seg ,oCar->_trkPos.toStart);
+  // float car_angle_next = RtTrackSideTgAngleL1(oCar->_trkPos.seg->next ,oCar->_trkPos.toStart);
+  // float diff = fabs(car_angle_next - car_angle);
+  // if(diff > 0){
+  //   oModelAcc = k_near/diff + k_far;
+  // }else{
+  //   oModelAcc =  k_far;
+  // }
+  //  if(oModelAcc > 1){
+  //   oModelAcc = 1.0;
+  //  }
+  //  if (oModelAcc < 0)
+  //  {
+  //    oModelAcc = 0.0;
+  //  }
+}
 
 
 //==========================================================================*
@@ -1623,8 +1741,8 @@ void TDriver::Drive()
   }
   else
   {
-	LearnBraking(Pos);
-    BrakingForceController();
+    LearnBraking(Pos);
+    BrakingForceController();//====
     Clutching();                                 // Tread/Release clutch
   }
   GearTronic();                                  // Shift if needed
@@ -1681,12 +1799,27 @@ void TDriver::Drive()
   oLastBrake = oBrake;
   oLastAbsDriftAngle = oAbsDriftAngle;
 
-  getModelAcceleration();
-
   // Tell TORCS what we want do do
-  // CarAccelCmd = (float) oAccel;
-  CarAccelCmd = (float) oModelAcc;
-  CarBrakeCmd = (float) oBrake;
+  if(initk == 0){
+    CarAccelCmd = (float) oAccel;
+    CarBrakeCmd = (float) oBrake;
+  }else if(initk == 1){
+    if(tt == 1){
+      getModelAcceleration();  
+      CarAccelCmd = (float) oModelAcc;
+      CarBrakeCmd = (float) oBrake;
+    }
+    if(tt == 2){
+      printf("ddddddddddddd\n");
+      getModelAcceleration();
+      CarAccelCmd = (float) oModelAcc;
+      CarBrakeCmd = (float) oModelDAcc;
+    }
+  }else{
+    getModel1Acceleration();
+    CarAccelCmd = (float) oModelAcc;
+    CarBrakeCmd = (float) oBrake;
+  }
   CarClutchCmd = (float) oClutch;
   CarGearCmd = oGear;
   CarSteerCmd = (float) oSteer;
@@ -1706,7 +1839,7 @@ void TDriver::Drive()
 
   //printf("%d\n",(int)tval_result.tv_sec);
 
-  if(((int)tval_result.tv_usec) >= 1000){
+  if(((int)tval_result.tv_usec) >= 100){
     get_start_time = 1;
     data[counter][0] = oCar-> race.distFromStartLine;
     data[counter][1] = oCar->_steerCmd;
@@ -1769,11 +1902,11 @@ void TDriver::Drive()
   }
 
   // Single wheel brake
-  oCar->ctrl.singleWheelBrakeMode = 1;
-  oCar->ctrl.brakeFrontRightCmd = (float) (oBrake * oBrakeRep * oBrakeRight * oBrakeFront); 
-  oCar->ctrl.brakeFrontLeftCmd = (float) (oBrake * oBrakeRep * oBrakeLeft * oBrakeFront); 
-  oCar->ctrl.brakeRearRightCmd = (float) (oBrake * (1 - oBrakeRep) * oBrakeRight * oBrakeRear); 
-  oCar->ctrl.brakeRearLeftCmd = (float) (oBrake * (1 - oBrakeRep) * oBrakeLeft * oBrakeRear); 
+  // oCar->ctrl.singleWheelBrakeMode = 1;
+  // oCar->ctrl.brakeFrontRightCmd = (float) (oBrake * oBrakeRep * oBrakeRight * oBrakeFront); 
+  // oCar->ctrl.brakeFrontLeftCmd = (float) (oBrake * oBrakeRep * oBrakeLeft * oBrakeFront); 
+  // oCar->ctrl.brakeRearRightCmd = (float) (oBrake * (1 - oBrakeRep) * oBrakeRight * oBrakeRear); 
+  // oCar->ctrl.brakeRearLeftCmd = (float) (oBrake * (1 - oBrakeRep) * oBrakeLeft * oBrakeRear); 
 
   // ... SIMUV4
 
@@ -1843,23 +1976,20 @@ void TDriver::Shutdown()
   int itr = 0;
   for(int i=1; i<=counter; i++)
   {
-    for(int i=1; i<=counter; i++)
+    for(int j=0; j<8; j++)
     {
-      for(int j=0; j<8; j++)
-      {
-        fo<<data[itr][j]<<"\t";
-        //std::cout<<logData[i][j]<<" ";
-      }
-      fo<<clockTime[itr]<<"\t";
-      for(int j=8; j<COLS-1; j++)
-      {
-        fo<<data[itr][j]<<"\t";
-        //std::cout<<logData[i][j]<<" ";
-      }
-      fo<<data[itr][COLS-1]<<"\n";
-      itr++;
+      fo<<data[itr][j]<<"\t";
+      //std::cout<<logData[i][j]<<" ";
     }
-  }
+    fo<<clockTime[itr]<<"\t";
+    for(int j=8; j<COLS-1; j++)
+    {
+      fo<<data[itr][j]<<"\t";
+      //std::cout<<logData[i][j]<<" ";
+    }
+    fo<<data[itr][COLS-1]<<"\n";
+    itr++;
+}
   fo.close();
 
   printf("Enter your name here ::::----\n");
@@ -2334,103 +2464,103 @@ float TDriver::getDistToSegEnd()
 double TDriver::Steering()
 {
 	
-	float track_width = oCar->_trkPos.seg->width;
-	float car_angle = RtTrackSideTgAngleL(&(oCar->_trkPos)) - oCar->_yaw;
-	NORM_PI_PI(car_angle); // put the angle back in the range from -PI to PI
+	// float track_width = oCar->_trkPos.seg->width;
+	// float car_angle = RtTrackSideTgAngleL(&(oCar->_trkPos)) - oCar->_yaw;
+	// NORM_PI_PI(car_angle); // put the angle back in the range from -PI to PI
 
-	float pos_correc = (oCar->_trkPos.toMiddle)/ (track_width);
-	float right_curve_correc = ((track_width/4) + oCar->_trkPos.toMiddle)/(track_width);
-	float left_curve_correc = (-(track_width/4) + oCar->_trkPos.toMiddle)/(track_width);
+	// float pos_correc = (oCar->_trkPos.toMiddle)/ (track_width);
+	// float right_curve_correc = ((track_width/4) + oCar->_trkPos.toMiddle)/(track_width);
+	// float left_curve_correc = (-(track_width/4) + oCar->_trkPos.toMiddle)/(track_width);
 
-	float rW=0, lW=0, sW=0;
-	tTrackSeg *seg = oCar->_trkPos.seg;
+	// float rW=0, lW=0, sW=0;
+	// tTrackSeg *seg = oCar->_trkPos.seg;
 
-	//remaining length of current segment
-	float seg_len = getDistToSegEnd();
+	// //remaining length of current segment
+	// float seg_len = getDistToSegEnd();
 
 
-	if(seg->next->next->next->next->next->type == TR_RGT)
-	{
-		rW += 1*(1-(seg_len/12.0));
-	}
-	else if(seg->next->next->next->next->next->type == TR_LFT)
-	{
-		lW += 1*(1-(seg_len/12.0));
-	}
-	else
-		sW += 1*(1-(seg_len/12.0));
+	// if(seg->next->next->next->next->next->type == TR_RGT)
+	// {
+	// 	rW += 1*(1-(seg_len/12.0));
+	// }
+	// else if(seg->next->next->next->next->next->type == TR_LFT)
+	// {
+	// 	lW += 1*(1-(seg_len/12.0));
+	// }
+	// else
+	// 	sW += 1*(1-(seg_len/12.0));
 
-	//4-segment of look ahead
-	if(seg->next->next->next->next->type == TR_RGT)
-	{
-		rW += -1.0;
-	}
-	else if(seg->next->next->next->next->type == TR_LFT)
-	{
-		lW += 4.0;
-	}
-	else
-		sW += -2.0;
+	// //4-segment of look ahead
+	// if(seg->next->next->next->next->type == TR_RGT)
+	// {
+	// 	rW += -1.0;
+	// }
+	// else if(seg->next->next->next->next->type == TR_LFT)
+	// {
+	// 	lW += 4.0;
+	// }
+	// else
+	// 	sW += -2.0;
 
-	//3-segment of look ahead
-	if(seg->next->next->next->type == TR_RGT)
-	{
-		rW += -0.5;
-	}
-	else if(seg->next->next->next->type == TR_LFT)
-	{
-		lW += 5.0;
-	}
-	else
-		sW += -1;
+	// //3-segment of look ahead
+	// if(seg->next->next->next->type == TR_RGT)
+	// {
+	// 	rW += -0.5;
+	// }
+	// else if(seg->next->next->next->type == TR_LFT)
+	// {
+	// 	lW += 5.0;
+	// }
+	// else
+	// 	sW += -1;
 
-	//2-segment of look ahead
-	if(seg->next->next->type == TR_RGT)
-	{
-		rW += -0.5;
-	}
-	else if(seg->next->next->type == TR_LFT)
-	{
-		lW += 5.0;
-	}
-	else
-		sW += -1;
+	// //2-segment of look ahead
+	// if(seg->next->next->type == TR_RGT)
+	// {
+	// 	rW += -0.5;
+	// }
+	// else if(seg->next->next->type == TR_LFT)
+	// {
+	// 	lW += 5.0;
+	// }
+	// else
+	// 	sW += -1;
 
-	//1-segment of look ahead
-	if(seg->next->type == TR_RGT)
-	{
-		rW += 2*(seg_len/12) + 3*(1-(seg_len/12.0));
-	}
-	else if(seg->next->type == TR_LFT)
-	{
-		lW += 2*(seg_len/12) + 3*(1-(seg_len/12.0));
-	}
-	else
-		sW += 2*(seg_len/12) + 3*(1-(seg_len/12.0));
+	// //1-segment of look ahead
+	// if(seg->next->type == TR_RGT)
+	// {
+	// 	rW += 2*(seg_len/12) + 3*(1-(seg_len/12.0));
+	// }
+	// else if(seg->next->type == TR_LFT)
+	// {
+	// 	lW += 2*(seg_len/12) + 3*(1-(seg_len/12.0));
+	// }
+	// else
+	// 	sW += 2*(seg_len/12) + 3*(1-(seg_len/12.0));
 
-	//current segment
-	if(seg->type == TR_RGT)
-	{
-		rW += 3*(seg_len/12.0);
-	}
-	else if(seg->type == TR_LFT)
-	{
-		lW += 3*(seg_len/12.0);
-	}
-	else
-		sW += 3*(seg_len/12.0);
+	// //current segment
+	// if(seg->type == TR_RGT)
+	// {
+	// 	rW += 3*(seg_len/12.0);
+	// }
+	// else if(seg->type == TR_LFT)
+	// {
+	// 	lW += 3*(seg_len/12.0);
+	// }
+	// else
+	// 	sW += 3*(seg_len/12.0);
 	
-	float curve_correc=0;
+	// float curve_correc=0;
 
-	curve_correc = (rW/10)*right_curve_correc + (lW/10)*left_curve_correc;
-	pos_correc = (sW/10)*pos_correc;
+	// curve_correc = (rW/10)*right_curve_correc + (lW/10)*left_curve_correc;
+	// pos_correc = (sW/10)*pos_correc;
 
-	float steering = car_angle - pAlpha*pos_correc - pBeta*curve_correc;
+	// float steering = car_angle - pAlpha*pos_correc - pBeta*curve_correc;
 	
-	return steering/oCar->_steerLock;
+	// return steering/oCar->_steerLock;
 
 
-/*
+
   TLanePoint AheadPointInfo;
   if (oUnstucking)
   {
@@ -2447,7 +2577,7 @@ double TDriver::Steering()
   
   oDeltaOffset = oLanePoint.Offset + CarToMiddle;// Delta to planned offset
   return oAngle / SteerLock;
-*/
+
   
 }
 //==========================================================================*
@@ -3210,7 +3340,7 @@ bool TDriver::EcoShift()
 //==========================================================================*
 
 //==========================================================================*
-// S²GCuASL ;D
+// SÂ²GCuASL ;D
 // = Simplified sequential gear controller using adaptive shift levels
 //--------------------------------------------------------------------------*
 void TDriver::GearTronic()
@@ -4291,7 +4421,7 @@ double TDriver::FilterBrake(double Brake)
 	  oBrakeLeft = 1.0f;
 	  oBrakeFront = 1.0f;
 	  oBrakeRear = 1.0f;
-	  //LogSimplix.debug("#BR = BL %.3f°\n",oDriftAngle*180/PI);
+	  //LogSimplix.debug("#BR = BL %.3fÂ°\n",oDriftAngle*180/PI);
 	}
   }
   // ... EPS system for use with SimuV4

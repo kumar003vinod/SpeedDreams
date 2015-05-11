@@ -424,11 +424,17 @@ private:
 	float t_near;
 	float t_far;
 	float steer;
-	bool initk;
+	int initk;
+	int model_no;
+	int tt;
 	float k_far;
 	float k_near;
 	float k_i;
+	float k;
+	float k1;
+	float k2;
 	float oModelAcc;
+	float oModelDAcc;
     float oDelThetaNear;
     float oDelThetaFar;
     float oThetaNear;
@@ -553,6 +559,7 @@ private:
 	float pAlpha;// parameter controlling position correction
 	float pBeta; // parameter controlling curve correction
 	void getModelAcceleration();
+	void getModel1Acceleration();
 };
 //==========================================================================*
 
