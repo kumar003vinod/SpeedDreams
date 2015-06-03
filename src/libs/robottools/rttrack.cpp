@@ -572,6 +572,24 @@ RtTrackSideTgAngleL(tTrkLocPos *p)
 }
 
 
+tdble
+RtTrackSideTgAngleL1(trackSeg *seg, float toStart)
+{
+    switch (seg->type) {
+    case TR_STR:
+	return seg->angle[TR_ZS];
+	break;
+    case TR_RGT:
+	return seg->angle[TR_ZS] + toStart;
+	break;
+    case TR_LFT:
+	return seg->angle[TR_ZS] - toStart;
+	break;
+    }
+    return 0;
+}
+
+
 /** Used to get the normal vector of the road (pointing upward).
     Local coordinates are used to locate the point where to
     get the road normal vector.

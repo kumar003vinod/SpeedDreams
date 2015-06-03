@@ -154,6 +154,7 @@ ROBOTTOOLS_API void RtTrackSideNormalG(tTrackSeg *seg, tdble X, tdble Y, int sid
  * the angle 0 is parallel to the first segment start.
  */
 ROBOTTOOLS_API tdble RtTrackSideTgAngleL(tTrkLocPos *p);
+ROBOTTOOLS_API tdble RtTrackSideTgAngleL1(tTrackSeg *seg, float toStart);
 
 /*
  * Used to get the normal vector of the road itself (pointing

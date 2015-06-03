@@ -345,6 +345,8 @@ TDriver::TDriver(int Index):
   oBrakeAdjustPerc(1.0),
   oDecelAdjustTarget(1.0),
   oDecelAdjustPerc(1.0),
+	pAlpha(0.5),
+	pBeta(0.5),
   oRandomSeed(0),
   oIndex(0),
   oTestPitStop(0),
@@ -3671,6 +3673,7 @@ void TDriver::Runaround(double Scale, double Target, bool DoAvoid)
 //--------------------------------------------------------------------------*
 void TDriver::AvoidOtherCars(double K, bool& IsClose, bool& IsLapper)
 {
+	//in unitopponent.h
   const TOpponent::TState& MyState =             // Get my own state
 	oOpponents[oOwnOppIdx].Info().State;
 
@@ -3682,6 +3685,8 @@ void TDriver::AvoidOtherCars(double K, bool& IsClose, bool& IsLapper)
   double OppToMiddle = -1000;
   double MinDistToCarInFront = TrackLength;
 
+	//printf("%d\n",oNbrCars);
+
   for (I = 0; I < oNbrCars; I++)                 // Get info about imminent
   {                                              //   collisions from
       bool CarInFront = oOpponents[I].Classify(  //   all opponents depending
@@ -3690,6 +3695,9 @@ void TDriver::AvoidOtherCars(double K, bool& IsClose, bool& IsLapper)
 	  MinDistToCarInFront,
 	  /*oStrategy->OutOfPitlane(),*/             //   In pitlane?
 	  oMaxAccel.Estimate(CarSpeedLong));         //   Estimate accelleration
+
+	  //printf("%d\n",CarInFront);
+
 	  if (CarInFront)
 		OppToMiddle = oOpponents[I].Car()->pub.trkPos.toMiddle;
   }
@@ -3777,6 +3785,8 @@ void TDriver::AvoidOtherCars(double K, bool& IsClose, bool& IsLapper)
   Target = RunAround.AvoidTo                     // Which way we should take
     (Coll,oCar,*this,oDoAvoid,TempTarget);       //   depending on opponents
 
+    //oDoAvoid is true if car is in front
+
   float ExitOffset = float
 	(oStrategy->oPit->oDistToPitEnd 
 	+ Param.Pit.oExitLength);
@@ -3830,10 +3840,12 @@ void TDriver::AvoidOtherCars(double K, bool& IsClose, bool& IsLapper)
   // ... Skilling from Andrew Sumner
 
   IsClose = (Coll.Flags & F_CLOSE) != 0;         // Set flag, if opponent is close by
-  if ((IsClose) && (DistanceRaced > 400))
+
+  if ((IsClose))
   {
+    // printf("%f\n", oTargetSpeed);
     double F = MAX(0,20 - Coll.MinOppDistance) / 20;
-	oTargetSpeed *= (F * 0.98f + (1 - F));  
+	oTargetSpeed *= (F * 0.98f + (1 - F));
   }
 
   if (oFlying)                                   // We can't do anything

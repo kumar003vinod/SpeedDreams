@@ -2131,27 +2131,41 @@ TV2D TDriver::getTargetPoint()
 //--------------------------------------------------------------------------*
 double TDriver::Steering()
 {
-
-/*
   float angle = RtTrackSideTgAngleL(&(oCar->_trkPos)) - oCar->_yaw;
   NORM_PI_PI(angle); // put the angle back in the range from -PI to PI
 
   const float SC = 1.0;
 
-  float correction = (oCar->_trkPos.toMiddle-3)/oCar->_trkPos.seg->width;
+  float correction = (oCar->_trkPos.toMiddle-3.14)/oCar->_trkPos.seg->width;
+
+  // printf("%f\n", oCar->_trkPos.seg->radius);
+  // printf("%f\n", oCar->_trkPos.seg->radius * oCar->_trkPos.seg->arc);
+  // if(oCar->_trkPos.seg->arc == 0.0){
+  //   printf("full\n");
+  // }else{
+  //   printf("%f\n", oCar->_trkPos.seg->arc);
+  // }
+
+  float change = RtTrackSideTgAngleL1((oCar->_trkPos.seg), oCar->_trkPos.toStart);
+  float change1 = RtTrackSideTgAngleL1((oCar->_trkPos.seg->next), oCar->_trkPos.toStart);
+
+  float totalChange = change - change1;
+
+  // printf("%f\n", totalChange);
+
+  printf("%f\n", fabs(totalChange/3.14));
 
   angle -= SC * correction;
   
   return angle/oCar->_steerLock;
-*/
 
-  Tdble targetAngle;
-  TV2D target = getTargetPoint();
+  // Tdble targetAngle;
+  // TV2D target = getTargetPoint();
 
-  targetAngle = atan2(target.y - oCar->_pos_Y, target.x - oCar->_pos_X);
-  targetAngle -= oCar->_yaw;
-  NORM_PI_PI(targetAngle);
-  return targetAngle / oCar->_steerLock;
+  // targetAngle = atan2(target.y - oCar->_pos_Y, target.x - oCar->_pos_X);
+  // targetAngle -= oCar->_yaw;
+  // NORM_PI_PI(targetAngle);
+  // return targetAngle / oCar->_steerLock;
 }
 //==========================================================================*
 
