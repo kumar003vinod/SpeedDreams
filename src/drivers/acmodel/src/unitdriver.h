@@ -435,6 +435,7 @@ private:
 	float k2;
 	float oModelAcc;
 	float oModelDAcc;
+	float last_angle;
     float oDelThetaNear;
     float oDelThetaFar;
     float oThetaNear;
