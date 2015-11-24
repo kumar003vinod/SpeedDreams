@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    file          : simplix_ls1.xml
+    created       : 07 Mar 2008
+    last modified : 06 Nov 2010
+    copyright     : (C) 2008-2010 Wolf-Dieter Beelitz
+
+    SVN version   : $Id: simplix_ls1.xml 5764 2014-01-26 07:31:48Z wdbee $
+-->
+<!--    This program is free software; you can redistribute it and/or modify  -->
+<!--    it under the terms of the GNU General Public License as published by  -->
+<!--    the Free Software Foundation; either version 2 of the License, or     -->
+<!--    (at your option) any later version.                                   -->
+<!DOCTYPE params SYSTEM "../../libs/tgf/params.dtd">
+
+<params name="simplix_ls1" type="robotdef">
+	<section name="Robots">
+		<section name="index">
+			<section name="0">
+				<attstr name="name" val="Felipe Hernandez"></attstr>
+				<attstr name="short name" val="F. Hernandez"></attstr>
+				<attstr name="code name" val="HER"></attstr>
+				<attstr name="desc" val="One of Spain's rising sportcar racing stars"></attstr>
+				<attstr name="team" val="Archer Racing Team Uguu"></attstr>
+				<attstr name="author" val=""></attstr>
+				<attstr name="car name" val="ls1-archer-r9"></attstr>
+				<attnum name="race number" val="1008"></attnum>
+				<attnum name="red" val="1.0"></attnum>
+				<attnum name="green" val="0.9"></attnum>
+				<attnum name="blue" val="0.7"></attnum>
+			</section>
+
+			<section name="1">
+				<attstr name="name" val="Christoph Ehrhoff"></attstr>
+				<attstr name="short name" val="C. Ehrhoff"></attstr>
+				<attstr name="code name" val="EHR"></attstr>
+				<attstr name="desc" val="German racing star who won't move to F1 because the LS1s are too fun"></attstr>
+				<attstr name="team" val="Archer Racing Team Uguu"></attstr>
+				<attstr name="author" val=""></attstr>
+				<attstr name="car name" val="ls1-archer-r9"></attstr>
+				<attnum name="race number" val="1009"></attnum>
+				<attnum name="red" val="1.0"></attnum>
+				<attnum name="green" val="0.9"></attnum>
+				<attnum name="blue" val="0.7"></attnum>
+			</section>
+
+			<section name="2">
+				<attstr name="name" val="Jeffrey Doughty"></attstr>
+				<attstr name="short name" val="J. Doughty"></attstr>
+				<attstr name="code name" val="DOU"></attstr>
+				<attstr name="desc" val="Amazing cook, amazing driver... almost"></attstr>
+				<attstr name="team" val="Vulture Heart Racing"></attstr>
+				<attstr name="author" val=""></attstr>
+				<attstr name="car name" val="ls1-vulture-v6r"></attstr>
+				<attnum name="race number" val="72"></attnum>
+				<attnum name="red" val="1.0"></attnum>
+				<attnum name="green" val="0.9"></attnum>
+				<attnum name="blue" val="0.1"></attnum>
+			</section>
+
+			<section name="3">
+				<attstr name="name" val="Billy Martinson"></attstr>
+				<attstr name="short name" val="B. Martinson"></attstr>
+				<attstr name="code name" val="MAR"></attstr>
+				<attstr name="desc" val="Big American guy with big skills"></attstr>
+				<attstr name="team" val="Vulture Heart Racing"></attstr>
+				<attstr name="author" val=""></attstr>
+				<attstr name="car name" val="ls1-vulture-v6r"></attstr>
+				<attnum name="race number" val="73"></attnum>
+				<attnum name="red" val="1.0"></attnum>
+				<attnum name="green" val="0.9"></attnum>
+				<attnum name="blue" val="0.1"></attnum>
+			</section>
+
+			<section name="4">
+				<attstr name="name" val="Kaoru Takeda"></attstr>
+				<attstr name="short name" val="K. Takeda"></attstr>
+				<attstr name="code name" val="KTA"></attstr>
+				<attstr name="desc" val="Cold and almost emotionless kid"></attstr>
+				<attstr name="team" val="Japanese Toro Drivers Club"></attstr>
+				<attstr name="author" val=""></attstr>
+				<attstr name="car name" val="ls1-toro-rgt"></attstr>
+				<attnum name="race number" val="51"></attnum>
+				<attnum name="red" val="0.6"></attnum>
+				<attnum name="green" val="0.6"></attnum>
+				<attnum name="blue" val="0.6"></attnum>
+			</section>
+
+			<section name="5">
+				<attstr name="name" val="Yukie Tsuchigami"></attstr>
+				<attstr name="short name" val="Y. Tsuchigami"></attstr>
+				<attstr name="code name" val="TSU"></attstr>
+				<attstr name="desc" val="Former Japanese pop idol, surprisingly skilled but mistake prone"></attstr>
+				<attstr name="author" val=""></attstr>
+				<attstr name="team" val="Japanese Toro Drivers Club"></attstr>
+				<attstr name="car name" val="ls1-toro-rgt"></attstr>
+				<attnum name="race number" val="50"></attnum>
+				<attnum name="red" val="0.6"></attnum>
+				<attnum name="green" val="0.6"></attnum>
+				<attnum name="blue" val="0.6"></attnum>
+			</section>
+
+			<section name="6">
+				<attstr name="name" val="Emma Pergusa"></attstr>
+				<attstr name="short name" val="E. Pergusa"></attstr>
+				<attstr name="code name" val="PER"></attstr>
+				<attstr name="desc" val="Borderline crazy and highly enthusiastic driver"></attstr>
+				<attstr name="team" val="Scuderia Pergusa"></attstr>
+				<attstr name="author" val=""></attstr>
+				<attstr name="car name" val="ls1-cavallo-570s1"></attstr>
+				<attnum name="race number" val="47"></attnum>
+				<attnum name="red" val="1.0"></attnum>
+				<attnum name="green" val="0.5"></attnum>
+				<attnum name="blue" val="0.15"></attnum>
+			</section>
+
+			<section name="7">
+				<attstr name="name" val="Sophia de la Sarthe"></attstr>
+				<attstr name="short name" val="S. Sarthe"></attstr>
+				<attstr name="code name" val="SAR"></attstr>
+				<attstr name="desc" val="France's finest girl-racer"></attstr>
+				<attstr name="team" val="Scuderia Pergusa"></attstr>
+				<attstr name="author" val=""></attstr>
+				<attstr name="car name" val="ls1-cavallo-570s1"></attstr>
+				<attnum name="race number" val="48"></attnum>
+				<attnum name="red" val="1.0"></attnum>
+				<attnum name="green" val="0.5"></attnum>
+				<attnum name="blue" val="0.15"></attnum>
+			</section>
+
+			<section name="8">
+				<attstr name="name" val="Michael Brettmans"></attstr>
+				<attstr name="short name" val="M. Brettmans"></attstr>
+				<attstr name="code name" val="BRE"></attstr>
+				<attstr name="desc" val="Aggressive and relentless competitor"></attstr>
+				<attstr name="team" val="Telemachi Racing Team"></attstr>
+				<attstr name="author" val=""></attstr>
+				<attstr name="car name" val="ls1-zentek-z7r"></attstr>
+				<attnum name="race number" val="41"></attnum>
+				<attnum name="red" val="0.0"></attnum>
+				<attnum name="green" val="0.9"></attnum>
+				<attnum name="blue" val="0.8"></attnum>
+			</section>
+
+			<section name="9">
+				<attstr name="name" val="Yui Aizen"></attstr>
+				<attstr name="short name" val="Y. Aizen"></attstr>
+				<attstr name="code name" val="YAI"></attstr>
+				<attstr name="desc" val="Green hell fanatic"></attstr>
+				<attstr name="team" val="Telemachi Racing Team"></attstr>
+				<attstr name="author" val=""></attstr>
+				<attstr name="car name" val="ls1-zentek-z7r"></attstr>
+				<attnum name="race number" val="42"></attnum>
+				<attnum name="red" val="0.0"></attnum>
+				<attnum name="green" val="0.9"></attnum>
+				<attnum name="blue" val="0.8"></attnum>
+			</section>
+<!--
+			<section name="10">
+				<attstr name="name" val="Maxim Sirois"></attstr>
+				<attstr name="short name" val="M. Sirois"></attstr>
+				<attstr name="code name" val="SIR"></attstr>
+				<attstr name="desc" val="Canadian sensation, heroic and almost too brave for his own good"></attstr>
+				<attstr name="team" val="Newcastle Cars"></attstr>
+				<attstr name="author" val=""></attstr>
+				<attstr name="car name" val="ls1-newcastle-fury"></attstr>
+				<attnum name="race number" val="59"></attnum>
+				<attnum name="red" val="1.0"></attnum>
+				<attnum name="green" val="1.0"></attnum>
+				<attnum name="blue" val="0.0"></attnum>
+			</section>
+
+			<section name="11">
+				<attstr name="name" val="Mikhaila Frabrovsky"></attstr>
+				<attstr name="short name" val="M. Frabrovsky"></attstr>
+				<attstr name="code name" val="FRA"></attstr>
+				<attstr name="desc" val="One of Poland's finest racers, could be a rising star"></attstr>
+				<attstr name="team" val="Newcastle Cars"></attstr>
+				<attstr name="author" val=""></attstr>
+				<attstr name="car name" val="ls1-newcastle-fury"></attstr>
+				<attnum name="race number" val="60"></attnum>
+				<attnum name="red" val="1.0"></attnum>
+				<attnum name="green" val="1.0"></attnum>
+				<attnum name="blue" val="0.0"></attnum>
+			</section>
+-->
+<!--
+			<section name="12">
+				<attstr name="name" val="Xavier Bertaux"></attstr>
+				<attstr name="short name" val="X. Bertaux"></attstr>
+				<attstr name="code name" val="BER"></attstr>
+				<attstr name="desc" val="Drives GT cars because he's bored of F1"></attstr>
+				<attstr name="team" val="Free French Racers team Orcana"></attstr>
+				<attstr name="author" val=""></attstr>
+				<attstr name="car name" val="ls1-taipan-ltsr"></attstr>
+				<attnum name="race number" val="54"></attnum>
+				<attnum name="red" val="1.0"></attnum>
+				<attnum name="green" val="0.1"></attnum>
+				<attnum name="blue" val="0.1"></attnum>
+			</section>
+
+			<section name="13">
+				<attstr name="name" val="Jean-Philippe Meuret"></attstr>
+				<attstr name="short name" val="J-P. Meuret"></attstr>
+				<attstr name="code name" val="MEU"></attstr>
+				<attstr name="desc" val="SpeedDreams project manager"></attstr>
+				<attstr name="team" val="Free French Racers team Orcana"></attstr>
+				<attstr name="author" val=""></attstr>
+				<attstr name="car name" val="ls1-taipan-ltsr"></attstr>
+				<attnum name="race number" val="55"></attnum>
+				<attnum name="red" val="1.0"></attnum>
+				<attnum name="green" val="0.1"></attnum>
+				<attnum name="blue" val="0.1"></attnum>
+			</section>
+-->
+		</section>
+	</section>
+</params>

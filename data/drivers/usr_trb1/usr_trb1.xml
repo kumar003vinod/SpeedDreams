@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    file                 : usr.xml
+    created              : Wed Jan 8 18:31:16 CET 2003
+    copyright            : (C) 2002 Andrew Sumner
+    email                : firechief@bluewin.ch
+    version              : $Id: usr_trb1.xml 5319 2013-03-15 00:22:00Z kmetykog $
+-->
+
+<!--    This program is free software; you can redistribute it and/or modify  -->
+<!--    it under the terms of the GNU General Public License as published by  -->
+<!--    the Free Software Foundation; either version 2 of the License, or     -->
+<!--    (at your option) any later version.                                   -->
+
+<!DOCTYPE params SYSTEM "../../libs/tgf/params.dtd">
+
+<params name="usr_trb1" type="robotdef">
+  <section name="Robots">
+    <section name="index">
+
+      <section name="1">
+        <attstr name="name" val="Kaito Kinoshita"></attstr>
+        <attstr name="short name" val="K. Kinoshita"></attstr>
+        <attstr name="code name" val="KAI"></attstr>
+        <attstr name="desc" val=""></attstr>
+        <attstr name="team" val="Aisha Racing Concern"></attstr>
+        <attstr name="author" val="Andrew Sumner"></attstr>
+        <attstr name="car name" val="trb1-cavallo-360rb"></attstr>
+        <attnum name="race number" val="18"></attnum>
+        <attnum name="red" val="0.9"></attnum>
+        <attnum name="green" val="0.9"></attnum>
+        <attnum name="blue" val="0.9"></attnum>
+        <attstr name="features" val=""></attstr>
+      </section>
+
+      <section name="2">
+        <attstr name="name" val="Daniel Hardwick"></attstr>
+        <attstr name="short name" val="D. Hardwick"></attstr>
+        <attstr name="code name" val="HAR"></attstr>
+        <attstr name="desc" val=""></attstr>
+        <attstr name="team" val="Aisha Racing Concern"></attstr>
+        <attstr name="author" val="Andrew Sumner"></attstr>
+        <attstr name="car name" val="trb1-cavallo-360rb"></attstr>
+        <attnum name="race number" val="24"></attnum>
+        <attnum name="red" val="0.9"></attnum>
+        <attnum name="green" val="0.9"></attnum>
+        <attnum name="blue" val="0.9"></attnum>
+        <attstr name="features" val=""></attstr>
+      </section>
+
+      <section name="3">
+        <attstr name="name" val="Kumiko Imagawa"></attstr>
+        <attstr name="short name" val="K. Imagawa"></attstr>
+        <attstr name="code name" val="IMA"></attstr>
+        <attstr name="desc" val=""></attstr>
+        <attstr name="team" val="Anime Age Racing"></attstr>
+        <attstr name="author" val="Andrew Sumner"></attstr>
+        <attstr name="car name" val="trb1-boxer-trbrs"></attstr>
+        <attnum name="race number" val="12"></attnum>
+        <attnum name="red" val="1.0"></attnum>
+        <attnum name="green" val="0.2"></attnum>
+        <attnum name="blue" val="0.2"></attnum>
+        <attstr name="features" val=""></attstr>
+      </section>
+
+      <section name="4">
+        <attstr name="name" val="Ami Akechi"></attstr>
+        <attstr name="short name" val="A. Akechi"></attstr>
+        <attstr name="code name" val="AKE"></attstr>
+        <attstr name="desc" val=""></attstr>
+        <attstr name="team" val="Anime Age Racing"></attstr>
+        <attstr name="author" val="Andrew Sumner"></attstr>
+        <attstr name="car name" val="trb1-boxer-trbrs"></attstr>
+        <attnum name="race number" val="2"></attnum>
+        <attnum name="red" val="1.0"></attnum>
+        <attnum name="green" val="0.2"></attnum>
+        <attnum name="blue" val="0.2"></attnum>
+        <attstr name="features" val=""></attstr>
+      </section>
+
+      <section name="5">
+        <attstr name="name" val="May Maeda"></attstr>
+        <attstr name="short name" val="M. Maeda"></attstr>
+        <attstr name="code name" val="MAY"></attstr>
+        <attstr name="desc" val=""></attstr>
+        <attstr name="team" val="LeekSpin Yukiho Speed"></attstr>
+        <attstr name="author" val="Andrew Sumner"></attstr>
+        <attstr name="car name" val="trb1-spirit-rb1lt"></attstr>
+        <attnum name="race number" val="3"></attnum>
+        <attnum name="red" val="0.8"></attnum>
+        <attnum name="green" val="0.7"></attnum>
+        <attnum name="blue" val="0.2"></attnum>
+        <attstr name="features" val=""></attstr>
+      </section>
+
+      <section name="6">
+        <attstr name="name" val="Mark Sanders"></attstr>
+        <attstr name="short name" val="M. Sanders"></attstr>
+        <attstr name="code name" val="MSA"></attstr>
+        <attstr name="desc" val=""></attstr>
+        <attstr name="team" val="Leekspin Yukiho Speed"></attstr>
+        <attstr name="author" val="Andrew Sumner"></attstr>
+        <attstr name="car name" val="trb1-spirit-rb1lt"></attstr>
+        <attnum name="race number" val="666"></attnum>
+        <attnum name="red" val="1.0"></attnum>
+        <attnum name="green" val="0.5"></attnum>
+        <attnum name="blue" val="0.0"></attnum>
+        <attstr name="features" val=""></attstr>
+      </section>
+
+      <section name="7">
+        <attstr name="name" val="Andreas Tomasson"></attstr>
+        <attstr name="short name" val="A. Tomasson"></attstr>
+        <attstr name="code name" val="TOM"></attstr>
+        <attstr name="desc" val=""></attstr>
+        <attstr name="team" val="Uguu Technocraft"></attstr>
+        <attstr name="author" val="Andrew Sumner"></attstr>
+        <attstr name="car name" val="trb1-taipan-rb1"></attstr>
+        <attnum name="race number" val="20"></attnum>
+        <attnum name="red" val="0.4"></attnum>
+        <attnum name="green" val="0.4"></attnum>
+        <attnum name="blue" val="1.0"></attnum>
+        <attstr name="features" val=""></attstr>
+      </section>
+
+      <section name="8">
+        <attstr name="name" val="Yukie Tsuchikami"></attstr>
+        <attstr name="short name" val="Y. Tsuchikami"></attstr>
+        <attstr name="code name" val="YUK"></attstr>
+        <attstr name="desc" val=""></attstr>
+        <attstr name="team" val="Uguu Technocraft"></attstr>
+        <attstr name="author" val="Andrew Sumner"></attstr>
+        <attstr name="car name" val="trb1-taipan-rb1"></attstr>
+        <attnum name="race number" val="58"></attnum>
+        <attnum name="red" val="0.7"></attnum>
+        <attnum name="green" val="0.7"></attnum>
+        <attnum name="blue" val="0.7"></attnum>
+        <attstr name="features" val=""></attstr>
+      </section>
+
+      <section name="9">
+        <attstr name="name" val="Marcelo Takeda"></attstr>
+        <attstr name="short name" val="M. Takeda"></attstr>
+        <attstr name="code name" val="TAK"></attstr>
+        <attstr name="desc" val=""></attstr>
+        <attstr name="team" val="Lovely BEAM"></attstr>
+        <attstr name="author" val="Andrew Sumner"></attstr>
+        <attstr name="car name" val="trb1-silber-rblk"></attstr>
+        <attnum name="race number" val="28"></attnum>
+        <attnum name="red" val="0.7"></attnum>
+        <attnum name="green" val="0.7"></attnum>
+        <attnum name="blue" val="0.7"></attnum>
+        <attstr name="features" val=""></attstr>
+      </section>
+
+      <section name="10">
+        <attstr name="name" val="Richard Ulrich"></attstr>
+        <attstr name="short name" val="R. Ulrich"></attstr>
+        <attstr name="code name" val="ULR"></attstr>
+        <attstr name="desc" val=""></attstr>
+        <attstr name="team" val="Lovely BEAM"></attstr>
+        <attstr name="author" val="Andrew Sumner"></attstr>
+        <attstr name="car name" val="trb1-silber-rblk"></attstr>
+        <attnum name="race number" val="13"></attnum>
+        <attnum name="red" val="0.7"></attnum>
+        <attnum name="green" val="0.7"></attnum>
+        <attnum name="blue" val="0.7"></attnum>
+        <attstr name="features" val=""></attstr>
+      </section>
+
+      <section name="11">
+        <attstr name="name" val="Eckhard Jaeger"></attstr>
+        <attstr name="short name" val="E. Jaeger"></attstr>
+        <attstr name="code name" val="JAE"></attstr>
+        <attstr name="desc" val=""></attstr>
+        <attstr name="team" val="Petrol Addictions"></attstr>
+        <attstr name="author" val="Wolf-Dieter Beelitz"></attstr>
+        <attstr name="car name" val="trb1-sector-rb1"></attstr>
+        <attnum name="race number" val="6"></attnum>
+        <attnum name="red" val="0.8"></attnum>
+        <attnum name="green" val="0.7"></attnum>
+        <attnum name="blue" val="0.2"></attnum>
+        <attstr name="features" val=""></attstr>
+      </section>
+
+      <section name="12">
+        <attstr name="name" val="Jean-Philipe Meuret"></attstr>
+        <attstr name="short name" val="J-P. Meuret"></attstr>
+        <attstr name="code name" val="JPM"></attstr>
+        <attstr name="desc" val=""></attstr>
+        <attstr name="team" val="Petrol Addictions"></attstr>
+        <attstr name="author" val="Wolf-Dieter Beelitz"></attstr>
+        <attstr name="car name" val="trb1-sector-rb1"></attstr>
+        <attnum name="race number" val="25"></attnum>
+        <attnum name="red" val="0.8"></attnum>
+        <attnum name="green" val="0.7"></attnum>
+        <attnum name="blue" val="0.2"></attnum>
+        <attstr name="features" val=""></attstr>
+      </section>
+
+      <section name="13">
+        <attstr name="name" val="Richard Giskard"></attstr>
+        <attstr name="short name" val="R. Giskard"></attstr>
+        <attstr name="code name" val="GIS"></attstr>
+        <attstr name="desc" val=""></attstr>
+        <attstr name="team" val="USR"></attstr>
+        <attstr name="author" val="Wolf-Dieter Beelitz"></attstr>
+        <attstr name="car name" val="trb1-zaxxon-rb"></attstr>
+        <attnum name="race number" val="77"></attnum>
+        <attnum name="red" val="0.8"></attnum>
+        <attnum name="green" val="0.7"></attnum>
+        <attnum name="blue" val="0.2"></attnum>
+        <attstr name="features" val=""></attstr>
+      </section>
+
+      <section name="14">
+        <attstr name="name" val="Reynard Daneel"></attstr>
+        <attstr name="short name" val="R. Daneel"></attstr>
+        <attstr name="code name" val="DAN"></attstr>
+        <attstr name="desc" val=""></attstr>
+        <attstr name="team" val="USR"></attstr>
+        <attstr name="author" val="Wolf-Dieter Beelitz"></attstr>
+        <attstr name="car name" val="trb1-zaxxon-rb"></attstr>
+        <attnum name="race number" val="78"></attnum>
+        <attnum name="red" val="0.8"></attnum>
+        <attnum name="green" val="0.7"></attnum>
+        <attnum name="blue" val="0.2"></attnum>
+        <attstr name="features" val=""></attstr>
+      </section>
+    </section>
+  </section>
+</params>

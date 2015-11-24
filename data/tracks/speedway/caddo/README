@@ -1,0 +1,33 @@
+Track name: Caddo Speedway
+
+Based on Texas Motor Speedway, Fort Worth, Texas.
+A quad-oval speedway measuring 1.5 miles (2.4 km) around and
+banked 24 degrees in the turns.
+The project name comes from the Caddo tribe, who use the word 'Texas'
+meaning "friends" or "allies" in their language.
+
+Note: the pits are included, but Speed Dreams / TORCS has a limitation
+currently so it cannot draw a decent pit building when the pit includes
+a turn. So I added the pit definition but expect some graphical weirdness
+on track. Let's hope Speed Dreams will be able to get rid of this
+age-old limitation soon.
+
+Credits:
+-Haruna Say for the idea of more speedways in Speed Dreams
+
+Thanks to:
+-Speed Dreams team http://speed-dreams.org
+-Google Maps
+-http://en.wikipedia.org/wiki/Texas_Motor_Speedway
+-http://www.nascartrack.com/TEXAS_MOTOR_SPEEDWAY.html
+-http://www.youtube.com/watch?v=efyl92iDMuI (Cam positioning)
+
+License:
+All original XML, PNG, XCF, JPG, AC, ACC, RGB files for this track are:
+Copyright 2010 Gabor Kmetyko <kg.kilo@gmail.com>
+Copyleft: This is a free work, you can copy, distribute,
+and modify it under the terms of the Free Art License
+http://artlibre.org/licence/lal/en/
+
+Textures mostly originated from other Speed Dreams tracks:
+-background from Newton track

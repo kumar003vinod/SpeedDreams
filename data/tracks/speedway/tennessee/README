@@ -1,0 +1,45 @@
+Track name: Tennessee Half Mile Arena
+
+Based on Bristol Motor Speedway, Bristol, Tennessee.
+A half-mile, steeply banked paperclip design race track, opened in 1961.
+It currently hosts several NASCAR race weekends annually.
+
+Note: the banking on Bristol has long been disputed. They had
+advertised it as 36 degrees, however nowdays it is claimed to have
+'only' 26-30 degrees banking. One of the resources says:
+"While the turns are still advertised at 36 degrees of banking,
+the banking in the corners appears to be 22 degrees in the
+bottom groove, 25 in the middle, and 27 at the top of the wall.
+These measurements were determined using a digital
+angle finder and a level."
+(http://www.truckseries.com/cgi-script/NCTS_07/articles/000119/011988.htm)
+Such a track profile - an elliptic track - is not available in
+Speed Dreams / TORCS, so I had to make a tough decision:
+I decided to have them at 28 degrees, as a mean average :)
+The straights are 6-10 degrees, so I've set them to 8 degrees.
+
+Note #2: Pits on BMS are tricky. In reality, both straights are used
+for pits, but in Speed Dreams / TORCS we cannot handle that situation.
+So only one pit area is designed, but the entry/exit path to it is
+unusually long, starts/ends in the opposite straight. However, the track
+is so short that a decent entry path is needed for the robots.
+
+Credits:
+-Haruna Say for the idea of more speedways in Speed Dreams
+
+Thanks to:
+-Speed Dreams team http://speed-dreams.org
+-Google Maps
+-http://en.wikipedia.org/wiki/Bristol_Motor_Speedway
+-http://www.bristolmotorspeedway.com/
+-http://www.nascartrack.com/BRISTOL_MOTOR_SPEEDWAY.html
+-http://www.youtube.com/watch?v=8dhsYhg70C8 (Cam positioning)
+
+License:
+All original XML, PNG, XCF, JPG, AC, ACC, RGB files for this track are:
+Copyright 2011 Gabor Kmetyko <kg.kilo@gmail.com>
+Copyleft: This is a free work, you can copy, distribute,
+and modify it under the terms of the Free Art License
+http://artlibre.org/licence/lal/en/
+
+Textures mostly originated from other Speed Dreams tracks:

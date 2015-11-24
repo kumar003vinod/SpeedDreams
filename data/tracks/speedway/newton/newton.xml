@@ -1,0 +1,725 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    file                 : g-speedway.xml
+    created              : Sun Mar 19 00:13:46 CET 2000
+    copyright            : (C) 2000 by Eric Espie                         
+    email                : torcs@free.fr   
+    version              : $Id: newton.xml 5626 2013-07-24 13:57:49Z torcs-ng $                                  
+-->
+
+<!--    This program is free software; you can redistribute it and/or modify  -->
+<!--    it under the terms of the GNU General Public License as published by  -->
+<!--    the Free Software Foundation; either version 2 of the License, or     -->
+<!--    (at your option) any later version.                                   -->
+
+<!DOCTYPE params SYSTEM "../../../../src/libs/tgf/params.dtd" [
+<!-- general definitions for tracks -->
+<!ENTITY default-surfaces SYSTEM "../../../data/tracks/surfaces.xml">
+<!ENTITY default-objects SYSTEM "../../../data/tracks/objects.xml">
+]>
+
+<params name="newton" type="trackdef" mode="mw">
+	<section name="Track Lights">
+	<!-- top -->
+      <section name="1">
+       <attstr name="role" val="st_red" />
+       <section name="topleft">
+         <attnum name="x" val="590.083" />
+         <attnum name="y" val="24.709" />
+         <attnum name="z" val="19.802" />
+       </section>
+       <section name="bottomright">
+         <attnum name="x" val="590.083" />
+         <attnum name="y" val="23.709" />
+         <attnum name="z" val="18.802" />
+       </section>
+	<attstr name="texture on" val="data/textures/start-light-red.png" />
+	<attstr name="texture off" val="data/textures/start-light-off.png" />
+       <attnum name="index" val="10" />
+      </section>
+      <section name="2">
+       <attstr name="role" val="st_red" />
+       <section name="topleft">
+         <attnum name="x" val="590.083" />
+         <attnum name="y" val="15.709" />
+         <attnum name="z" val="19.802" />
+       </section>
+       <section name="bottomright">
+         <attnum name="x" val="590.083" />
+         <attnum name="y" val="14.709" />
+         <attnum name="z" val="18.802" />
+       </section>
+	<attstr name="texture on" val="data/textures/start-light-red.png" />
+	<attstr name="texture off" val="data/textures/start-light-off.png" />
+       <attnum name="index" val="10" />
+      </section>
+      <section name="3">
+       <attstr name="role" val="st_red" />
+       <section name="topleft">
+         <attnum name="x" val="590.083" />
+         <attnum name="y" val="6.709" />
+         <attnum name="z" val="19.802" />
+       </section>
+       <section name="bottomright">
+         <attnum name="x" val="590.083" />
+         <attnum name="y" val="5.709" />
+         <attnum name="z" val="18.802" />
+       </section>
+	<attstr name="texture on" val="data/textures/start-light-red.png" />
+	<attstr name="texture off" val="data/textures/start-light-off.png" />
+       <attnum name="index" val="10" />
+      </section>
+	<!-- mid red-->
+      <section name="4">
+       <attstr name="role" val="st_red" />
+       <section name="topleft">
+         <attnum name="x" val="590.083" />
+         <attnum name="y" val="24.709" />
+         <attnum name="z" val="18.802" />
+       </section>
+       <section name="bottomright">
+         <attnum name="x" val="590.083" />
+         <attnum name="y" val="23.709" />
+         <attnum name="z" val="17.802" />
+       </section>
+	<attstr name="texture on" val="data/textures/start-light-red.png" />
+	<attstr name="texture off" val="data/textures/start-light-off.png" />
+       <attnum name="index" val="10" />
+      </section>
+      <section name="5">
+       <attstr name="role" val="st_red" />
+       <section name="topleft">
+         <attnum name="x" val="590.083" />
+         <attnum name="y" val="15.709" />
+         <attnum name="z" val="18.802" />
+       </section>
+       <section name="bottomright">
+         <attnum name="x" val="590.083" />
+         <attnum name="y" val="14.709" />
+         <attnum name="z" val="17.802" />
+       </section>
+	<attstr name="texture on" val="data/textures/start-light-red.png" />
+	<attstr name="texture off" val="data/textures/start-light-off.png" />
+       <attnum name="index" val="10" />
+      </section>
+      <section name="6">
+       <attstr name="role" val="st_red" />
+       <section name="topleft">
+         <attnum name="x" val="590.083" />
+         <attnum name="y" val="6.709" />
+         <attnum name="z" val="18.802" />
+       </section>
+       <section name="bottomright">
+         <attnum name="x" val="590.083" />
+         <attnum name="y" val="5.709" />
+         <attnum name="z" val="17.802" />
+       </section>
+	<attstr name="texture on" val="data/textures/start-light-red.png" />
+	<attstr name="texture off" val="data/textures/start-light-off.png" />
+       <attnum name="index" val="10" />
+      </section>
+	<!-- mid green-->
+      <section name="7">
+       <attstr name="role" val="st_green_st" />
+       <section name="topleft">
+         <attnum name="x" val="590.083" />
+         <attnum name="y" val="24.709" />
+         <attnum name="z" val="17.802" />
+       </section>
+       <section name="bottomright">
+         <attnum name="x" val="590.083" />
+         <attnum name="y" val="23.709" />
+         <attnum name="z" val="16.802" />
+       </section>
+	<attstr name="texture on" val="data/textures/start-light-green.png" />
+	<attstr name="texture off" val="data/textures/start-light-off.png" />
+       <attnum name="index" val="0" />
+      </section>
+      <section name="8">
+       <attstr name="role" val="st_green_st" />
+       <section name="topleft">
+         <attnum name="x" val="590.083" />
+         <attnum name="y" val="15.709" />
+         <attnum name="z" val="17.802" />
+       </section>
+       <section name="bottomright">
+         <attnum name="x" val="590.083" />
+         <attnum name="y" val="14.709" />
+         <attnum name="z" val="16.802" />
+       </section>
+	<attstr name="texture on" val="data/textures/start-light-green.png" />
+	<attstr name="texture off" val="data/textures/start-light-off.png" />
+       <attnum name="index" val="0" />
+      </section>
+      <section name="9">
+       <attstr name="role" val="st_green_st" />
+       <section name="topleft">
+         <attnum name="x" val="590.083" />
+         <attnum name="y" val="6.709" />
+         <attnum name="z" val="17.802" />
+       </section>
+       <section name="bottomright">
+         <attnum name="x" val="590.083" />
+         <attnum name="y" val="5.709" />
+         <attnum name="z" val="16.802" />
+       </section>
+	<attstr name="texture on" val="data/textures/start-light-green.png" />
+	<attstr name="texture off" val="data/textures/start-light-off.png" />
+       <attnum name="index" val="0" />
+      </section>
+	<!-- bottom-->
+      <section name="10">
+       <attstr name="role" val="st_green_st" />
+       <section name="topleft">
+         <attnum name="x" val="590.083" />
+         <attnum name="y" val="24.709" />
+         <attnum name="z" val="16.802" />
+       </section>
+       <section name="bottomright">
+         <attnum name="x" val="590.083" />
+         <attnum name="y" val="23.709" />
+         <attnum name="z" val="15.802" />
+       </section>
+	<attstr name="texture on" val="data/textures/start-light-green.png" />
+	<attstr name="texture off" val="data/textures/start-light-off.png" />
+       <attnum name="index" val="0" />
+      </section>
+      <section name="11">
+       <attstr name="role" val="st_green_st" />
+       <section name="topleft">
+         <attnum name="x" val="590.083" />
+         <attnum name="y" val="15.709" />
+         <attnum name="z" val="16.802" />
+       </section>
+       <section name="bottomright">
+         <attnum name="x" val="590.083" />
+         <attnum name="y" val="14.709" />
+         <attnum name="z" val="15.802" />
+       </section>
+	<attstr name="texture on" val="data/textures/start-light-green.png" />
+	<attstr name="texture off" val="data/textures/start-light-off.png" />
+       <attnum name="index" val="0" />
+      </section>
+      <section name="12">
+       <attstr name="role" val="st_green_st" />
+       <section name="topleft">
+         <attnum name="x" val="590.083" />
+         <attnum name="y" val="6.709" />
+         <attnum name="z" val="16.802" />
+       </section>
+       <section name="bottomright">
+         <attnum name="x" val="590.083" />
+         <attnum name="y" val="5.709" />
+         <attnum name="z" val="15.802" />
+       </section>
+	<attstr name="texture on" val="data/textures/start-light-green.png" />
+	<attstr name="texture off" val="data/textures/start-light-off.png" />
+       <attnum name="index" val="0" />
+      </section>
+    </section>
+
+
+  <!-- Surfaces -->
+  <section name="Surfaces">
+      &default-surfaces;
+	  
+	  <section name="asphalt-bw-n1">
+			<attnum name="color R1" val="0.1"/>
+			<attnum name="color G1" val="0.1"/>
+			<attnum name="color B1" val="0.1"/>
+			<attnum name="color R2" val="0.2"/>
+			<attnum name="color G2" val="0.2"/>
+			<attnum name="color B2" val="0.2"/>
+			<attstr name="texture name" val="new-asphalt-road.png"/>
+			<attstr name="texture type" in="discrete, continuous" val="discrete"/>
+			<attnum name="texture size" val="18.0001" unit="m"/>
+			<attnum name="texture mipmap" val="0.0" unit="m"/>
+						
+			<attnum name="friction"           val="1.05"/>
+			<attnum name="rolling resistance" val="0.02"/>
+			
+			<attnum name="roughness" val="0.005"/>
+			<attnum name="roughness wavelength" val="1.0"/>
+		</section>
+		
+		<section name="asphalt-bw-n1-pitentry">
+			<attnum name="color R1" val="0.1"/>
+			<attnum name="color G1" val="0.1"/>
+			<attnum name="color B1" val="0.1"/>
+			<attnum name="color R2" val="0.2"/>
+			<attnum name="color G2" val="0.2"/>
+			<attnum name="color B2" val="0.2"/>
+			<attstr name="texture name" val="new-asphalt-strokes.png"/>
+			<attstr name="texture type" in="discrete, continuous" val="discrete"/>
+			<attnum name="texture size" val="18.0001" unit="m"/>
+			<attnum name="texture mipmap" val="0.0" unit="m"/>
+			
+			<attnum name="friction"           val="1.05"/>
+			<attnum name="rolling resistance" val="0.02"/>
+			
+			<attnum name="roughness" val="0.005"/>
+			<attnum name="roughness wavelength" val="1.0"/>
+		</section>
+		
+		<section name="asphalt-bw-n1-pitentry-leftside">
+			<attnum name="color R1" val="0.1"/>
+			<attnum name="color G1" val="0.1"/>
+			<attnum name="color B1" val="0.1"/>
+			<attnum name="color R2" val="0.2"/>
+			<attnum name="color G2" val="0.2"/>
+			<attnum name="color B2" val="0.2"/>
+			<attstr name="texture name" val="new-asphalt-border.png"/>
+			<attstr name="texture type" in="discrete, continuous" val="discrete"/>
+			<attnum name="texture size" val="18.0001" unit="m"/>
+			<attnum name="texture mipmap" val="0.0" unit="m"/>
+			
+			<attnum name="friction"           val="0.95"/>
+			<attnum name="rolling resistance" val="0.02"/>
+			
+			<attnum name="roughness" val="0.006"/>
+			<attnum name="roughness wavelength" val="0.7"/>
+		</section>
+
+		<section name="asphalt-bw-n1-pit">
+			<attnum name="color R1" val="0.1"/>
+			<attnum name="color G1" val="0.1"/>
+			<attnum name="color B1" val="0.1"/>
+			<attnum name="color R2" val="0.2"/>
+			<attnum name="color G2" val="0.2"/>
+			<attnum name="color B2" val="0.2"/>
+			<attstr name="texture name" val="new-asphalt-pit.png"/>
+			<attstr name="texture type" in="discrete, continuous" val="discrete"/>
+			<attnum name="texture size" val="15.0001" unit="m"/>
+			<attnum name="texture mipmap" val="0.0" unit="m"/>
+			
+			<attnum name="friction"           val="0.95"/>
+			<attnum name="rolling resistance" val="0.02"/>
+			
+			<attnum name="roughness" val="0.006"/>
+			<attnum name="roughness wavelength" val="0.7"/>
+		</section>
+		
+		<section name="wall-n1">
+			<attnum name="color R1" val="1.0"/>
+			<attnum name="color G1" val="0.0"/>
+			<attnum name="color B1" val="0.0"/>
+			<attnum name="color R2" val="1.0"/>
+			<attnum name="color G2" val="1.0"/>
+			<attnum name="color B2" val="1.0"/>
+			<attstr name="texture name" val="new-wall-curve.png"/>
+			<attstr name="texture type" in="discrete, continuous" val="continuous"/>
+			<attnum name="texture size" val="6.0" unit="m"/>
+			<attnum name="texture mipmap" val="4.0"/>
+			
+			<attstr name="bump name" val=""/>
+			<attnum name="bump size" val="2.0" unit="m"/>
+			
+			<attnum name="friction"           val="0.0"/>
+			
+			<attnum name="roughness" val="0.03"/>
+			<attnum name="roughness wavelength" val="4.0"/>
+			<attnum name="dammage" val="10"/>
+		</section>
+		
+		<section name="wall-n1-2">
+			<attnum name="color R1" val="1.0"/>
+			<attnum name="color G1" val="0.0"/>
+			<attnum name="color B1" val="0.0"/>
+			<attnum name="color R2" val="1.0"/>
+			<attnum name="color G2" val="1.0"/>
+			<attnum name="color B2" val="1.0"/>
+			<attstr name="texture name" val="new-wall.png"/>
+			<attstr name="texture type" in="discrete, continuous" val="continuous"/>
+			<attnum name="texture size" val="6.0" unit="m"/>
+			<attnum name="texture mipmap" val="4.0"/>
+			
+			<attstr name="bump name" val=""/>
+			<attnum name="bump size" val="2.0" unit="m"/>
+			
+			<attnum name="friction"           val="0.0"/>
+			
+			<attnum name="roughness" val="0.03"/>
+			<attnum name="roughness wavelength" val="4.0"/>
+			<attnum name="dammage" val="10"/>
+		</section>
+
+		<section name="border-sand-n1">
+			<attnum name="color R1" val="0.1"/>
+			<attnum name="color G1" val="0.1"/>
+			<attnum name="color B1" val="0.1"/>
+			<attnum name="color R2" val="0.2"/>
+			<attnum name="color G2" val="0.2"/>
+			<attnum name="color B2" val="0.2"/>
+			<attstr name="texture name" val="new-asphalt-dirt.png"/>
+			<attstr name="texture type" in="discrete, continuous" val="discrete"/>
+			<attnum name="texture size" val="5.001" unit="m"/>
+			<attnum name="texture mipmap" val="0.0" unit="m"/>
+			
+			<attnum name="friction"           val="0.7"/>
+			<attnum name="rolling resistance" val="0.02"/>
+			
+			<attnum name="roughness" val="0.02"/>
+			<attnum name="roughness wavelength" val="0.15"/>
+		</section>
+		
+		<section name="grass-n1">
+			<attnum name="color R1" val="0.1"/>
+			<attnum name="color G1" val="0.4"/>
+			<attnum name="color B1" val="0.1"/>
+			<attnum name="color R2" val="0.2"/>
+			<attnum name="color G2" val="0.5"/>
+			<attnum name="color B2" val="0.2"/>
+			<attstr name="texture name" val="new-grass.png"/>
+			<attstr name="texture type" in="discrete, continuous" val="discrete"/>
+			<attnum name="texture size" val="15.0001" unit="m"/>
+			<attnum name="texture mipmap" val="4.0"/>
+			
+			<attnum name="friction"           val="0.55"/>
+			<attnum name="rolling resistance" val="0.08"/>
+			
+			<attnum name="roughness" val="0.05"/>
+			<attnum name="roughness wavelength" val="0.5"/>
+		</section>
+
+		<section name="grass-n1-2">
+			<attnum name="color R1" val="0.1"/>
+			<attnum name="color G1" val="0.4"/>
+			<attnum name="color B1" val="0.1"/>
+			<attnum name="color R2" val="0.2"/>
+			<attnum name="color G2" val="0.5"/>
+			<attnum name="color B2" val="0.2"/>
+			<attstr name="texture name" val="new-grass-lines.png"/>
+			<attstr name="texture type" in="discrete, continuous" val="discrete"/>
+			<attnum name="texture size" val="10.0001" unit="m"/>
+			<attnum name="texture mipmap" val="4.0"/>
+			
+			<attnum name="friction"           val="0.55"/>
+			<attnum name="rolling resistance" val="0.08"/>
+			
+			<attnum name="roughness" val="0.05"/>
+			<attnum name="roughness wavelength" val="0.5"/>
+		</section>
+	
+		<section name="new-wall-pit">
+			<attnum name="color R1" val="0.1"/>
+			<attnum name="color G1" val="0.1"/>
+			<attnum name="color B1" val="0.1"/>
+			<attnum name="color R2" val="0.2"/>
+			<attnum name="color G2" val="0.2"/>
+			<attnum name="color B2" val="0.2"/>
+			<attstr name="texture name" val="new-wall-pit.png"/>
+			<attstr name="texture type" in="discrete, continuous" val="continuous"/>
+			<attnum name="texture size" val="12.0" unit="m"/>
+			<attnum name="texture mipmap" val="0.0" unit="m"/>
+			
+			<attstr name="bump name" val=""/>
+			<attnum name="bump size" val="2.0" unit="m"/>
+			
+			<attnum name="friction"           val="0.05"/>
+		</section>
+  </section>
+
+  <!-- Objects -->
+  <section name="Objects">
+      &default-objects;
+  </section>  <!-- Objects -->
+
+  <section name="Header">
+    <attstr name="name"        val="Newton Cup"/>
+    <attstr name="category"    val="speedway"/>
+    <attnum name="version"     val="4"/>
+	<attnum name="sky version" val="1"/>
+    <attstr name="author"      val="E.Espie, X. Bertaux. E. M. Jaeger"/>
+    <attstr name="description" val="Another american, D-shaped speedway."/>
+  </section>
+
+	<section name="Local Info">
+		<attstr name="station" val="KEWK"/>
+		<attnum name="overall rain likelyhood" unit="%" val="30"/>
+		<attnum name="little rain likelyhood" unit="%" val="40"/>
+		<attnum name="medium rain likelyhood" unit="%" val="40"/>
+		<attnum name="time of day" unit="hour" val="9.0"/>
+		<attnum name="sun ascension" unit="deg" val="90"/>
+	</section>
+
+  <section name="Graphic">
+    <attstr name="3d description" val="newton.acc"/>
+
+    <attstr name="background image" val="background.jpg"/>
+    <attnum name="background type" val="4"/>
+
+    <attnum name="background color R" val="0.5"/>
+    <attnum name="background color G" val="0.5"/>
+    <attnum name="background color B" val="0.55"/>
+
+    <attnum name="ambient color R" val="0.5"/>
+    <attnum name="ambient color G" val="0.5"/>
+    <attnum name="ambient color B" val="0.5"/>
+
+    <attnum name="diffuse color R" val="1"/>
+    <attnum name="diffuse color G" val="1"/>
+    <attnum name="diffuse color B" val="1"/>
+
+    <attnum name="specular color R" val="0.6"/>
+    <attnum name="specular color G" val="0.6"/>
+    <attnum name="specular color B" val="0.6"/>
+
+
+    <attnum name="light position x" val="-0"/>
+    <attnum name="light position y" val="1000"/>
+    <attnum name="light position z" val="700"/>
+	
+    <section name="Environment Mapping">
+      <section name="1">
+	<attstr name="env map image" val="env.png"/>
+      </section>
+    </section>
+
+    <section name="Terrain Generation">
+      <attnum name="track step" unit="m" val="20"/>
+      <attnum name="border margin" unit="m" val="300"/>
+      <attnum name="border step" unit="m" val="50"/>
+      <attnum name="border height" unit="m" val="20"/>
+      <attstr name="surface" val="grass-n1"/>
+    </section>
+  </section>
+
+  <section name="Main Track">
+    <attstr name="surface" val="asphalt-bw-n1"/>
+	<attnum name="width" unit="m" val="30.0"/>
+    <attnum name="profil steps length" unit="m" val="10"/>
+	
+	<section name="Right Side">
+		<attstr name="surface"  val="grass-n1-2"/>
+		<attnum name="width"    val="0.0"/>
+		<attstr name="banking type" in="level,tangent" val="tangent"/>
+	</section>
+		
+	<section name="Left Border">
+		<attstr name="surface" val="border-sand-n1"/>
+		<attstr name="style" val="plan"/>
+		<attnum name="width" val="3.0"/>
+	</section>
+		
+	<section name="Left Side">
+		<attstr name="surface"  val="asphalt-bw-n1-pitentry-leftside"/>
+		<attnum name="start width"    val="12.0"/>
+		<attstr name="banking type" in="level,tangent" val="level"/>
+	</section>
+		
+	<section name="Right Barrier">
+		<attstr name="style" val="wall"/>
+		<attnum name="height" val="0.9"/>
+		<attnum name="width" val="0.5"/>
+		<attstr name="surface" val="wall-n1-2"/>
+	</section>
+		
+	<section name="Left Barrier">
+		<attstr name="style" val="wall"/>
+		<attnum name="height" val="0.6"/>
+		<attnum name="width" val="0.4"/>
+		<attstr name="surface" val="wall-n1-2"/>
+	</section>
+
+    <!-- PITS -->
+    <section name="Pits">
+		<attstr name="type" val="track side"/>
+		<attstr name="side" val="left"/>
+		<attstr name="entry" val="pit entry"/>
+		<attstr name="start" val="last seg"/>
+		<attstr name="end" val="start lane"/>
+		<attstr name="exit" val="pit exit"/>
+		<attnum name="length" unit="m" val="15"/>
+		<attnum name="width" unit="m" val="6"/>
+    </section>  <!-- PITS -->
+
+    <section name="Track Segments">
+      <section name="start lane">
+        <attstr name="type" val="str"/>
+		<attnum name="lg" unit="m" val="150"/>
+		<attnum name="banking start" unit="deg" val="-15"/>
+		<attnum name="banking end" unit="deg" val="-15"/>
+
+		<section name="Left Border">
+			<attstr name="surface" val="new-wall-pit"/>
+			<attstr name="style" val="wall"/>
+			<attnum name="width" val="0.5"/>
+			<attnum name="height" val="1.0"/>
+		</section>
+		<section name="Left Side">
+			<attnum name="start width" val="15"/>
+			<attnum name="end width" val="15"/>
+			<attstr name="surface" val="asphalt-bw-n1-pit"/>
+			<attstr name="type" in="level,tangent" val="level"/>
+		</section>
+     </section>
+
+    <section name="pit exit">
+        <attstr name="type" val="str"/>
+		<attnum name="lg" unit="m" val="150"/>
+	
+		<section name="Left Border">
+			<attstr name="surface" val="asphalt-bw-n1-pitentry"/>
+			<attnum name="width" val="1.0"/>
+			<attstr name="style" val="plan"/>
+		</section>
+
+		<section name="Left Side">
+			<attstr name="surface" val="asphalt-bw-n1-pitentry-leftside"/>
+			<attnum name="end width" val="8"/>
+		</section>
+    </section>
+
+      <!-- TURN 1 -->
+    <section name="turn1-1">
+        <attstr name="type" val="lft"/>
+		<attnum name="radius" unit="m" val="300"/>
+		<attnum name="arc" unit="deg" val="30"/>
+
+		<section name="Left Border">
+			<attstr name="surface" val="border-sand-n1"/>
+			<attnum name="width" val="1.0"/>
+			<attstr name="style" val="plan"/>
+		</section>
+    </section>
+
+    <section name="turn1-2">
+        <attstr name="type" val="lft"/>
+		<attnum name="radius" unit="m" val="250"/>
+		<attnum name="arc" unit="deg" val="60"/>
+    </section>
+
+    <section name="turn1-3">
+        <attstr name="type" val="lft"/>
+		<attnum name="radius" unit="m" val="300"/>
+		<attnum name="arc" unit="deg" val="50"/>
+    </section>
+
+    <!-- TURN 2 -->
+    <section name="turn2-1">
+        <attstr name="type" val="lft"/>
+		<attnum name="radius" unit="m" val="727.82545"/>
+		<attnum name="arc" unit="deg" val="80"/>
+    </section>
+
+    <!-- TURN 3 -->
+    <section name="turn3-1">
+        <attstr name="type" val="lft"/>
+		<attnum name="radius" unit="m" val="300"/>
+		<attnum name="arc" unit="deg" val="50"/>
+    </section>
+
+    <section name="turn3-2">
+        <attstr name="type" val="lft"/>
+		<attnum name="radius" unit="m" val="250"/>
+		<attnum name="arc" unit="deg" val="60"/>
+    </section>
+
+    <section name="turn3-3">
+        <attstr name="type" val="lft"/>
+		<attnum name="radius" unit="m" val="300"/>
+		<attnum name="arc" unit="deg" val="30"/>
+    </section>
+
+    <section name="pit entry">
+        <attstr name="type" val="str"/>
+		<attnum name="lg" unit="m" val="150"/>
+
+		<section name="Left Border">
+			<attstr name="surface" val="asphalt-bw-n1-pitentry"/>
+			<attnum name="width" val="1.0"/>
+			<attstr name="style" val="plan"/>
+		</section>
+
+		<section name="Left Side">
+			<attstr name="surface" val="asphalt-bw-n1-pitentry-leftside"/>
+			<attnum name="end width" val="15"/>
+		</section>
+    </section>
+
+
+    <section name="last seg">
+        <attstr name="type" val="str"/>
+	<attnum name="lg" unit="m" val="150"/>
+	
+	<section name="Left Border">
+		<attstr name="surface" val="new-wall-pit"/>
+		<attstr name="style" val="wall"/>
+		<attnum name="width" val="0.5"/>
+		<attnum name="height" val="1.0"/>
+	</section>
+
+	<section name="Left Side">
+	  <attnum name="end width" val="15"/>
+	  <attstr name="surface" val="asphalt-bw-n1-pit"/>
+	  <attstr name="type" in="level,tangent" val="level"/>
+	</section>
+      </section>
+
+
+    </section>
+  </section>
+
+  <!-- Cameras -->
+  <section name="Cameras">
+
+    <section name="cam 0">
+      <!-- Camera's position relative to a segment -->
+      <attstr name="segment"  val="start lane"/>
+      <attnum name="to right" val="0"/>
+      <attnum name="to start" val="100"/>
+      <attnum name="height"   val="4"/>
+      <!-- Camera field of view, indicates the first and last segment viewed -->
+      <attstr name="fov start" val="start lane"/> <!-- included  -->
+      <attstr name="fov end"   val="turn1-1"/> <!-- excluded -->
+    </section>
+
+    <section name="cam 1">
+      <!-- Camera's position relative to a segment -->
+      <attstr name="segment"  val="turn1-2"/>
+      <attnum name="to right" val="40"/>
+      <attnum name="to start" unit="deg" val="30"/>
+      <attnum name="height"   val="2"/>
+      <!-- Camera field of view, indicates the first and last segment viewed -->
+      <attstr name="fov start" val="turn1-1"/> <!-- included  -->
+      <attstr name="fov end"   val="line2-1"/> <!-- excluded -->
+    </section>
+
+    <section name="cam 4">
+      <!-- Camera's position relative to a segment -->
+      <attstr name="segment"  val="turn2-1"/>
+      <attnum name="to right" val="40"/>
+      <attnum name="to start" unit="deg" val="30"/>
+      <attnum name="height"   val="2"/>
+      <!-- Camera field of view, indicates the first and last segment viewed -->
+      <attstr name="fov start" val="turn2-1"/> <!-- included  -->
+      <attstr name="fov end"   val="turn3-1"/> <!-- excluded -->
+    </section>
+
+    <section name="cam 7">
+      <!-- Camera's position relative to a segment -->
+      <attstr name="segment"  val="turn3-2"/>
+      <attnum name="to right" val="40"/>
+      <attnum name="to start" unit="deg" val="30"/>
+      <attnum name="height"   val="2"/>
+      <!-- Camera field of view, indicates the first and last segment viewed -->
+      <attstr name="fov start" val="turn3-1"/> <!-- included  -->
+      <attstr name="fov end"   val="pit entry"/> <!-- excluded -->
+    </section>
+
+    <section name="cam 8">
+      <!-- Camera's position relative to a segment -->
+      <attstr name="segment"  val="last seg"/>
+      <attnum name="to right" val="0"/>
+      <attnum name="to start" val="100"/>
+      <attnum name="height"   val="4"/>
+      <!-- Camera field of view, indicates the first and last segment viewed -->
+      <attstr name="fov start" val="pit entry"/> <!-- included  -->
+      <attstr name="fov end"   val="start lane"/> <!-- excluded -->
+    </section>
+
+  </section>
+
+
+</params>
+

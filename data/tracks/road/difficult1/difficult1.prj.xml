@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.6.0_30" class="java.beans.XMLDecoder">
+ <object class="utils.Properties">
+  <void property="author">
+   <string>jai</string>
+  </void>
+  <void property="category">
+   <string>oval</string>
+  </void>
+  <void property="currentA">
+   <double>-6.2831853071795924</double>
+  </void>
+  <void property="currentX">
+   <double>-7.958078640513122E-13</double>
+  </void>
+  <void property="currentY">
+   <double>-3.723808025035909E-12</double>
+  </void>
+  <void property="curveNameCount">
+   <int>28</int>
+  </void>
+  <void property="description">
+   <string>creating difficult track</string>
+  </void>
+  <void property="path">
+   <string>/usr/share/games/torcs/tracks/oval/difficult1</string>
+  </void>
+  <void property="pitEnd">
+   <string></string>
+  </void>
+  <void property="pitEntry">
+   <string></string>
+  </void>
+  <void property="pitExit">
+   <string></string>
+  </void>
+  <void property="pitStart">
+   <string></string>
+  </void>
+  <void property="straightNameCount">
+   <int>16</int>
+  </void>
+  <void property="trackName">
+   <string>difficult1</string>
+  </void>
+ </object>
+</java>

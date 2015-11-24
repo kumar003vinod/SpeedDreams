@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+file                : bristol.xml
+auto generated      : by Track Editor
+version             : v 0.6.0 24/4/2005
+copyright           : (C) 2005 by Charalampos Alexopoulos
+email               : 
+-->
+<!--
+This program is free software; you can redistribute it and/or modify it
+under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+-->
+<!DOCTYPE params SYSTEM "../../../src/libs/tgf/params.dtd" [
+<!--  general definitions for tracks  -->
+<!ENTITY default-surfaces SYSTEM "../../../data/tracks/surfaces.xml">
+]>
+
+<params name="Tennessee Half Mile Arena" type="trackdef" mode="mw">
+  <section name="Header">
+    <attstr name="name" val="Tennessee Half Mile Arena" />
+    <attstr name="category" val="speedway" />
+    <attnum name="version" val="4" />
+    <attnum name="sky version" val="1" />
+    <attstr name="author" val="kilo" />
+    <attstr name="description" val="A half-mile, steeply banked paperclip design race track" />
+  </section>
+  
+  <section name="Local Info">
+    <attnum name="overall rain likelyhood" unit="%" val="20"/>
+    <attnum name="little rain likelyhood" unit="%" val="60"/>
+    <attnum name="medium rain likelyhood" unit="%" val="20"/>
+    <attnum name="time of day" unit="hour" val="7.0"/>
+    <attnum name="sun ascension" unit="deg" val="0"/>
+  </section>
+
+  <section name="Graphic">
+    <attstr name="3d description" val="tennessee.ac" />
+    <attstr name="background image" val="background.png" />
+    <attnum name="background type" val="4" />
+
+    <attnum name="background color R" val="0.60"/>
+    <attnum name="background color G" val="0.60"/>
+    <attnum name="background color B" val="0.48"/>
+
+    <attnum name="ambient color R" val="0.1"/>
+    <attnum name="ambient color G" val="0.1"/>
+    <attnum name="ambient color B" val="0.05"/>
+
+    <attnum name="diffuse color R" val="1"/>
+    <attnum name="diffuse color G" val="1"/>
+    <attnum name="diffuse color B" val="0.9"/>
+
+    <attnum name="specular color R" val="0.6"/>
+    <attnum name="specular color G" val="0.6"/>
+    <attnum name="specular color B" val="0.6"/>
+
+    <attnum name="light position x" val="1500"/>
+    <attnum name="light position y" val="450"/>
+    <attnum name="light position z" val="300"/>
+
+    <section name="Terrain Generation">
+      <attnum name="track step" unit="m" val="20" />
+      <attnum name="border margin" unit="m" val="50" />
+      <attnum name="border step" unit="m" val="30" />
+      <attnum name="border height" unit="m" val="0" />
+      <attstr name="orientation" val="clockwise" />
+      <attnum name="maximum altitude" unit="m" val="10" />
+      <attnum name="minimum altitude" unit="m" val="-5" />
+      <attnum name="group size" unit="m" val="200" />
+      <attstr name="surface" val="grass7" />
+    </section>
+  </section>
+
+  <section name="Main Track">
+    <attnum name="width" unit="ft" val="40.0" />
+    <attnum name="profil steps length" unit="m" val="4.0" />
+
+    <section name="Pits">
+      <attstr name="side" val="left" />
+      <attstr name="entry" val="Backstretch-2" />
+      <attnum name="pit style" val="3" /><!--TR_PIT_NO_BUILDING-->
+      <attstr name="start" val="Turn4-1" />
+      <attnum name="max pits" val="6" />
+      <attstr name="_start buildings" val="Turn4-2" />
+      <attstr name="start buildings" val="Frontstretch-2" />
+      <attstr name="_end" val="Turn1-1" />
+      <attstr name="end" val="Frontstretch-2" />
+      <attstr name="exit" val="Backstretch-1" />
+      <attnum name="length" unit="ft" val="45.0" />
+      <attnum name="_width" unit="ft" val="52.0" />
+      <attnum name="width" unit="ft" val="12.0" />
+    </section>
+    
+    <section name="Track Segments">
+      <!--******************************-->
+      <!--     Frontstretch             -->
+      <!--******************************-->
+      <section name="Frontstretch-1">
+        <attstr name="type" val="str" />
+        <attnum name="lg" unit="ft" val="293.00" />
+        <!-- 10 deg -->
+        <attnum name="z start left" unit="ft" val="0.0" />
+        <attnum name="z start right" unit="ft" val="6.95" />
+        <attnum name="z end left" unit="ft" val="0.0" />
+        <attnum name="z end right" unit="ft" val="6.95" />
+        <attstr name="profil" val="spline" />
+        <attstr name="surface" val="te-concrete" />
+        <section name="Left Border">
+          <attnum name="width" unit="ft" val="2.0" />
+          <attnum name="height" unit="ft" val="4.0" />
+          <attstr name="surface" val="te-wall" />
+          <attstr name="style" val="wall" />
+        </section>
+        <section name="Left Side">
+          <attnum name="start width" unit="ft" val="40.0" />
+          <attnum name="end width" unit="ft" val="40.0" />
+          <attstr name="surface" val="te-concrete-side" />
+        </section>
+        <section name="Left Barrier">
+          <attnum name="width" unit="ft" val="0.8" />
+          <attnum name="height" unit="ft" val="4.0" />
+          <attstr name="surface" val="te-wall" />
+          <attstr name="style" val="wall" />
+        </section>
+        <section name="Right Border">
+          <attnum name="width" unit="ft" val="0.0" />
+          <attnum name="height" unit="ft" val="0.0" />
+          <attstr name="surface" val="te-border" />
+          <attstr name="style" val="plan" />
+        </section>
+        <section name="Right Side">
+          <attnum name="start width" unit="ft" val="0.0" />
+          <attnum name="end width" unit="ft" val="0.0" />
+          <attstr name="surface" val="te-concrete-side" />
+          <attstr name="banking type" in="level,tangent" val="tangent" />
+        </section>
+        <section name="Right Barrier">
+          <attnum name="width" unit="ft" val="1.0" />
+          <attnum name="height" unit="ft" val="12.0" />
+          <attstr name="surface" val="barrier-fence" />
+          <attstr name="style" val="fence" />
+        </section>
+      </section>
+
+      <!--******************************-->
+      <!--     Turn 1&2                 -->
+      <!--******************************-->
+      <section name="Turn1-1">
+        <attstr name="type" val="lft" />
+        <attnum name="arc" unit="deg" val="45.0" />
+        <attnum name="radius" unit="ft" val="261.26" />
+        <!-- 28 deg -->
+        <attnum name="z end left" unit="ft" val="0.0" />
+        <attnum name="z end right" unit="ft" val="18.78" />
+        <attstr name="profil" val="spline" />
+        <section name="Left Border">
+          <attnum name="width" unit="ft" val="3.0" />
+          <attnum name="height" unit="ft" val="0.0" />
+          <attstr name="surface" val="te-border" />
+          <attstr name="style" val="plan" />
+        </section>
+      </section>
+      <section name="Turn1-2">
+        <attstr name="type" val="lft" />
+        <attnum name="arc" unit="deg" val="45.0" />
+        <attnum name="radius" unit="ft" val="261.26" />
+        <!-- 28 deg -->
+        <attnum name="z end left" unit="ft" val="0.0" />
+        <attnum name="z end right" unit="ft" val="18.78" />
+      </section>
+      <section name="Turn2-1">
+        <attstr name="type" val="lft" />
+        <attnum name="arc" unit="deg" val="45.0" />
+        <attnum name="radius" unit="ft" val="261.26" />
+        <!-- 28 deg -->
+        <attnum name="z end left" unit="ft" val="0.0" />
+        <attnum name="z end right" unit="ft" val="18.78" />
+      </section>
+      <section name="Turn2-2">
+        <attstr name="type" val="lft" />
+        <attnum name="arc" unit="deg" val="45.0" />
+        <attnum name="radius" unit="ft" val="261.26" />
+        <!-- 10 deg -->
+        <attnum name="z end left" unit="ft" val="0.0" />
+        <attnum name="z end right" unit="ft" val="6.95" />
+        <attstr name="profil" val="spline" />
+      </section>
+
+      <!--******************************-->
+      <!--     Backstretch              -->
+      <!--******************************-->
+      <section name="Backstretch-1">
+        <attstr name="type" val="str" />
+        <attnum name="lg" unit="ft" val="293.0" />
+        <!-- 10 deg -->
+        <attnum name="z end left" unit="ft" val="0.0" />
+        <attnum name="z end right" unit="ft" val="6.95" />
+        <attstr name="profil" val="spline" />
+        <section name="Left Border">
+          <attnum name="width" unit="ft" val="2.0" />
+          <attnum name="height" unit="ft" val="4.0" />
+          <attstr name="surface" val="te-wall" />
+          <attstr name="style" val="wall" />
+        </section>
+      </section>
+      <section name="Backstretch-2">
+        <attstr name="type" val="str" />
+        <attnum name="lg" unit="ft" val="293.39" />
+        <!-- 10 deg -->
+        <attnum name="z end left" unit="ft" val="0.0" />
+        <attnum name="z end right" unit="ft" val="6.95" />
+        <attstr name="profil" val="spline" />
+        <section name="Left Border">
+          <attnum name="width" unit="ft" val="2.0" />
+          <attnum name="height" unit="ft" val="4.0" />
+          <attstr name="surface" val="te-wall" />
+          <attstr name="style" val="wall" />
+        </section>
+      </section>
+
+      <!--******************************-->
+      <!--     Turn 3&4                 -->
+      <!--******************************-->
+      <section name="Turn3-1">
+        <attstr name="type" val="lft" />
+        <attnum name="arc" unit="deg" val="45.0" />
+        <attnum name="radius" unit="ft" val="261.26" />
+        <!-- 28 deg -->
+        <attnum name="z end left" unit="ft" val="0.0" />
+        <attnum name="z end right" unit="ft" val="18.78" />
+        <attstr name="profil" val="spline" />
+        <section name="Left Border">
+          <attnum name="width" unit="ft" val="3.0" />
+          <attnum name="height" unit="ft" val="0.0" />
+          <attstr name="surface" val="te-border" />
+          <attstr name="style" val="plan" />
+        </section>
+      </section>
+      <section name="Turn3-2">
+        <attstr name="type" val="lft" />
+        <attnum name="arc" unit="deg" val="45.0" />
+        <attnum name="radius" unit="ft" val="261.26" />
+        <!-- 28 deg -->
+        <attnum name="z end left" unit="ft" val="0.0" />
+        <attnum name="z end right" unit="ft" val="18.78" />
+      </section>
+      <section name="Turn4-1">
+        <attstr name="type" val="lft" />
+        <attnum name="arc" unit="deg" val="45.0" />
+        <attnum name="radius" unit="ft" val="261.26" />
+        <!-- 28 deg -->
+        <attnum name="z end left" unit="ft" val="0.0" />
+        <attnum name="z end right" unit="ft" val="18.78" />
+      </section>
+      <section name="Turn4-2">
+        <attstr name="type" val="lft" />
+        <attnum name="arc" unit="deg" val="44.999907" />
+        <attnum name="radius" unit="ft" val="261.26" />
+        <!-- 10 deg -->
+        <attnum name="z end left" unit="ft" val="0.0" />
+        <attnum name="z end right" unit="ft" val="6.95" />
+        <attstr name="profil" val="spline" />
+      </section>
+
+      <!--******************************-->
+      <!--     Frontstretch             -->
+      <!--******************************-->
+      <section name="Frontstretch-2">
+        <attstr name="type" val="str" />
+        <attnum name="lg" unit="ft" val="293.3914" />
+        <!-- 10 deg -->
+        <attnum name="z end left" unit="ft" val="0.0" />
+        <attnum name="z end right" unit="ft" val="6.95" />
+        <attstr name="profil" val="spline" />
+        <attstr name="surface" val="te-concrete" />
+        <section name="Left Border">
+          <attnum name="width" unit="ft" val="2.0" />
+          <attnum name="height" unit="ft" val="4.0" />
+          <attstr name="surface" val="te-wall" />
+          <attstr name="style" val="wall" />
+        </section>
+      </section>
+    </section>
+  </section>
+ 
+  <section name="Cameras">
+    <!-- Turn1, looking at frontstretch & Turn1&2 -->
+    <section name="cam 0">
+        <attstr name="segment" val="Frontstretch-1"/>
+        <attnum name="to right" val="22"/>
+        <attnum name="to start" val="158"/>
+        <attnum name="height" val="17"/>
+        <attstr name="fov start" val="Frontstretch-1"/>
+        <attstr name="fov end" val="Turn2-2"/>
+    </section>
+    <!-- End of backstretch, looking at backstretch all the way-->
+    <section name="cam 1">
+        <attstr name="segment" val="Backstretch-2"/>
+        <attnum name="to right" val="25"/>
+        <attnum name="to start" val="85"/>
+        <attnum name="height" val="5"/>
+        <attstr name="fov start" val="Turn2-2"/>
+        <attstr name="fov end" val="Turn3-2"/>
+    </section>
+    <!-- At start/finish line, looking at T3-4 and frontstretch-->
+    <section name="cam 2">
+        <attstr name="segment" val="Frontstretch-2"/>
+        <attnum name="to right" val="-5"/>
+        <attnum name="to start" val="90"/>
+        <attnum name="height" val="18"/>
+        <attstr name="fov start" val="Turn3-2"/>
+        <attstr name="fov end" val="Frontstretch-1"/>
+    </section>
+  </section>
+
+  <section name="Surfaces">
+    &default-surfaces;
+    
+    <section name="te-concrete">
+      <attnum name="color R1" val="0.1"/>
+      <attnum name="color G1" val="0.1"/>
+      <attnum name="color B1" val="0.1"/>
+      <attnum name="color R2" val="0.2"/>
+      <attnum name="color G2" val="0.2"/>
+      <attnum name="color B2" val="0.2"/>
+      <attstr name="texture name" val="te-concrete.png"/>
+      <attstr name="texture type" in="discrete, continuous" val="discrete"/>
+      <attnum name="texture size" val="40.0001" unit="ft"/>
+      <attnum name="texture mipmap" val="0.0" unit="m"/>
+
+      <attnum name="friction"           val="1.05"/>
+      <attnum name="rolling resistance" val="0.02"/>
+
+      <attnum name="roughness" val="0.005"/>
+      <attnum name="roughness wavelength" val="1.0"/>
+    </section>
+
+    <section name="te-border">
+      <attnum name="color R1" val="0.1"/>
+      <attnum name="color G1" val="0.1"/>
+      <attnum name="color B1" val="0.1"/>
+      <attnum name="color R2" val="0.2"/>
+      <attnum name="color G2" val="0.2"/>
+      <attnum name="color B2" val="0.2"/>
+      <attstr name="texture name" val="te-b-asphalt-l1.png"/>
+      <attstr name="texture type" in="discrete, continuous" val="discrete"/>
+      <attnum name="texture size" val="3.0001" unit="ft"/>
+      <attnum name="texture mipmap" val="0.0" unit="m"/>
+
+      <attnum name="friction"           val="1.05"/>
+      <attnum name="rolling resistance" val="0.02"/>
+
+      <attnum name="roughness" val="0.005"/>
+      <attnum name="roughness wavelength" val="1.0"/>
+    </section>
+
+    <section name="te-concrete-side">
+      <attnum name="color R1" val="0.1"/>
+      <attnum name="color G1" val="0.1"/>
+      <attnum name="color B1" val="0.1"/>
+      <attnum name="color R2" val="0.2"/>
+      <attnum name="color G2" val="0.2"/>
+      <attnum name="color B2" val="0.2"/>
+      <attstr name="texture name" val="te-concrete-side.png"/>
+      <attstr name="texture type" in="discrete, continuous" val="discrete"/>
+      <attnum name="texture size" val="40.0001" unit="ft"/>
+      <attnum name="texture mipmap" val="0.0" unit="m"/>
+
+      <attnum name="friction"           val="1.05"/>
+      <attnum name="rolling resistance" val="0.02"/>
+
+      <attnum name="roughness" val="0.01"/>
+      <attnum name="roughness wavelength" val="1.0"/>
+    </section>
+
+    <section name="barrier-fence">
+      <attnum name="color R1" val="1.0"/>
+      <attnum name="color G1" val="0.0"/>
+      <attnum name="color B1" val="0.0"/>
+      <attnum name="color R2" val="1.0"/>
+      <attnum name="color G2" val="1.0"/>
+      <attnum name="color B2" val="1.0"/>
+      <attstr name="texture name" val="te-wall-fence_n.png"/>
+      <attstr name="texture type" in="discrete, continuous" val="continuous"/>
+      <attnum name="texture size" val="3.0" unit="m"/>
+      <attnum name="texture mipmap" val="4.0"/>
+
+      <attnum name="friction" val="0.0"/>
+      <attnum name="roughness" val="0.03"/>
+      <attnum name="roughness wavelength" val="4.0"/>
+      <attnum name="dammage" val="10.0"/>
+    </section>
+
+    <section name="te-wall">
+      <attnum name="color R1" val="1.0"/>
+      <attnum name="color G1" val="0.0"/>
+      <attnum name="color B1" val="0.0"/>
+      <attnum name="color R2" val="1.0"/>
+      <attnum name="color G2" val="1.0"/>
+      <attnum name="color B2" val="1.0"/>
+      <attstr name="texture name" val="te-wall.png"/>
+      <attstr name="texture type" in="discrete, continuous" val="continuous"/>
+      <attnum name="texture size" val="6.0" unit="m"/>
+      <attnum name="texture mipmap" val="4.0"/>
+
+      <attnum name="friction" val="0.0"/>
+      <attnum name="roughness" val="0.03"/>
+      <attnum name="roughness wavelength" val="4.0"/>
+      <attnum name="dammage" val="10.0"/>
+    </section>
+  </section>
+</params>
+

@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    file                 : usr.xml
+    created              : Wed Jan 8 18:31:16 CET 2003
+    copyright            : (C) 2002 Andrew Sumner
+    email                : firechief@bluewin.ch
+    version              : $Id: usr_ls1.xml 5693 2013-09-06 22:45:35Z torcs-ng $
+-->
+
+<!--    This program is free software; you can redistribute it and/or modify  -->
+<!--    it under the terms of the GNU General Public License as published by  -->
+<!--    the Free Software Foundation; either version 2 of the License, or     -->
+<!--    (at your option) any later version.                                   -->
+
+<!DOCTYPE params SYSTEM "../../libs/tgf/params.dtd">
+
+<params name="usr_ls1" type="robotdef">
+  <section name="Robots">
+    <section name="index">
+
+      <section name="1">
+        <attstr name="name" val="Patrick Cullen"></attstr>
+        <attstr name="short name" val="P. Cullen"></attstr>
+        <attstr name="code name" val="CUL"></attstr>
+        <attstr name="desc" val=""></attstr>
+        <attstr name="team" val="March Racing"></attstr>
+        <attstr name="author" val="Andrew Sumner"></attstr>
+        <attstr name="car name" val="ls1-archer-r9"></attstr>
+        <attnum name="race number" val="57"></attnum>
+        <attnum name="red" val="0.9"></attnum>
+        <attnum name="green" val="0.2"></attnum>
+        <attnum name="blue" val="0.1"></attnum>
+        <attstr name="features" val=""></attstr>
+      </section>
+
+      <section name="2">
+        <attstr name="name" val="Jack MacNeil"></attstr>
+        <attstr name="short name" val="J. MacNeil"></attstr>
+        <attstr name="code name" val="MCN"></attstr>
+        <attstr name="desc" val=""></attstr>
+        <attstr name="team" val="March Racing"></attstr>
+        <attstr name="author" val="Andrew Sumner"></attstr>
+        <attstr name="car name" val="ls1-archer-r9"></attstr>
+        <attnum name="race number" val="58"></attnum>
+        <attnum name="red" val="0.9"></attnum>
+        <attnum name="green" val="0.2"></attnum>
+        <attnum name="blue" val="0.1"></attnum>
+        <attstr name="features" val=""></attstr>
+      </section>
+
+      <section name="3">
+        <attstr name="name" val="Eric Gaurdrault"></attstr>
+        <attstr name="short name" val="E. Gaurdrault"></attstr>
+        <attstr name="code name" val="GAU"></attstr>
+        <attstr name="desc" val=""></attstr>
+        <attstr name="team" val="Erik Gaurdrault Voitures"></attstr>
+        <attstr name="author" val="Andrew Sumner"></attstr>
+        <attstr name="car name" val="ls1-vulture-v6r"></attstr>
+        <attnum name="race number" val="63"></attnum>
+        <attnum name="red" val="0.0"></attnum>
+        <attnum name="green" val="0.2"></attnum>
+        <attnum name="blue" val="0.8"></attnum>
+        <attstr name="features" val=""></attstr>
+      </section>
+
+      <section name="4">
+        <attstr name="name" val="Nate Cooper"></attstr>
+        <attstr name="short name" val="N. Cooper"></attstr>
+        <attstr name="code name" val="COO"></attstr>
+        <attstr name="desc" val=""></attstr>
+        <attstr name="team" val="Erik Gaurdrault Voitures"></attstr>
+        <attstr name="author" val="Andrew Sumner"></attstr>
+        <attstr name="car name" val="ls1-vulture-v6r"></attstr>
+        <attnum name="race number" val="64"></attnum>
+        <attnum name="red" val="0.0"></attnum>
+        <attnum name="green" val="0.2"></attnum>
+        <attnum name="blue" val="0.8"></attnum>
+        <attstr name="features" val=""></attstr>
+      </section>
+
+      <section name="5">
+        <attstr name="name" val="Stefano Kudos"></attstr>
+        <attstr name="short name" val="S. Kudos"></attstr>
+        <attstr name="code name" val="KUD"></attstr>
+        <attstr name="desc" val=""></attstr>
+        <attstr name="team" val="All Inky Racing"></attstr>
+        <attstr name="author" val="Andrew Sumner"></attstr>
+        <attstr name="car name" val="ls1-toro-rgt"></attstr>
+        <attnum name="race number" val="52"></attnum>
+        <attnum name="red" val="0.8"></attnum>
+        <attnum name="green" val="0.7"></attnum>
+        <attnum name="blue" val="0.2"></attnum>
+        <attstr name="features" val=""></attstr>
+      </section>
+
+      <section name="6">
+        <attstr name="name" val="Audrey Sanchez"></attstr>
+        <attstr name="short name" val="A. Sanchez"></attstr>
+        <attstr name="code name" val="SAN"></attstr>
+        <attstr name="desc" val=""></attstr>
+        <attstr name="team" val="All Inky Racing"></attstr>
+        <attstr name="author" val="Andrew Sumner"></attstr>
+        <attstr name="car name" val="ls1-toro-rgt"></attstr>
+        <attnum name="race number" val="53"></attnum>
+        <attnum name="red" val="0.8"></attnum>
+        <attnum name="green" val="0.7"></attnum>
+        <attnum name="blue" val="0.2"></attnum>
+        <attstr name="features" val=""></attstr>
+      </section>
+
+      <section name="7">
+        <attstr name="name" val="Ai Chen"></attstr>
+        <attstr name="short name" val="A. Chen"></attstr>
+        <attstr name="code name" val="CHE"></attstr>
+        <attstr name="desc" val=""></attstr>
+        <attstr name="team" val="Frontline Racing"></attstr>
+        <attstr name="author" val="Andrew Sumner"></attstr>
+        <attstr name="car name" val="ls1-zentek-z7r"></attstr>
+        <attnum name="race number" val="61"></attnum>
+        <attnum name="red" val="0.4"></attnum>
+        <attnum name="green" val="0.4"></attnum>
+        <attnum name="blue" val="1.0"></attnum>
+        <attstr name="features" val=""></attstr>
+      </section>
+
+      <section name="8">
+        <attstr name="name" val="Hong Lin"></attstr>
+        <attstr name="short name" val="H. Lin"></attstr>
+        <attstr name="code name" val="LIN"></attstr>
+        <attstr name="desc" val=""></attstr>
+        <attstr name="team" val="Frontline Racing"></attstr>
+        <attstr name="author" val="Andrew Sumner"></attstr>
+        <attstr name="car name" val="ls1-zentek-z7r"></attstr>
+        <attnum name="race number" val="62"></attnum>
+        <attnum name="red" val="0.4"></attnum>
+        <attnum name="green" val="0.4"></attnum>
+        <attnum name="blue" val="1.0"></attnum>
+        <attstr name="features" val=""></attstr>
+      </section>
+
+      <section name="9">
+        <attstr name="name" val="Pavel Loginov"></attstr>
+        <attstr name="short name" val="P. Loginov"></attstr>
+        <attstr name="code name" val="LOG"></attstr>
+        <attstr name="desc" val=""></attstr>
+        <attstr name="team" val="Lovely BEAM"></attstr>
+        <attstr name="author" val="Andrew Sumner"></attstr>
+        <attstr name="car name" val="ls1-cavallo-570s1"></attstr>
+        <attnum name="race number" val="28"></attnum>
+        <attnum name="red" val="0.7"></attnum>
+        <attnum name="green" val="0.7"></attnum>
+        <attnum name="blue" val="0.7"></attnum>
+        <attstr name="features" val=""></attstr>
+      </section>
+
+      <section name="10">
+        <attstr name="name" val="Yuri Lavinov"></attstr>
+        <attstr name="short name" val="Y. Lavinov"></attstr>
+        <attstr name="code name" val="LAV"></attstr>
+        <attstr name="desc" val=""></attstr>
+        <attstr name="team" val="Lovely BEAM"></attstr>
+        <attstr name="author" val="Andrew Sumner"></attstr>
+        <attstr name="car name" val="ls1-cavallo-570s1"></attstr>
+        <attnum name="race number" val="13"></attnum>
+        <attnum name="red" val="0.7"></attnum>
+        <attnum name="green" val="0.7"></attnum>
+        <attnum name="blue" val="0.7"></attnum>
+        <attstr name="features" val=""></attstr>
+      </section>
+
+      <section name="11">
+        <attstr name="name" val="Hubert van der Bossche"></attstr>
+        <attstr name="short name" val="H. Bossche"></attstr>
+        <attstr name="code name" val="BOS"></attstr>
+        <attstr name="desc" val=""></attstr>
+        <attstr name="team" val="Petit Autosportif"></attstr>
+        <attstr name="author" val="Andrew Sumner"></attstr>
+        <attstr name="car name" val="ls1-newcastle-fury"></attstr>
+        <attnum name="race number" val="67"></attnum>
+        <attnum name="red" val="0.8"></attnum>
+        <attnum name="green" val="0.7"></attnum>
+        <attnum name="blue" val="0.2"></attnum>
+        <attstr name="features" val=""></attstr>
+      </section>
+
+      <section name="12">
+        <attstr name="name" val="Nicolas Lacroix"></attstr>
+        <attstr name="short name" val="N. Lacroix"></attstr>
+        <attstr name="code name" val="LAC"></attstr>
+        <attstr name="desc" val=""></attstr>
+        <attstr name="team" val="Petit Autosportif"></attstr>
+        <attstr name="author" val="Andrew Sumner"></attstr>
+        <attstr name="car name" val="ls1-newcastle-fury"></attstr>
+        <attnum name="race number" val="68"></attnum>
+        <attnum name="red" val="0.8"></attnum>
+        <attnum name="green" val="0.7"></attnum>
+        <attnum name="blue" val="0.2"></attnum>
+        <attstr name="features" val=""></attstr>
+      </section>
+
+      <section name="13">
+        <attstr name="name" val="Mai Maeda"></attstr>
+        <attstr name="short name" val="M. Maeda"></attstr>
+        <attstr name="code name" val="MAE"></attstr>
+        <attstr name="desc" val=""></attstr>
+        <attstr name="team" val="Ritsuko Tech"></attstr>
+        <attstr name="author" val="Andrew Sumner"></attstr>
+        <attstr name="car name" val="ls1-taipan-ltsr"></attstr>
+        <attnum name="race number" val="65"></attnum>
+        <attnum name="red" val="0.8"></attnum>
+        <attnum name="green" val="0.2"></attnum>
+        <attnum name="blue" val="0.8"></attnum>
+        <attstr name="features" val=""></attstr>
+      </section>
+
+      <section name="14">
+        <attstr name="name" val="Kaito Kinoshita"></attstr>
+        <attstr name="short name" val="K. Kinoshita"></attstr>
+        <attstr name="code name" val="KIN"></attstr>
+        <attstr name="desc" val=""></attstr>
+        <attstr name="team" val="Ritsuko Tech"></attstr>
+        <attstr name="author" val="Andrew Sumner"></attstr>
+        <attstr name="car name" val="ls1-taipan-ltsr"></attstr>
+        <attnum name="race number" val="66"></attnum>
+        <attnum name="red" val="0.8"></attnum>
+        <attnum name="green" val="0.2"></attnum>
+        <attnum name="blue" val="0.8"></attnum>
+        <attstr name="features" val=""></attstr>
+      </section>
+    </section>
+  </section>
+</params>
